@@ -348,7 +348,7 @@ strong, b {
   .typo {
     padding-left: 1.5rem;
     padding-right: 1.5em;
-    padding-top: 1.5rem;
+    padding-top: 0.0rem;
     padding-bottom: 1rem;
   }
 }
@@ -356,7 +356,7 @@ strong, b {
   .typo {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-top: 1.5rem;
+    padding-top: 0.0rem;
     padding-bottom: 1rem;
   }
 }
@@ -364,7 +364,7 @@ strong, b {
   .typo {
     padding-left: 4.0rem;
     padding-right: 4.0rem;
-    padding-top: 1rem;
+    padding-top: 0.0rem;
     padding-bottom: 1rem;
   }
 }
@@ -372,7 +372,7 @@ strong, b {
   .typo {
     padding-left: 4.0rem;
     padding-right: 4.0rem;
-    padding-top: 1.5rem;
+    padding-top: 0.0rem;
     padding-bottom: 1rem;
   }
 }
@@ -380,7 +380,7 @@ strong, b {
   .typo {
     padding-left: 6.5rem;
     padding-right: 6.5rem;
-    padding-top: 1.5rem;
+    padding-top: 0.0rem;
     padding-bottom: 1rem;
   }
 }
