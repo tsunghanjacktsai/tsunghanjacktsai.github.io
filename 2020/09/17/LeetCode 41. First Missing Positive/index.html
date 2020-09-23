@@ -153,7 +153,7 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-41-first-missing-positive">LeetCode 41. First Missing Positive</span></h1><p><img src="/images/LeetCode%2041.%20First%20Missing%20Positive/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/first-missing-positive/" target="_blank" rel="noopener">First Missing Positive</a></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/first-missing-positive/" target="_blank" rel="noopener">First Missing Positive</a></p>
 <p>Given an unsorted integer array, find the smallest missing positive integer.</p>
 <p><strong>Example 1:</strong></p>
 <pre><code>Input: [1,2,0]
@@ -167,14 +167,14 @@ Output: 1</code></pre><p><strong>Follow up:</strong></p>
 <ol>
 <li>Start traversing through the array.<ol>
 <li>Ignore those elements that are negative or larger than the array length.</li>
-<li>Otherwise, swap nums[i] to the correct place (2 to index 1).</li>
+<li>Otherwise, swap <code>nums[i]</code> to the correct place (2 to index 1).</li>
 </ol>
 </li>
-<li>Check if all elements are at where they should be, e.g. 1 at index 0, 3 at index 2. If nums[i] is not equal to (i + 1), which means that we have found the missing positive, return (i + 1) as an answer.</li>
-<li>Be careful for some edge cases like [1, 2, 3] (all elements are at where they should be) or an empty array. For those examples, [1, 2, 3] should return 4 and the empty array should return 1, which can be sum up that those kinds of situations will return the array length + 1.</li>
+<li>Check if all elements are at where they should be, e.g. 1 at index 0, 3 at index 2. If <code>nums[i]</code> is not equal to <code>i + 1</code>, which means that we have found the missing positive, return <code>i + 1</code> as an answer.</li>
+<li>Be careful for some edge cases like <code>[1, 2, 3]</code> (all elements are at where they should be) or an empty array. For those examples, <code>[1, 2, 3]</code> should return 4 and the empty array should return 1, which can be sum up that those kinds of situations will return the <code>array length + 1</code>.</li>
 </ol>
 <p>Let’s see some details with an example in the image below:</p>
-<p><img src="/images/41.%20First%20Missing%20Positive/PNG%20image.png" alt></p>
+<p><img src="/images/LeetCode%2041.%20First%20Missing%20Positive/PNG%20image%209-1600839260228.png" alt></p>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">firstMissingPositive</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>

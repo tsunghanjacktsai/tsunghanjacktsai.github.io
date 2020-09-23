@@ -153,7 +153,7 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-1-two-sum">LeetCode 1. Two Sum</span></h1><p><img src="/images/LeetCode%201.%20Two%20Sum/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">Two Sum</a></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">Two Sum</a></p>
 <p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
 <p>You may assume that each input would have <strong><em>exactly\</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>
 <p>You can return the answer in any order.</p>
@@ -174,7 +174,7 @@ Output: [0,1]</code></pre><p><strong>Constraints:</strong></p>
 <h2><span id="design">Design</span></h2><p>The problem requires us to return indices of two numbers which their sum is equal to a given target. To memoize the value and its index, the hash table could be applied to store the information for the later use. The main process of the algorithm is shown below:</p>
 <ol>
 <li>Traverse through the array, record each number and its index into the hash table.</li>
-<li>Check if the table contains (target - current element). If so, return the current element’s index with it.</li>
+<li>Check if the table contains <code>target - current element</code>. If so, return the current element’s index with it.</li>
 </ol>
 <p><img src="/images/1.%20Two%20Sum/cIydEax.png" alt></p>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>

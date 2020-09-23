@@ -153,7 +153,7 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-56-merge-intervals">LeetCode 56. Merge Intervals</span></h1><p><img src="/images/LeetCode%2056.%20Merge%20Intervals/LeetCode.png" alt></p>
-<h2><span id="problem-statement">Problem Statement</span></h2><p>Source link: <a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener">Merge Intervals</a></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener">Merge Intervals</a></p>
 <p>Given a collection of intervals, merge all overlapping intervals.</p>
 <p><strong>Example 1:</strong></p>
 <pre><code>Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
@@ -168,7 +168,7 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.</code></pre><
 <h2><span id="design">Design</span></h2><ol>
 <li>Sort the 2-dimensional array by the starting value of each array within it.</li>
 <li>Initialize a list for storing the result interval.</li>
-<li>Traverse through the 2-dimensional array, if the last value of previous array is smaller than the first value of current array (e.g. [8, 10] [15, 18] &rarr; 15 &gt; 10), which means there is no overlap, add the current interval into the result interval list. Otherwise, update the result interval by getting the larger one between the last value of previous array and the last value of current array (e.g. [1, 3] [2, 6] &rarr; overlap and 6 &gt; 3 &rarr; [1, 6]).</li>
+<li>Traverse through the 2-dimensional array, if the last value of previous array is smaller than the first value of current array (e.g. <code>[8, 10] [15, 18]</code> &rarr; 15 &gt; 10), which means there is no overlap, add the current interval into the result interval list. Otherwise, update the result interval by getting the larger one between the last value of previous array and the last value of current array (e.g. <code>[1, 3] [2, 6]</code> &rarr; overlap and 6 &gt; 3 &rarr; <code>[1, 6]</code>).</li>
 <li>Return the result interval array.</li>
 </ol>
 <p>The detailed process is shown in the image below:</p>

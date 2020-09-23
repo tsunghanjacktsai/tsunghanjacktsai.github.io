@@ -153,7 +153,7 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-435-non-overlapping-intervals">LeetCode 435. Non-overlapping Intervals</span></h1><p><img src="/images/LeetCode%20435.%20Non-overlapping%20Intervals/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener">Non-overlapping Intervals</a></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener">Non-overlapping Intervals</a></p>
 <p>Given a collection of intervals, find the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.</p>
 <p><strong>Example 1:</strong></p>
 <pre><code>Input: [[1,2],[2,3],[3,4],[1,3]]
@@ -173,7 +173,7 @@ Explanation: You don&#39;t need to remove any of the intervals since they&#39;re
 <ol>
 <li>Sort intervals by their starting points (ascending).</li>
 <li>Record ending point of the previous selected interval and number of non-overlapping intervals for the result.</li>
-<li>If the starting point of a current interval is smaller than the ending point of its previous one, which means an overlap appears, increase the number of non-overlapping intervals. Otherwise, select an interval which has the smaller ending point. Don’t forget to record the previous ending point as well.</li>
+<li>If the starting point of a current interval is smaller than the ending point of its previous one, which means an overlap exists, increase the number of non-overlapping intervals. Otherwise, select an interval which has the smaller ending point. Don’t forget to record the previous ending point as well.</li>
 <li>Return the result by subtracting the number of non-overlapping intervals from the array length.</li>
 </ol>
 <p><img src="/images/435.%20Non-overlapping%20Intervals/rGWlPZF.png" alt></p>

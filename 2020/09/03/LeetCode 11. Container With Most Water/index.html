@@ -153,17 +153,17 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-11-container-with-most-water">LeetCode 11. Container With Most Water</span></h1><p><img src="/images/LeetCode%2011.%20Container%20With%20Most%20Water/LeetCode.png" alt></p>
-<h2><span id="problem-statement">Problem Statement</span></h2><p>Source link: <a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="noopener">Container With Most Water</a></p>
+<h2><span id="problem-statement">Problem Statement</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="noopener">Container With Most Water</a></p>
 <p>Given <em>n</em> non-negative integers <em>a1</em>, <em>a2</em>, …, <em>an</em> , where each represents a point at coordinate (<em>i</em>, <em>ai</em>). <em>n</em> vertical lines are drawn such that the two endpoints of line <em>i</em> is at (<em>i</em>, <em>ai</em>) and (<em>i</em>, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
 <p><strong>Note:</strong> You may not slant the container and <em>n</em> is at least 2.</p>
 <p><img src="/images/LeetCode%2011.%20Container%20With%20Most%20Water/image-20200923101036300.png" alt="image-20200923101036300"></p>
 <p><strong>Example:</strong></p>
 <pre><code>Input: [1,8,6,2,5,4,8,3,7]
-Output: 49</code></pre><h2><span id="design">Design</span></h2><p>The problem can be simply solved by the two pointers pattern. The container size can be calculated as: (right_pos - left_pos) * min(left, right).</p>
+Output: 49</code></pre><h2><span id="design">Design</span></h2><p>The problem can be simply solved by the two pointers pattern. The container size can be calculated as: <code>(right_pos - left_pos) * min(left, right)</code>.</p>
 <ol>
-<li>Initialize left, right pointers for the array height and the variable tmp to store the result of container size calculated each time.</li>
+<li>Initialize left, right pointers for the array height and the variable <code>tmp</code> to store the result of container size calculated each time.</li>
 <li>If the height of left position is higher than the right, the container height would be the one where right pointer at then move the right pointer one step left and vice versa.</li>
-<li>The variable res would be assigned with the tmp or maintain the same value. Repeat 2 and 3 steps until left_pos = right_post.</li>
+<li>The variable res would be assigned with the <code>tmp</code> or maintain the same value. Repeat 2 and 3 steps until <code>left_pos = right_post</code>.</li>
 </ol>
 <p><img src="/images/11.%20Container%20With%20Most%20Water/tdhgsMU-1600360189721.png" alt></p>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>

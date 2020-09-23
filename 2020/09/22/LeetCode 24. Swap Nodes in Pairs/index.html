@@ -153,14 +153,14 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-24-swap-nodes-in-pairs">LeetCode 24. Swap Nodes in Pairs</span></h1><p><img src="/images/LeetCode%20448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener">Swap Nodes in Pairs</a></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener">Swap Nodes in Pairs</a></p>
 <p>Given a linked list, swap every two adjacent nodes and return its head.</p>
 <p>You may <strong>not</strong> modify the values in the list’s nodes, only nodes itself may be changed.</p>
 <p><strong>Example:</strong></p>
-<pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</code></pre><h2><span id="design">Design</span></h2><p>This problem is a kind of in-place reversal of a linked list, which requires us to reverse every two adjacent nodes (see the example of the problem).</p>
+<pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</code></pre><h2><span id="design">Design</span></h2><p>This problem requires us to reverse every two adjacent nodes (see the example of the problem), and should be implemented in place.</p>
 <ol>
-<li>Initialize two pointers prev and cur for traversing the whole list and doing reverse operations.</li>
-<li>Save positions where prev and cur at for later usages as the list will separate into two parts after reversing nodes.</li>
+<li>Initialize two pointers <code>prev</code> and <code>cur</code>for traversing the whole list and doing reverse operations.</li>
+<li>Save positions where <code>prev</code> and <code>cur</code> at for later usages as the list will separate into two parts after reversing nodes.</li>
 <li>Complete reversals for the next two nodes.</li>
 <li>We can use saved nodes to reconnect the reversed sub-list with subsequent nodes.</li>
 <li>Replace pointers to the correct position preparing for the next iteration (back to second step).</li>
