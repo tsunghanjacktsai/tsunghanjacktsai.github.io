@@ -153,7 +153,24 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-1-two-sum">LeetCode 1. Two Sum</span></h1><p><img src="/images/LeetCode%201.%20Two%20Sum/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">Two Sum</a></p>
+<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">Two Sum</a></p>
+<p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
+<p>You may assume that each input would have <strong><em>exactly\</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>
+<p>You can return the answer in any order.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: nums = [3,2,4], target = 6
+Output: [1,2]</code></pre><p><strong>Example 3:</strong></p>
+<pre><code>Input: nums = [3,3], target = 6
+Output: [0,1]</code></pre><p><strong>Constraints:</strong></p>
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 105</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+<li><code>-109 &lt;= target &lt;= 109</code></li>
+<li><strong>Only one valid answer exists.</strong></li>
+</ul>
 <h2><span id="design">Design</span></h2><p>The problem requires us to return indices of two numbers which their sum is equal to a given target. To memoize the value and its index, the hash table could be applied to store the information for the later use. The main process of the algorithm is shown below:</p>
 <ol>
 <li>Traverse through the array, record each number and its index into the hash table.</li>
@@ -182,7 +199,7 @@
                 <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
-                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+                Tsung Han Tsai © 2018 - 2020 • All rights reserved
             </ul>
         </div>
     </div>

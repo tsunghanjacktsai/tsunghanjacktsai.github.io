@@ -153,7 +153,18 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-56-merge-intervals">LeetCode 56. Merge Intervals</span></h1><p><img src="/images/LeetCode%2056.%20Merge%20Intervals/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener">Merge Intervals</a></p>
+<h2><span id="problem-statement">Problem Statement</span></h2><p>Source link: <a href="https://leetcode.com/problems/merge-intervals/" target="_blank" rel="noopener">Merge Intervals</a></p>
+<p>Given a collection of intervals, merge all overlapping intervals.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: intervals = [[1,4],[4,5]]
+Output: [[1,5]]
+Explanation: Intervals [1,4] and [4,5] are considered overlapping.</code></pre><p><strong>Constraints:</strong></p>
+<ul>
+<li><code>intervals[i][0] &lt;= intervals[i][1]</code></li>
+</ul>
 <h2><span id="design">Design</span></h2><ol>
 <li>Sort the 2-dimensional array by the starting value of each array within it.</li>
 <li>Initialize a list for storing the result interval.</li>
@@ -198,7 +209,7 @@
                 <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
-                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+                Tsung Han Tsai © 2018 - 2020 • All rights reserved
             </ul>
         </div>
     </div>

@@ -153,7 +153,25 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-3-longest-substring-without-repeating-characters">LeetCode 3. Longest Substring Without Repeating Characters</span></h1><p><img src="/images/LeetCode%203.%20Longest%20Substring%20Without%20Repeating%20Characters/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></p>
+<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></p>
+<p>Given a string <code>s</code>, find the length of the <strong>longest substring</strong> without repeating characters.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: s = &quot;abcabcbb&quot;
+Output: 3
+Explanation: The answer is &quot;abc&quot;, with the length of 3.</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: s = &quot;bbbbb&quot;
+Output: 1
+Explanation: The answer is &quot;b&quot;, with the length of 1.</code></pre><p><strong>Example 3:</strong></p>
+<pre><code>Input: s = &quot;pwwkew&quot;
+Output: 3
+Explanation: The answer is &quot;wke&quot;, with the length of 3.
+Notice that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.</code></pre><p><strong>Example 4:</strong></p>
+<pre><code>Input: s = &quot;&quot;
+Output: 0</code></pre><p><strong>Constraints:</strong></p>
+<ul>
+<li><code>0 &lt;= s.length &lt;= 5 * 104</code></li>
+<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>
+</ul>
 <h2><span id="design">Design</span></h2><p>As the problem is asking us to find something by substrings within a given size string, the sliding window pattern can be used to solve this problem. The key process will be like:</p>
 <ol>
 <li>Initialize a map as a window for storing the existing number of each character.</li>
@@ -193,7 +211,7 @@
                 <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
-                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+                Tsung Han Tsai © 2018 - 2020 • All rights reserved
             </ul>
         </div>
     </div>

@@ -153,7 +153,22 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-435-non-overlapping-intervals">LeetCode 435. Non-overlapping Intervals</span></h1><p><img src="/images/LeetCode%20435.%20Non-overlapping%20Intervals/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener">Non-overlapping Intervals</a></p>
+<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener">Non-overlapping Intervals</a></p>
+<p>Given a collection of intervals, find the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: [[1,2],[2,3],[3,4],[1,3]]
+Output: 1
+Explanation: [1,3] can be removed and the rest of intervals are non-overlapping.</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: [[1,2],[1,2],[1,2]]
+Output: 2
+Explanation: You need to remove two [1,2] to make the rest of intervals non-overlapping.</code></pre><p><strong>Example 3:</strong></p>
+<pre><code>Input: [[1,2],[2,3]]
+Output: 0
+Explanation: You don&#39;t need to remove any of the intervals since they&#39;re already non-overlapping.</code></pre><p><strong>Note:</strong></p>
+<ol>
+<li>You may assume the interval’s end point is always bigger than its start point.</li>
+<li>Intervals like [1,2] and [2,3] have borders “touching” but they don’t overlap each other.</li>
+</ol>
 <h2><span id="design">Design</span></h2><p>The most complex part of this problem is to determine which interval to preserve while an overlap exists. As we did not know how large the starting point of the next interval will be, we always need to select the smaller ending point between overlapping intervals to create more spaces for the next interval. So the main process is described below:</p>
 <ol>
 <li>Sort intervals by their starting points (ascending).</li>
@@ -192,7 +207,7 @@
                 <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
-                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+                Tsung Han Tsai © 2018 - 2020 • All rights reserved
             </ul>
         </div>
     </div>

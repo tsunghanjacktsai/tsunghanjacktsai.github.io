@@ -153,8 +153,16 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-448-find-all-numbers-disappeared-in-an-array">LeetCode 448. Find All Numbers Disappeared in an Array</span></h1><p><img src="/images/LeetCode%20448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/" target="_blank" rel="noopener">Find All Numbers Disappeared in an Array</a></p>
-<h2><span id="design">Design</span></h2><p>This problem could be solved by the cyclic sort pattern as elements inside the array are restricted from 1 to n and required to solve with constant space and $O(n)$ time. The main solving process is described below:</p>
+<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/" target="_blank" rel="noopener">Find All Numbers Disappeared in an Array</a></p>
+<p>Given an array of integers where 1 ≤ a[i] ≤ <em>n</em> (<em>n</em> = size of array), some elements appear twice and others appear once.</p>
+<p>Find all the elements of [1, <em>n</em>] inclusive that do not appear in this array.</p>
+<p>Could you do it without extra space and in O(<em>n</em>) runtime? You may assume the returned list does not count as extra space.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Input:
+[4,3,2,7,8,2,3,1]
+
+Output:
+[5,6]</code></pre><h2><span id="design">Design</span></h2><p>This problem could be solved by the cyclic sort pattern as elements inside the array are restricted from 1 to n and required to solve with constant space and $O(n)$ time. The main solving process is described below:</p>
 <ol>
 <li>Sort the array by swapping elements if $nums[i] \neq nums[nums[i] - 1]$.</li>
 <li>Check if all elements are at right places. If nums[i] is not with the correct index, e.g. 2 is not with the index 1, the missing number has been found and put it into the result list.</li>
@@ -195,7 +203,7 @@
                 <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
-                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+                Tsung Han Tsai © 2018 - 2020 • All rights reserved
             </ul>
         </div>
     </div>

@@ -153,8 +153,12 @@
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-143-reorder-list">LeetCode 143. Reorder List</span></h1><p><img src="/images/LeetCode%20143.%20Reorder%20List/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><a href="https://leetcode.com/problems/reorder-list/" target="_blank" rel="noopener">Reorder List</a></p>
-<h2><span id="design">Design</span></h2><p>The problem can be solved by the fast &amp; slow pointers appoach:</p>
+<h2><span id="problem">Problem</span></h2><p>Source link: <a href="https://leetcode.com/problems/reorder-list/" target="_blank" rel="noopener">Reorder List</a></p>
+<p>Given a singly linked list <em>L</em>: <em>L</em>0→<em>L</em>1→…→<em>L**n</em>-1→<em>L</em>n,<br>reorder it to: <em>L</em>0→<em>L<strong>n<em>→</em>L<em>1→</em>L</strong>n</em>-1→<em>L</em>2→<em>L**n</em>-2→…</p>
+<p>You may <strong>not</strong> modify the values in the list’s nodes, only nodes itself may be changed.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.</code></pre><h2><span id="design">Design</span></h2><p>The problem can be solved by the fast &amp; slow pointers appoach:</p>
 <ol>
 <li>Search for the middle point of the list by moving the fast pointer 2x faster than the slow pointer, which can help us find where should we start to rearrange.</li>
 <li>Start from where the slow pointer at and reverse the remaining elements, which can construct the second half list.</li>
@@ -215,7 +219,7 @@
                 <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
-                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+                Tsung Han Tsai © 2018 - 2020 • All rights reserved
             </ul>
         </div>
     </div>
