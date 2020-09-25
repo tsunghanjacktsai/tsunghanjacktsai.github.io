@@ -167,8 +167,8 @@ Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</code></pre><p><strong>Follow up:</st
 <p><img src="/images/LeetCode%20206.%20Reverse%20Linked%20List/PNG%20image%2011.png" alt></p>
 <h3><span id="recursive">Recursive</span></h3><p>The recursive edition is more concise:</p>
 <ol>
-<li>Solve sub-problems first, which reverse remaining nodes headed at <code>head.next</code>. We can also get where the new head is in the reversed linked list.</li>
-<li>Complete the the main part of the recursion, which do a reversal for the <code>head</code> and <code>head.next</code>.</li>
+<li>Solve each sub-problem by reversing nodes from <code>head.next</code>. Eventually, we can get a reversed sub-list and the new <code>head</code> position.</li>
+<li>Complete the reversal for <code>head</code> and <code>head.next</code> and return the result.</li>
 </ol>
 <p>The process is shown below:</p>
 <p><img src="/images/LeetCode%20206.%20Reverse%20Linked%20List/PNG%20image%2012.png" alt></p>
