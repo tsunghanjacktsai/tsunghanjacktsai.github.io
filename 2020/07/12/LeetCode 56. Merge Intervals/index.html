@@ -166,10 +166,9 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.</code></pre><
 <li><code>intervals[i][0] &lt;= intervals[i][1]</code></li>
 </ul>
 <h2><span id="design">Design</span></h2><ol>
-<li>Sort the 2-dimensional array by the starting value of each array within it.</li>
-<li>Initialize a list for storing the result interval.</li>
-<li>Traverse through the 2-dimensional array, if the last value of previous array is smaller than the first value of current array (e.g. <code>[8, 10] [15, 18]</code> &rarr; 15 &gt; 10), which means there is no overlap, add the current interval into the result interval list. Otherwise, update the result interval by getting the larger one between the last value of previous array and the last value of current array (e.g. <code>[1, 3] [2, 6]</code> &rarr; overlap and 6 &gt; 3 &rarr; <code>[1, 6]</code>).</li>
-<li>Return the result interval array.</li>
+<li>Sort intervals by their starting value.</li>
+<li>Traverse through intervals, if the last value of  the previous interval is smaller than the first value of the current interval(e.g. <code>[8, 10] [15, 18]</code> &rarr; 15 &gt; 10), which means there is no overlap between them. Add the current interval into the result list.</li>
+<li>Otherwise, update the result interval by getting the larger one between ending point of the previous array and ending point of the current array (e.g. <code>[1, 3] [2, 6]</code> &rarr; overlap and 6 &gt; 3 &rarr; <code>[1, 6]</code>).</li>
 </ol>
 <p>The detailed process is shown in the image below:</p>
 <p><img src="/images/56.%20Merge%20Intervals/cYEt38F.png" alt="Merge Intervals"></p>

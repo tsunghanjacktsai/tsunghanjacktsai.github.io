@@ -160,7 +160,7 @@
 <pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><h2><span id="design">Design</span></h2><p>The problem is a variation of <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener">Reverse Linked List</a>, which asked us to reverse the linked list from the node m to n. However, even the statement seems not much difference, the implementation will require more effort. The algorithm process is described below:</p>
 <ol>
-<li>Initialize two pointers <code>prev</code> and <code>cur</code> to traverse through the list and complete reverse operations.</li>
+<li>Given two pointers <code>prev</code> and <code>cur</code> to traverse through the list and complete reverse operations.</li>
 <li>Skip <code>m - 1</code> nodes first as they do not need to be reversed.</li>
 <li>Mark the positions where <code>prev</code> and <code>cur</code> at right now for reconnecting the reversed part with remained nodes later.</li>
 <li>Start to reverse nodes from m to n. Be careful the actual number of nodes you need to reverse.</li>

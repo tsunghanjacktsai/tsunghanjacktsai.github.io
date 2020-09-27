@@ -177,12 +177,10 @@ Output: [[1,7]]</code></pre><p> <strong>Constraints:</strong></p>
 <li><code>0 &lt;= newInterval[0] &lt;= newInterval[1] &lt;= 105</code></li>
 </ul>
 <h2><span id="design">Design</span></h2><ol>
-<li>Initialize the list for storing result intervals, and an index pointing to each interval within original intervals array.</li>
-<li>Traverse through original intervals array, insert those intervals which their upper bounds are smaller than the lower bound of new interval into the result intervals list.</li>
-<li>Merge the new interval into where the index at, which getting the smaller one of both lower bounds and the larger one of both upper bounds of the interval inside the original array and the new interval.</li>
-<li>Add the new interval into the result list.</li>
-<li>Insert last intervals within the original intervals array into the result list.</li>
-<li>Return the result list converting into the array.</li>
+<li>Given a list for storing result intervals, and an index pointing to each interval within the original intervals array.</li>
+<li>Traverse through the original intervals array, insert those intervals, which their upper bounds are smaller than the lower bound of new interval, into the result intervals list.</li>
+<li>Get the smaller one between lower bounds and the larger one between upper bounds of old and new intervals and add them into the result list.</li>
+<li>Insert remaining intervals into the result list.</li>
 </ol>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> intervals<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> newInterval<span class="token punctuation">)</span> <span class="token punctuation">{</span>

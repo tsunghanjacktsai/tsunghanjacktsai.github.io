@@ -168,7 +168,7 @@ Output: 2-&gt;3-&gt;6-&gt;7-&gt;1-&gt;5-&gt;4-&gt;NULL</code></pre><p><strong>Co
 </ul>
 <h2><span id="design">Design</span></h2><p>The solution of this problem is actually quite straightforward. We can separate the list into two sub-list, which one part contains nodes at odd positions and the other one contains nodes at even positions. The algorithm process is like:</p>
 <ol>
-<li>Initialize two pointers <code>odd</code> and <code>even</code> for nodes at odd and even positions respectively. Record the head of even nodes at the same time for the later connection.</li>
+<li>Given two pointers <code>odd</code> and <code>even</code> for nodes at odd and even positions respectively. Record the head of even nodes at the same time for the later connection.</li>
 <li>Start traversing through the list and separate the list into odd and even parts.</li>
 <li>Connect the tail of odd nodes to the saved head of even nodes.</li>
 </ol>

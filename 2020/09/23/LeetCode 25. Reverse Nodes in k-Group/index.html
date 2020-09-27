@@ -167,7 +167,7 @@
 </ul>
 <h2><span id="design">Design</span></h2><p>The problem requires us to reverse every k adjacent nodes of a linked list, and should be implemented in place. Also, there is a constraint that nodes should remain where they are if the number of nodes is not a multiple of k. Most of the implementation of this problem is quite same as the problem <a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener">Swap Nodes in Pairs</a>, which we only need to reverse every k nodes instead of each pair. However, the difference is, how we can remain left-out nodes at where they are. To  solve this, we can initialize a pointer <code>tmp</code>, which it can traverse the next k nodes first to see if there are enough nodes available for doing reverse operation. Hence, the main process will be:</p>
 <ol>
-<li>Initialize two pointers <code>prev</code> and <code>cur</code> for doing reverse operations.</li>
+<li>Given two pointers <code>prev</code> and <code>cur</code> for doing reverse operations.</li>
 <li>Record where <code>prev</code> and <code>cur</code> initially at for the later reconnecting of reversed sub-list and subsequent nodes.</li>
 <li>Start doing reverse operations for the next k nodes.</li>
 <li>We need to reconnect the reversed part with the later part.</li>

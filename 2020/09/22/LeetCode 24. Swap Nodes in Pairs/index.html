@@ -159,7 +159,7 @@
 <p><strong>Example:</strong></p>
 <pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</code></pre><h2><span id="design">Design</span></h2><p>This problem requires us to reverse every two adjacent nodes (see the example of the problem), and should be implemented in place.</p>
 <ol>
-<li>Initialize two pointers <code>prev</code> and <code>cur</code>for traversing the whole list and doing reverse operations.</li>
+<li>Given two pointers <code>prev</code> and <code>cur</code>for traversing the whole list and doing reverse operations.</li>
 <li>Save positions where <code>prev</code> and <code>cur</code> at for later usages as the list will separate into two parts after reversing nodes.</li>
 <li>Complete reversals for the next two nodes.</li>
 <li>We can use saved nodes to reconnect the reversed sub-list with subsequent nodes.</li>

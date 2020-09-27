@@ -161,7 +161,7 @@
 Output: 7 -&gt; 0 -&gt; 8
 Explanation: 342 + 465 = 807.</code></pre><h2><span id="design">Design</span></h2><p>The problem can be solved by a simple mathematic method, which the main process is shown below:</p>
 <ol>
-<li>Initialize the result list with a pointer for the construction.</li>
+<li>Given the result list with a pointer for the construction.</li>
 <li>Traverse through both lists, add the value of <code>l1</code> to <code>l2</code>. </li>
 <li>We can get the single digit no matter the carry exists or not by <code>sum % 10</code>. After, put it into the result list.</li>
 <li>Take out the carry value by <code>sum /= 10</code> for the next digit calculation.</li>

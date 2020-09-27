@@ -174,7 +174,7 @@ Output: 0</code></pre><p><strong>Constraints:</strong></p>
 </ul>
 <h2><span id="design">Design</span></h2><p>As the problem is asking us to find something by substrings within a given size string, the sliding window pattern can be used to solve this problem. The key process will be like:</p>
 <ol>
-<li>Initialize a map as a window for storing the existing number of each character.</li>
+<li>Given a map as a window for storing the existing number of each character.</li>
 <li>The window expands while a new character is arrived, which will update the value of the given key inside the map, i.e. increase the existing number of the given character.</li>
 <li>While the existing number of the given character is larger than one, i.e., there are repeating characters inside the substring, start to shrink the window.</li>
 <li>Update the maximum length if the window size is larger than it.</li>
