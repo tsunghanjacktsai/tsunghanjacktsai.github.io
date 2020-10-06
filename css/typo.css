@@ -378,8 +378,8 @@ strong, b {
 }
 @media only screen and (min-width: 1200px) {
   .typo {
-    padding-left: 6.5rem;
-    padding-right: 6.5rem;
+    padding-left: 8.0rem;
+    padding-right: 8.0rem;
     padding-top: 0.0rem;
     padding-bottom: 1rem;
   }
@@ -403,7 +403,7 @@ h1, h2, h3, h4, h5, h6 {
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
   margin-top: 0.5em;
-  margin-bottom: 0.2em;
+  margin-bottom: -0.5em;
   /*line-height: 1.35;*/
 }
 
