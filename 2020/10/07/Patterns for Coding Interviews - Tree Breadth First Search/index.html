@@ -168,7 +168,7 @@
 <li><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree" target="_blank" rel="noopener">Average of Levels in Binary Tree</a></li>
 <li><a href="https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree" target="_blank" rel="noopener">All Nodes Distance K in Binary Tree</a></li>
 </ol>
-<h2><span id="approach">Approach</span></h2><p>Tree BFS pattern could be applied to solve problems while traversing a tree is needed. Those problems often require us to do operations within a tree in a level by level order. A key point here is that we should always pre-record nodes from the next level to return the required result while we traverse to the next level. Those pre-recorded nodes could be store within a queue as its first-in-first-out feature enables us to retrieve nodes in the correct order.</p>
+<h2><span id="approach">Approach</span></h2><p>Tree BFS pattern could be applied to solve problems while traversing a tree is needed. Those problems often require us to do operations within a tree in a level by level order. A key point here is that we should always pre-record nodes from the next level to return the required result later. Those pre-recorded nodes could be store within a queue as its first-in-first-out feature enables us to retrieve nodes in the correct order.</p>
 <p>Let’s see a LeetCode problem <a href="https://leetcode.com/problems/binary-tree-level-order-traversal" target="_blank" rel="noopener">Binary Tree Level Order Traversal</a> for a warm up. It requires us to print out nodes in each level of a tree. Here’s an example:</p>
 <p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
 <pre><code>    3
@@ -249,7 +249,7 @@ Explanation:
 <li>If it is the last node of the current level, put it into the result list.</li>
 <li>Start pre-recording nodes in the next level by offering left and right child of the current node if available. Get back to the 3rd step until nodes in the current level have all been met.</li>
 </ol>
-<p>An image is provided below:</p>
+<p>A visualization is provided below:</p>
 <p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/PNG%20image%2017.png" alt></p>
 <p>So the code implementation will be:</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
@@ -296,7 +296,7 @@ Explanation:
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <p>The time complexity of both problems are $O(n)$, which we need to traverse through every node within a tree. Besides, their space complexity is $O(n)$ as we need to create a queue for storing pre-recorded nodes.</p>
-<h2><span id="conclusion">Conclusion</span></h2><p>Isn’t it easy to solve tree BFS problem by this pattern? As we mentioned before, it is essential to pre-record nodes from the next level with a queue. By practicing more similar problems, you might find that the implementations are not much different. Of course, you could also apply the recursive technique to do tree BFS. This is just another great method which I think is more suitable for someone who is unfamiliar with recursive thinking.</p>
+<h2><span id="conclusion">Conclusion</span></h2><p>Isn’t it easy to solve tree BFS problem by this pattern? Keep in mind that it is essential to pre-record nodes from the next level with a queue. By practicing more similar problems, you might find that the implementations are not much different. Of course, you could also apply the recursive technique to do tree BFS. This is just another great method which is more suitable for someone who is unfamiliar with recursive thinking.</p>
 
             </div>
         </div>
