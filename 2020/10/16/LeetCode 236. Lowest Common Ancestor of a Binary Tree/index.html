@@ -155,22 +155,56 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="leetcode-124-binary-tree-maximum-path-sum">LeetCode 124. Binary Tree Maximum Path Sum</span></h1><p><img src="/images/LeetCode%2098.%20Validate%20Binary%20Search%20Tree/LeetCode-1601463660180-1602417888796.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/binary-tree-maximum-path-sum" target="_blank" rel="noopener">Binary Tree Maximum Path Sum</a></p>
-<p>Given a <strong>non-empty</strong> binary tree, find the maximum path sum.</p>
-<p>For this problem, a path is defined as any node sequence from some starting node to any node in the tree along the parent-child connections. The path must contain <strong>at least one node</strong> and does not need to go through the root.</p>
+                <h1><span id="leetcode-236-lowest-common-ancestor-of-a-binary-tree">LeetCode 236. Lowest Common Ancestor of a Binary Tree<img src="/images/LeetCode%2098.%20Validate%20Binary%20Search%20Tree/LeetCode-1601463660180-1602417888796.png" alt></span></h1><h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree" target="_blank" rel="noopener">Lowest Common Ancestor of a Binary Tree</a></p>
+<p>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.</p>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank" rel="noopener">definition of LCA on Wikipedia</a>: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow <strong>a node to be a descendant of itself</strong>).”</p>
 <p><strong>Example 1:</strong></p>
-<p><img src="/images/LeetCode%20124.%20Binary%20Tree%20Maximum%20Path%20Sum/exx1.jpg" alt="img"></p>
-<pre><code>Input: root = [1,2,3]
-Output: 6</code></pre><p><strong>Example 2:</strong></p>
-<p><img src="/images/LeetCode%20124.%20Binary%20Tree%20Maximum%20Path%20Sum/exx2.jpg" alt="img"></p>
-<pre><code>Input: root = [-10,9,20,null,null,15,7]
-Output: 42</code></pre><p> <strong>Constraints:</strong></p>
+<p><img src="/images/LeetCode%20236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/binarytree.png" alt="img"></p>
+<pre><code>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+Output: 3
+Explanation: The LCA of nodes 5 and 1 is 3.</code></pre><p><strong>Example 2:</strong></p>
+<p><img src="/images/LeetCode%20236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/binarytree.png" alt="img"></p>
+<pre><code>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+Output: 5
+Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.</code></pre><p><strong>Example 3:</strong></p>
+<pre><code>Input: root = [1,2], p = 1, q = 2
+Output: 1</code></pre><p><strong>Constraints:</strong></p>
 <ul>
-<li>The number of nodes in the tree is in the range <code>[0, 3 * 104]</code>.</li>
-<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
+<li>The number of nodes in the tree is in the range <code>[2, 105]</code>.</li>
+<li><code>-109 &lt;= Node.val &lt;= 109</code></li>
+<li>All <code>Node.val</code> are <strong>unique</strong>.</li>
+<li><code>p != q</code></li>
+<li><code>p</code> and <code>q</code> will exist in the tree.</li>
 </ul>
-<h2><span id="design">Design</span></h2><h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"></code></pre>
+<h2><span id="design">Design</span></h2><p>This is an advanced problem of <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree" target="_blank" rel="noopener">Lowest Common Ancestor of a Binary Search Tree</a>. This time we should try to find lowest common ancestor between p and q within a binary tree instead of a binary search tree. Hence, nodes on left and right subtrees did not store in a specific order. To get the required result, we should apply the postorder traversal technique, which looks like below:</p>
+<ol>
+<li>Search for p or q on left and right subtrees.</li>
+<li>Make sure p and q on which side of the tree. If they appear on different sides, simply return the root node.</li>
+<li>Otherwise, the LCA will appear on the side which p and q are.</li>
+</ol>
+<p><img src="/images/LeetCode%20236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/PNG%20image%2027-1602835676728.png" alt></p>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> TreeNode <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>TreeNode root<span class="token punctuation">,</span> TreeNode p<span class="token punctuation">,</span> TreeNode q<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> null <span class="token operator">||</span> root <span class="token operator">==</span> p <span class="token operator">||</span> root <span class="token operator">==</span> q<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    TreeNode left <span class="token operator">=</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode right <span class="token operator">=</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> right <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> left <span class="token operator">!=</span> null <span class="token operator">?</span> left <span class="token operator">:</span> right<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$</p>
 <p>Space: $O(n)$</p>
 

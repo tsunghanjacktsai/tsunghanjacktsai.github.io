@@ -174,8 +174,13 @@ Output: 1</code></pre><p><strong>Example 2:</strong></p>
    2   4
   /
  1
-Output: 3</code></pre><h2><span id="design">Design</span></h2><p>This is a problem that can be solved by tree DFS pattern. By knowing the feature of binary search tree, which nodes on left subtrees are smaller than the root node, and nodes on right subtrees are larger than it. So we can start searching kth smallest elements from left subtrees to right subtrees, i.e. do an inorder traversal to get the required result. The process is shown in the image below:</p>
-<p><img src="/images/LeetCode%20230.%20Kth%20Smallest%20Element%20in%20a%20BST/PNG%20image%2025.png" alt></p>
+Output: 3</code></pre><p><strong>Constraints:</strong></p>
+<ul>
+<li>The number of elements of the BST is between <code>1</code> to <code>10^4</code>.</li>
+<li>You may assume <code>k</code> is always valid, <code>1 ≤ k ≤ BST&#39;s total elements</code>.</li>
+</ul>
+<h2><span id="design">Design</span></h2><p>This is a problem that can be solved by tree DFS pattern. By knowing the feature of binary search tree, which nodes on left subtrees are smaller than the root node, and nodes on right subtrees are larger than it. So we can start searching kth smallest elements from left subtrees to right subtrees, i.e. do an inorder traversal to get the required result. The process is shown in the image below:</p>
+<p><img src="/images/LeetCode%20230.%20Kth%20Smallest%20Element%20in%20a%20BST/PNG%20image%2025.png" alt="img"></p>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Definition for a binary tree node.
  * public class TreeNode {

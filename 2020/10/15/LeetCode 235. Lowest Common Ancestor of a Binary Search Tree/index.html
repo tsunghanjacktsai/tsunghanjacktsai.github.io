@@ -155,7 +155,7 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="leetcode-230-kth-smallest-element-in-a-bst">LeetCode 230. Kth Smallest Element in a BST</span></h1><p><img src="/images/LeetCode%2098.%20Validate%20Binary%20Search%20Tree/LeetCode-1601463660180-1602417888796.png" alt></p>
+                <h1><span id="leetcode-235-lowest-common-ancestor-of-a-binary-search-tree">LeetCode 235. Lowest Common Ancestor of a Binary Search Tree</span></h1><p><img src="/images/LeetCode%2098.%20Validate%20Binary%20Search%20Tree/LeetCode-1601463660180-1602417888796.png" alt></p>
 <h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree" target="_blank" rel="noopener">Lowest Common Ancestor of a Binary Search Tree</a></p>
 <p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
 <p>According to the <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank" rel="noopener">definition of LCA on Wikipedia</a>: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow <strong>a node to be a descendant of itself</strong>).”</p>
@@ -183,7 +183,7 @@ Output: 2</code></pre><p><strong>Constraints:</strong></p>
 <li>p.val &gt; root.val &amp; q.val &gt; root.val: both p and q are on the right subtrees, which means that the lowest common ancestor is also on the right.</li>
 <li>(p.val &gt; root.val &amp; q.val &lt; root.val) or (p.val &lt; root.val &amp; q.val &gt; root.val): p and q are on the different side of the tree, which means that the lowest common ancestor is the root node.</li>
 </ol>
-<p><img src="/images/LeetCode%20235.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree/PNG%20image%2026.png" alt></p>
+<p><img src="/images/LeetCode%20235.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree/PNG%20image%2026.png" alt="img"></p>
 <p>Hence, we could find lowest common ancestor between p and q on root node, left and right subtrees by backtracking.</p>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Definition for a binary tree node.
