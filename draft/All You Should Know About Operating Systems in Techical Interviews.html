@@ -214,7 +214,38 @@
 <li><strong>Multilevel Queue</strong>: Processes are allocated in different queues in terms of their priority. Processes in lower level queues are allowed to execute until the processes in higher level queues are completed.</li>
 <li><strong>Multilevel Queue Feedback</strong>: This is the scheduling algorithm used in UNIX system, which allows processes moving between each level queue. The process will be moved to the lower level queue if it costs too much execution time.</li>
 </ol>
-<h2><span id="memory-management">Memory Management</span></h2><h2><span id="deadlocks">Deadlocks</span></h2><h2><span id="file-systems">File Systems</span></h2><h2><span id="reference">Reference</span></h2><ol>
+<h2><span id="memory-management">Memory Management</span></h2><h3><span id="how-does-memory-model-designed-in-operating-systems">How does memory model designed in operating systems?</span></h3><p>There are two types of memory in operating systems:</p>
+<ol>
+<li><strong>Primary memory (internal memory)</strong>: CPU registers, cache memory and main memory, which are directly accessible by the processor.</li>
+<li><strong>Secondary memory (external memory)</strong>:  different  types of disk (magnetic, optical), which are some storage devices that can accessed by the processor through I/O.</li>
+</ol>
+<p><img src="/images/All%20You%20Should%20Know%20About%20Operating%20Systems%20in%20Techical%20Interviews/Operating%20Systems%205-1603431301177.png" alt></p>
+<h3><span id="how-does-memory-management-work-in-operating-systems">How does memory management work in operating systems?</span></h3><p>The memory management of operating systems is responsible for allocating memory to processes, including converting logical addresses into physical addresses or swapping processes between internal and external memory.</p>
+<h3><span id="what-are-virtual-address-and-physical-address">What are virtual address and physical address?</span></h3><p>Take a common example, the pointer concept we see in some programming languages stores the virtual address of memory, which is decided by operating systems. The physical address is the address in physical memory, i.e., memory address registers.</p>
+<p>Modern processors use virtual addressing technique to translate a virtual address into a physical address via MMU (memory management unit). The process of virtual addressing is shown in the image below:</p>
+<p><img src="/images/All%20You%20Should%20Know%20About%20Operating%20Systems%20in%20Techical%20Interviews/Operating%20Systems%206.png" alt></p>
+<h3><span id="how-do-operating-systems-allocate-memory">How do operating systems allocate memory?</span></h3><p>There are four types of common memory allocation techniques:</p>
+<ol>
+<li><strong>Partitioned allocation</strong>: Divide memory by blocks and each of them contains one process. Space would be wasted if the process only needs a small memory to run. This is contiguous allocation as those blocks are consecutive in memory.</li>
+<li><strong>Paged memory management</strong>: Divide memory by page frames, which are units smaller than blocks. This increases the use of memory and reduces internal fragmentation. It is non-contiguous allocation as page frames are allowed to be separated. Paged tables are used to mapping virtual addresses to physical addresses.</li>
+<li><strong>Segmented memory management</strong>: Divide memory by segments, which are logical groups of the data or code. It is non-contiguous allocation as segments are allowed to be separated. Segment tables are used to mapping virtual addresses to physical addresses.</li>
+<li><strong>Segmentation with paging</strong>: Combines the advantages of paged and segmented memory management. It divides memory by several segments, then separates each segment into several page frames.</li>
+</ol>
+<h3><span id="what-is-tlb-translation-lookaside-buffer">What is TLB (Translation Lookaside Buffer)?</span></h3><p>In paged memory management, there are two issues need to be handled:</p>
+<ol>
+<li>The virtual-to-physical mapping should be fast.</li>
+<li>The page table will become large while the virtual address space is large.</li>
+</ol>
+<p>TLB could be applied to speed up the transition between virtual and physical memory. It could be regarded as a cache, which stores a part of data inside a page table. With this cache, we only need to access the main memory once instead of twice while executing I/O.</p>
+<p>The process of translating a virtual address into a physical address is:</p>
+<ol>
+<li>Search for the page number inside TLB.</li>
+<li>If the given page is found, read the corresponding physical address from TLB.</li>
+<li>If the given page cannot be found, read the corresponding physical address inside the page table and store it into TLB.</li>
+<li>Eliminate a page inside TLB by certain strategies while it is full.</li>
+</ol>
+<h3><span id="what-is-a-multilevel-page-table">What is a multilevel page table?</span></h3><p>Besides speeding up mapping, we can use a multilevel page table to handle the issue caused by the large virtual address space. It avoids always placing all the page tables in main memory, which could save up more space.</p>
+<h2><span id="deadlocks">Deadlocks</span></h2><h2><span id="file-systems">File Systems</span></h2><h2><span id="reference">Reference</span></h2><ol>
 <li><a href="https://www.geeksforgeeks.org/operating-system-introduction-operating-system-set-1/" target="_blank" rel="noopener">Introduction of Operating System</a></li>
 <li><a href="https://www.geeksforgeeks.org/operating-system-microkernel/" target="_blank" rel="noopener">Microkernel in Operating System</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)" target="_blank" rel="noopener">Kernel (operating system) - Wikipedia</a></li>
@@ -224,6 +255,8 @@
 <li><a href="https://www.geeksforgeeks.org/methods-in-interprocess-communication/" target="_blank" rel="noopener">Methods in Interprocess Communication - GeeksforGeeks</a></li>
 <li><a href="https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/" target="_blank" rel="noopener">CPU Scheduling in Operating Systems - GeeksforGeeks</a></li>
 <li><a href="https://www.tutorialspoint.com/operating_system/os_process_scheduling_algorithms.htm" target="_blank" rel="noopener">Operating System Scheduling algorithms - Tutorialspoint</a></li>
+<li><a href="https://www.geeksforgeeks.org/paging-in-operating-system/" target="_blank" rel="noopener">Paging in Operating System - GeeksforGeeks</a></li>
+<li></li>
 </ol>
 
             </div>
