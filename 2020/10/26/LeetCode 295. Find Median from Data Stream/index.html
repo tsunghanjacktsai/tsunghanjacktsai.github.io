@@ -172,10 +172,10 @@ findMedian() -&gt; 1.5
 addNum(3) 
 findMedian() -&gt; 2</code></pre><h2><span id="design">Design</span></h2><p>The brute-force way of solving this problem is to simply insert all given numbers into an ordered list like insertion sort, which costs $O(n)$ time. So we can return the median immediately. That doesn’t sound bad, right? But is there a way that we could improve it?</p>
 <p>The answer is yes.</p>
-<p>The two heap pattern introduced here is able to make some improvement. As the median is the middle value of a set of numbers, the main idea here is to separate the list into two halves, which a half is smaller than the median and the other half is larger. So we could save the smaller half into a minimum heap and the larger half into a maximum heap. If the number of elements is odd, the median will be the peak element of either maximum or minimum heap. Otherwise, it will be the average of peak elements in both heaps.</p>
-<p>The most essential thing here is that we need to balance both heap sizes. If the maximum heap become larger than the minimum heap size + 1, move the peak element of the maximum heap to the minimum heap. Otherwise, do it the same while the minimum heap size is larger than the maximum heap size.</p>
+<p>The <strong>two heap pattern</strong> introduced here is able to make some improvement. As the median is the middle value of a set of numbers, the main idea here is to separate the list into two halves, which a half is smaller than the median and the other half is larger. So we could save the smaller half into a minimum heap and the larger half into a maximum heap. If the number of elements is odd, the median will be the peak element of either maximum or minimum heap. Otherwise, it will be the average of peak elements in both heaps.</p>
+<p>The most essential thing here is that we need to balance the sizes of both heaps. If the maximum heap size becomes larger than the minimum heap size + 1, move the peak element of the maximum heap into the minimum heap. Otherwise, do it the same while the minimum heap size is larger than the maximum heap size.</p>
 <p>Have a look at the image below for the algorithm process:</p>
-<p><img src="/images/LeetCode%20295.%20Find%20Median%20from%20Data%20Stream/IMG_0144.jpg" alt></p>
+<p><img src="/images/LeetCode%20295.%20Find%20Median%20from%20Data%20Stream/IMG_0144.png" alt></p>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MedianFinder</span> <span class="token punctuation">{</span>
 
   PriorityQueue<span class="token operator">&lt;</span>Integer<span class="token operator">></span> maxHeap<span class="token punctuation">;</span>
