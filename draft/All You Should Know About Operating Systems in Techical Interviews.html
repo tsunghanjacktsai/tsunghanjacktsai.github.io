@@ -162,12 +162,12 @@
 <li>An operating system (OS) is a program managing hardware and software resources of the computer.</li>
 <li>An operating system is structured by a kernel and some other basic components. In general, the kernel is a bridge between applications and hardware. It is responsible for managing stuff like process, internal memory, file, and network, which has the direct access to hardware and maintains stability and performance of the system.</li>
 </ol>
-<img src="/images/Operating%20Systems%201.png" style="zoom:67%;">
+<img src="/images/All%20You%20Should%20Know%20About%20Operating%20Systems%20in%20Techical%20Interviews/Operating%20Systems%201.png" style="zoom:67%;">
 
 <h3><span id="how-do-users-access-computer-resources">How do users access computer resources?</span></h3><p>The computer operation can be divided into two modes:</p>
 <ol>
 <li><strong>User mode</strong>: The process under this level can only access the data that users provide.</li>
-<li><strong>Kernel mode</strong>: The process under this level has complete access to computer hardware and can execute some special operations of the machine (e.g. I/O).</li>
+<li><strong>Kernel mode</strong>: The process under this level has complete access to computer hardware and can execute some special operations of the machine (e.g., I/O).</li>
 </ol>
 <p>The typical applications often run under the user mode. When there is a demand for service under kernel mode, a system call should be issued. It is a request that asking kernel process to execute functions such as device management, file management, process management, and memory management.</p>
 <img src="/images/Operating%20Systems%202.png" style="zoom:67%;">
@@ -178,7 +178,7 @@
 <h3><span id="what-are-states-of-the-process">What are states of the process?</span></h3><p>There are 7 states of the process, which are:</p>
 <ol>
 <li><strong>New</strong>: The process is creating.</li>
-<li><strong>Ready</strong>: The process is ready to run, i.e. it is waiting the resources (e.g. time slices) from processor.</li>
+<li><strong>Ready</strong>: The process is ready to run, i.e., it is waiting the resources (e.g., time slices) from processor.</li>
 <li><strong>Run</strong>: The process is currently running in CPU. Only one process is allowed at a time.</li>
 <li><strong>Wait (or Block)</strong>: The process is paused and waiting for the required resources to be available.</li>
 <li><strong>Complete (or Terminated)</strong>: The process has finished executing. It might be interrupted by some reasons or normal exit. </li>
@@ -188,10 +188,10 @@
 <img src="/images/Operating%20Systems%204.png" style="zoom:67%;">
 
 <h3><span id="what-is-context-switching-when-will-it-happen">What is context switching? When will it happen?</span></h3><p>Context switching means saving the running process state and loading the state of another process. This usually happens while a higher-priority process comes into the ready state or an interrupt occurs.</p>
-<h3><span id="what-is-a-race-condition">What is a race condition?</span></h3><p>A race condition happens while more than one processes are sharing the same code or resources. In this case, an unexpected result might occur as each process could access the shared variables at any time.</p>
+<h3><span id="what-is-a-race-condition">What is a race condition?</span></h3><p>A race condition happens while more than one process are sharing the same code or resources. In this case, an unexpected result might occur as each process could access the shared variables at any time.</p>
 <h3><span id="how-do-processes-communicate-with-each-other">How do processes communicate with each other?</span></h3><p>There are six ways of inter-process communications (IPC):</p>
 <ol>
-<li><strong>Pipe</strong>: It enables the output of a process become the input of another process that has a <strong>common origin</strong>, i.e. the same process. The data flow by using pipe is one direction only (e.g. command “|” in Linux).</li>
+<li><strong>Pipe</strong>: It enables the output of a process become the input of another process that has a <strong>common origin</strong>, i.e., the same process. The data flow by using pipe is one direction only (e.g., command “|” in Linux).</li>
 <li><strong>Names pipe</strong>: This allows communication of processes from different origin. It follows first in first out (FIFO) rules.</li>
 <li><strong>Message queueing</strong>: Both types of pipes are inefficient as the process that sends data into the buffer needs to wait until another process retrieves it. Message queueing is able to solve this problem, which producers do not need to wait for consumers retrieving data.</li>
 <li>*<em>Shared memory: *</em> There is also a disadvantage of message queueing, which is time-consuming while the size of sending data is too large. Hence an idea of shared memory came up. It allows multiple processes access the same area of memory. This is the most efficient way as each process can see the update of data immediately.</li>
@@ -200,7 +200,7 @@
 </ol>
 <h3><span id="how-do-threads-synchronize-with-each-other">How do threads synchronize with each other?</span></h3><p>The purpose of thread synchronization is similar to inter-process communication, which avoid competing shared resources between concurrent threads. There are three common ways of thread synchronization:</p>
 <ol>
-<li><strong>Mutex</strong>: It is a mechanism of mutual exclusion. Mutex only allows one thread accesses the shared resources at a time (e.g. <code>synchronized</code> in Java).</li>
+<li><strong>Mutex</strong>: It is a mechanism of mutual exclusion. Mutex only allows one thread accesses the shared resources at a time (e.g., <code>synchronized</code> in Java).</li>
 <li><strong>Semaphore</strong>: It is quite similar to mutex, but its value could be larger than 1 and allows multiple threads enter shared resources at a time.</li>
 <li><strong>Event</strong>: It remains thread synchronization by notification (wait/notify).</li>
 </ol>
@@ -246,7 +246,23 @@
 </ol>
 <h3><span id="what-is-a-multilevel-page-table">What is a multilevel page table?</span></h3><p>Besides speeding up mapping, we can use a multilevel page table to handle the issue caused by the large virtual address space. It avoids always placing all the page tables in main memory, which could save up more space.</p>
 <h3><span id="what-is-virtual-memory">What is virtual memory?</span></h3><p>This is common while the memory cost by a software exceeds the memory of the computer itself. The reason why this can be implemented is because of the virtual memory. It divides a program into several pieces and allows them to be temporarily stored on the external memory (disk) before the program needs it. By doing this, the program will regard itself to own a piece of continuous space.</p>
-<h2><span id="deadlocks">Deadlocks</span></h2><h2><span id="file-systems">File Systems</span></h2><h2><span id="reference">Reference</span></h2><ol>
+<h3><span id="how-to-implement-virtual-memory">How to implement virtual memory?</span></h3><p>There are two common types of virtual memory implementation:</p>
+<ol>
+<li><strong>Demand paging</strong>: It is based on the paging technique and has the page replacement function. If we cannot find the  required page before a process starts, the operating system will search it in the secondary memory and swap the page found into the main memory depending on the given page replacement algorithm.</li>
+<li><strong>Demand segmentation</strong>: It is a technique similar to demand paging. The only difference between them is that demand segmentation swap segments instead of pages into the main memory depending on the given segment replacement algorithm.</li>
+</ol>
+<h3><span id="what-is-page-replacement-algorithm">What is page replacement algorithm?</span></h3><p>Page fault happens while a required page is not in the main memory. And we need page replacement algorithms to swap the page from the secondary memory into the main memory. Some common types of page replacement algorithms are listed below:</p>
+<ol>
+<li><strong>Optimal page replacement</strong>: Replace the page that is no longer used or will not be used for the longest time. This will ensure the lowest possibility of page fault. However, OPT replacement cannot be achieved so far as people cannot predict which page will not be used again in the future.</li>
+<li><strong>FIFO (First-In-First-Out) page replacement</strong>: Eliminate the page that stays in the main memory for the longest time.</li>
+<li><strong>LRU (Least Recently Used) page replacement</strong>: Eliminate the page with the longest elapsed time since it was last accessed.</li>
+<li><strong>LFU (Least Frequently Used) page replacement</strong>: Eliminate the least used page in a period of time.</li>
+</ol>
+<h3><span id="what-is-a-deadlock-in-operating-systems">What is a deadlock in operating systems?</span></h3><p>Deadlock is a situation when more than two processes are waiting for the resource holding by each other, but no one is going to terminate first.</p>
+<p><img src="/images/All%20You%20Should%20Know%20About%20Operating%20Systems%20in%20Techical%20Interviews/Operating%20systems%207.png" alt></p>
+<h2><span id="references">References</span></h2><ol>
+<li><a href="https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X" target="_blank" rel="noopener">Modern Operating Systems: Tanenbaum, Andrew, Bos, Herbert</a></li>
+<li><a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">Snailclimb/<em>JavaGuide</em> - GitHub</a></li>
 <li><a href="https://www.geeksforgeeks.org/operating-system-introduction-operating-system-set-1/" target="_blank" rel="noopener">Introduction of Operating System</a></li>
 <li><a href="https://www.geeksforgeeks.org/operating-system-microkernel/" target="_blank" rel="noopener">Microkernel in Operating System</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)" target="_blank" rel="noopener">Kernel (operating system) - Wikipedia</a></li>
@@ -257,7 +273,8 @@
 <li><a href="https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/" target="_blank" rel="noopener">CPU Scheduling in Operating Systems - GeeksforGeeks</a></li>
 <li><a href="https://www.tutorialspoint.com/operating_system/os_process_scheduling_algorithms.htm" target="_blank" rel="noopener">Operating System Scheduling algorithms - Tutorialspoint</a></li>
 <li><a href="https://www.geeksforgeeks.org/paging-in-operating-system/" target="_blank" rel="noopener">Paging in Operating System - GeeksforGeeks</a></li>
-<li></li>
+<li><a href="https://www.javatpoint.com/os-demand-paging" target="_blank" rel="noopener">OS Demand Paging - javatpoint</a></li>
+<li><a href="https://www.quora.com/What-is-demand-segmentation" target="_blank" rel="noopener">What is demand segmentation? - Quora</a></li>
 </ol>
 
             </div>
