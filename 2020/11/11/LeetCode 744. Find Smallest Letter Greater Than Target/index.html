@@ -155,69 +155,79 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="patterns-for-coding-interviews-modified-binary-search">Patterns for Coding Interviews - Modified Binary Search</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/Interviews.png" alt></p>
-<h2><span id="problem">Problem</span></h2><ol>
-<li><p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array" target="_blank" rel="noopener">Search in Rotated Sorted Array</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/search-a-2d-matrix" target="_blank" rel="noopener">Search a 2D Matrix</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii" target="_blank" rel="noopener">Search in Rotated Sorted Array II</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array" target="_blank" rel="noopener">Find Minimum in Rotated Sorted Array</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/find-peak-element" target="_blank" rel="noopener">Find Peak Element</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/count-of-range-sum" target="_blank" rel="noopener">Count of Range Sum</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/find-smallest-letter-greater-than-target" target="_blank" rel="noopener">Find Smallest Letter Greater Than Target</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/binary-search" target="_blank" rel="noopener">Binary Search</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/peak-index-in-a-mountain-array" target="_blank" rel="noopener">Peak Index in a Mountain Array</a></p>
-</li>
-</ol>
-<h2><span id="approach">Approach</span></h2><p>Being asked to search for elements within a given sorted list or array is very common in technical interviews. One of the best solutions to handle this problem is binary search pattern.</p>
-<p>You might think that binary search is so simple that you can even write it with your eyes closed. However, binary search approach could be varied in different kinds of problems. People would often fail on dealing with its edge cases or conditions.</p>
-<p>First, we look at an easy LeetCode problem <a href="https://leetcode.com/problems/binary-search" target="_blank" rel="noopener">Binary Search</a>, which requires us to find a target element in within a sorted integer array. Here are some examples:</p>
-<p><strong>Example:</strong></p>
-<pre><code>Input: nums = [-1,0,3,5,9,12], target = 9
-Output: 4
-Explanation: 9 exists in nums and its index is 4</code></pre><pre><code>Input: nums = [-1,0,3,5,9,12], target = 2
-Output: -1
-Explanation: 2 does not exist in nums so return -1</code></pre><p>This can be easily solved by the most basic form of binary search. The idea is as follows:</p>
-<ol>
-<li>Define a start pointer and an end pointer which pointing to the start and end element of the array respectively.</li>
-<li>Find out the middle point of these two pointers.</li>
-<li>If the middle element is equal to the target value, return its index. Otherwise, move the start or end pointer to narrow down the search scope.</li>
-<li>Repeat from the second step until we find the target or else return -1 as the result.</li>
-</ol>
-<p>The visual explanation and code implementation are shown below:</p>
-<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Modified%20Binary%20Search/PNG%20image.png" alt></p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums <span class="token operator">==</span> null <span class="token operator">||</span> nums<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+                <h1><span id="leetcode-744-find-smallest-letter-greater-than-target">LeetCode 744. Find Smallest Letter Greater Than Target</span></h1><p><img src="/images/LeetCode%20295.%20Find%20Median%20from%20Data%20Stream/LeetCode-1601463660180-1602417888796.png" alt></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/find-smallest-letter-greater-than-target" target="_blank" rel="noopener">Find Smallest Letter Greater Than Target</a></p>
+<p>Given a list of sorted characters <code>letters</code> containing only lowercase letters, and given a target letter <code>target</code>, find the smallest element in the list that is larger than the given target.</p>
+<p>Letters also wrap around. For example, if the target is <code>target = &#39;z&#39;</code> and <code>letters = [&#39;a&#39;, &#39;b&#39;]</code>, the answer is <code>&#39;a&#39;</code>.</p>
+<p><strong>Examples:</strong></p>
+<pre><code>Input:
+letters = [&quot;c&quot;, &quot;f&quot;, &quot;j&quot;]
+target = &quot;a&quot;
+Output: &quot;c&quot;
 
-    <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+Input:
+letters = [&quot;c&quot;, &quot;f&quot;, &quot;j&quot;]
+target = &quot;c&quot;
+Output: &quot;f&quot;
+
+Input:
+letters = [&quot;c&quot;, &quot;f&quot;, &quot;j&quot;]
+target = &quot;d&quot;
+Output: &quot;f&quot;
+
+Input:
+letters = [&quot;c&quot;, &quot;f&quot;, &quot;j&quot;]
+target = &quot;g&quot;
+Output: &quot;j&quot;
+
+Input:
+letters = [&quot;c&quot;, &quot;f&quot;, &quot;j&quot;]
+target = &quot;j&quot;
+Output: &quot;c&quot;
+
+Input:
+letters = [&quot;c&quot;, &quot;f&quot;, &quot;j&quot;]
+target = &quot;k&quot;
+Output: &quot;c&quot;</code></pre><p><strong>Note:</strong></p>
+<ol>
+<li><code>letters</code> has a length in range <code>[2, 10000]</code>.</li>
+<li><code>letters</code> consists of lowercase letters, and contains at least 2 unique letters.</li>
+<li><code>target</code> is a lowercase letter.</li>
+</ol>
+<h2><span id="design">Design</span></h2><p>The problem can be solved by the modified binary search pattern. By breaking down the statement, we could found 5 types of situations in this problem:</p>
+<ol>
+<li>The target letter is greater than the last element.</li>
+<li>The target letter is smaller than the first element.</li>
+<li>The target letter is equal to the middle element.</li>
+<li>The target letter is smaller than the middle element.</li>
+<li>The target letter is greater than the middle element.</li>
+</ol>
+<p>First two situations are easy to get the solution, as the problem stated, just simply return the first element of the array.</p>
+<p>For the last three situations, we can use binary search to get the required element. One thing to note here is when the target is equal to the middle element, we should eliminate the left part of the array and carry on searching as we aim to find the element right to the target. The process is shown below:</p>
+<p><img src="/images/LeetCode%20744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target/PNG%20image%2035.png" alt></p>
+<p>As shown in the figure, we return the element where the start pointer is. However, there’s an edge case should be handled. If the start pointer end up pointing to index<code>letters.length</code>, then we should return the first element. This can be done by index <code>start % letters.length</code>.</p>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">char</span> <span class="token function">nextGreatestLetter</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> letters<span class="token punctuation">,</span> <span class="token keyword">char</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">></span> letters<span class="token punctuation">[</span>letters<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">||</span> target <span class="token operator">&lt;</span> letters<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> letters<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> end <span class="token operator">=</span> letters<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token keyword">while</span> <span class="token punctuation">(</span>start <span class="token operator">&lt;=</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">int</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">==</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">></span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">>=</span> letters<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         start <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
         end <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 
-    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> letters<span class="token punctuation">[</span>start <span class="token operator">%</span> letters<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>A few things should be noticed here:</p>
-<ol>
-<li><h3><span id="example-2">Example 2</span></h3></li>
-</ol>
-<h2><span id="conclusion">Conclusion</span></h2>
+<h2><span id="complexity">Complexity</span></h2><p>Time: $O(logn)$</p>
+<p>Space: $O(1)$</p>
+
             </div>
         </div>
         <!-- Copyright 版权 start -->

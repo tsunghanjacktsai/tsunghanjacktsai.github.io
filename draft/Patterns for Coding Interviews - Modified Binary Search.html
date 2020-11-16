@@ -176,8 +176,20 @@
 <li><p><a href="https://leetcode.com/problems/peak-index-in-a-mountain-array" target="_blank" rel="noopener">Peak Index in a Mountain Array</a></p>
 </li>
 </ol>
-<h2><span id="approach">Approach</span></h2><p>Being asked to search for elements within a given sorted list or array is very common in technical interviews. One of the best solutions to handle this problem is binary search pattern.</p>
-<p>You might think that binary search is so simple that you can even write it with your eyes closed. However, binary search approach could be varied in different kinds of problems. People would often fail on dealing with its edge cases or conditions.</p>
+<h2><span id="approach">Approach</span></h2><p>Being asked to search for elements within a given sorted list or array is very common in technical interviews. One of the best solutions to handle this kind of problems is binary search pattern.</p>
+<p>You might think that binary search is so simple that you can even write it with your eyes closed. However, binary search approach could be varied in different kinds of situations. People would often fail on dealing with its edge cases or conditions.</p>
+<p>A few common mistakes should be careful here:</p>
+<ol>
+<li><p>The break condition of the search loop can be varied in different problems. But if you place <code>start &lt; end</code> as the condition, you will probably miss the target element while it is at the place where the left or right pointer is.</p>
+<blockquote>
+<p>We use <code>start &lt;= end</code> if we are returning the match from inside the loop. We use <code>start &lt; end</code> when we want to exit the loop first and then use the result of <code>lo</code> or <code>hi</code> to return the match.</p>
+</blockquote>
+</li>
+<li><p>Someone would get the middle point by <code>(start + end) / 2</code>. It is an intuitive way to write like this, however, you might get overflow error when the value <code>start</code>and <code>end</code> is big. A great way to deal with this is <code>start + (end - start)</code>, or even more efficient way<code>start + (end - start) &gt;&gt;&gt; 1</code>.</p>
+</li>
+<li><p>The update of left and right pointers can also be varied under different scenes. The easiest way to determine their movement is to see if the current middle element is still possible to become the result after an iteration.</p>
+</li>
+</ol>
 <p>First, we look at an easy LeetCode problem <a href="https://leetcode.com/problems/binary-search" target="_blank" rel="noopener">Binary Search</a>, which requires us to find a target element in within a sorted integer array. Here are some examples:</p>
 <p><strong>Example:</strong></p>
 <pre><code>Input: nums = [-1,0,3,5,9,12], target = 9
@@ -201,23 +213,60 @@ Explanation: 2 does not exist in nums so return -1</code></pre><p>This can be ea
     <span class="token keyword">while</span> <span class="token punctuation">(</span>start <span class="token operator">&lt;=</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">int</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
 
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">==</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">></span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">></span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         start <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         end <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 
     <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>A few things should be noticed here:</p>
+<p>The time complexity of basic binary search as above is $O(logn)$, and the space complexity is $O(1)$.</p>
+<p>After learning the basic binary search, we will then go on an advanced one. Let’s try a LeetCode Medium problem <a href="https://leetcode.com/problems/find-peak-element" target="_blank" rel="noopener">Find Peak Element</a>. The problem requires us to find the peak element of an array. Here comes a few examples:</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: nums = [1,2,3,1]
+Output: 2
+Explanation: 3 is a peak element and your function should return the index number 2.</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: nums = [1,2,1,3,5,6,4]
+Output: 1 or 5 
+Explanation: Your function can return either index number 1 where the peak element is 2, 
+             or index number 5 where the peak element is 6.</code></pre><p>This one is a bit different, which you are not asked to search for a given value.</p>
+<p>First, think about how to identify a peak element within a set of integers. By observing the examples above, we can easily find that the only difference between the peak element and others is that its value is greater than the next element. So the algorithm process will be like below:</p>
 <ol>
-<li><h3><span id="example-2">Example 2</span></h3></li>
+<li>Find out the middle element of the array.</li>
+<li>Compare the middle point with its next element.</li>
+<li>Check if the middle point is larger than its next element. If so, the peak element is on the left side of the array. Here we should be careful that the middle point is still possible to be the answer, so we only discard its right part, i.e. <code>end = mid</code>. Otherwise, search on the right side of the middle point.</li>
+<li>Go back to the second step.</li>
+<li>Since we are storing the peak element with the start pointer. We should end the loop when <code>start = end</code> and return the value of the start pointer.</li>
 </ol>
-<h2><span id="conclusion">Conclusion</span></h2>
+<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Modified%20Binary%20Search/PNG%20image%2037-1605162667078.png" alt></p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findPeakElement</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>start <span class="token operator">&lt;</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">int</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">></span> nums<span class="token punctuation">[</span>mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        end <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        start <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> start<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2><span id="conclusion">Conclusion</span></h2><p>In summary, we should always focus on these three things while solving binary search problems:</p>
+<ol>
+<li>How to get the middle point?</li>
+<li>How to move the left and right pointers?</li>
+<li>What is the break condition of the search loop?</li>
+</ol>
+
             </div>
         </div>
         <!-- Copyright 版权 start -->
