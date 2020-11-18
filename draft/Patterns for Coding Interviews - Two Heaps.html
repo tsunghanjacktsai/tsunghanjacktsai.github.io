@@ -155,69 +155,9 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="patterns-for-coding-interviews-modified-binary-search">Patterns for Coding Interviews - Modified Binary Search</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/Interviews.png" alt></p>
-<h2><span id="problem">Problem</span></h2><ol>
-<li><p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array" target="_blank" rel="noopener">Search in Rotated Sorted Array</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/search-a-2d-matrix" target="_blank" rel="noopener">Search a 2D Matrix</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii" target="_blank" rel="noopener">Search in Rotated Sorted Array II</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array" target="_blank" rel="noopener">Find Minimum in Rotated Sorted Array</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/find-peak-element" target="_blank" rel="noopener">Find Peak Element</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/count-of-range-sum" target="_blank" rel="noopener">Count of Range Sum</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/find-smallest-letter-greater-than-target" target="_blank" rel="noopener">Find Smallest Letter Greater Than Target</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/binary-search" target="_blank" rel="noopener">Binary Search</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/peak-index-in-a-mountain-array" target="_blank" rel="noopener">Peak Index in a Mountain Array</a></p>
-</li>
-</ol>
-<h2><span id="approach">Approach</span></h2><p>Being asked to search for elements within a given sorted list or array is very common in technical interviews. One of the best solutions to handle this problem is binary search pattern.</p>
-<p>You might think that binary search is so simple that you can even write it with your eyes closed. However, binary search approach could be varied in different kinds of problems. People would often fail on dealing with its edge cases or conditions.</p>
-<p>First, we look at an easy LeetCode problem <a href="https://leetcode.com/problems/binary-search" target="_blank" rel="noopener">Binary Search</a>, which requires us to find a target element in within a sorted integer array. Here are some examples:</p>
-<p><strong>Example:</strong></p>
-<pre><code>Input: nums = [-1,0,3,5,9,12], target = 9
-Output: 4
-Explanation: 9 exists in nums and its index is 4</code></pre><pre><code>Input: nums = [-1,0,3,5,9,12], target = 2
-Output: -1
-Explanation: 2 does not exist in nums so return -1</code></pre><p>This can be easily solved by the most basic form of binary search. The idea is as follows:</p>
-<ol>
-<li>Define a start pointer and an end pointer which pointing to the start and end element of the array respectively.</li>
-<li>Find out the middle point of these two pointers.</li>
-<li>If the middle element is equal to the target value, return its index. Otherwise, move the start or end pointer to narrow down the search scope.</li>
-<li>Repeat from the second step until we find the target or else return -1 as the result.</li>
-</ol>
-<p>The visual explanation and code implementation are shown below:</p>
-<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Modified%20Binary%20Search/PNG%20image.png" alt></p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums <span class="token operator">==</span> null <span class="token operator">||</span> nums<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+                <h1><span id="patterns-for-coding-interviews-two-heaps">Patterns for Coding Interviews - Two Heaps</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/Interviews.png" alt></p>
+<h2><span id="problem">Problem</span></h2><p>1.</p>
 
-    <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>start <span class="token operator">&lt;=</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">int</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">==</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">></span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        start <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        end <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>A few things should be noticed here:</p>
-<ol>
-<li><h3><span id="example-2">Example 2</span></h3></li>
-</ol>
-<h2><span id="conclusion">Conclusion</span></h2>
             </div>
         </div>
         <!-- Copyright 版权 start -->

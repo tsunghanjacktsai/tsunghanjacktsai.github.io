@@ -157,13 +157,15 @@
             <div class="typo">
                 <h1><span id="computer-network">Computer Network</span></h1><h2><span id="introduction">Introduction</span></h2><h2><span id="1-what-does-the-architecture-of-computer-network">1. What does the architecture of computer network?</span></h2><p>In general, computer network often be divided into 5 main layers. This is the combination of OSI (Open System Interconnection) model and TCP/IP model, which have 7 layers and 4 layers respectively.</p>
 <p><img src="/images/Computer%20Network/image-20201116152624596.png" alt="image-20201116152624596"></p>
-<h2><span id="2-what-are-the-functions-of-each-layer">2. What are the functions of each layer?</span></h2><p>The following introduction will be based on the 5-layer network model:</p>
+<h2><span id="2-what-are-the-functions-of-each-layer">2. What are the functions of each layer?</span></h2><p>The following introduction will be based on the OSI network model:</p>
 <ol>
-<li><strong>Application</strong>: </li>
-<li><strong>Transport</strong>:</li>
-<li><strong>Network</strong>:</li>
-<li><strong>Data link</strong>:</li>
-<li><strong>Physical</strong>:</li>
+<li><strong>Application</strong>: The task of application layer is to specify the communication protocols or interfaces between application processes run by host. There are some general protocols in application layer, e.g., HTTP (HyperText Transfer Protocol), DNS (Domain Name System), and SMTP.</li>
+<li><strong>Presentation</strong>: This layer is mainly responsible for translating data from application layer into the required format (e.g., ASCII). Some work such as data encryption/decryption and compression are also done here.</li>
+<li><strong>Session</strong>: This layer is responsible to establish and maintain connection or session between two processes. It also allows processes adding checkpoints for synchronization.</li>
+<li><strong>Transport</strong>: It provides the end-to-end data (segments) transfer service between applications over networks. The best-known protocols of transport layer are: TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).</li>
+<li><strong>Network</strong>: The main functions of network layer is packet (data chunks) routing. To be specific, network layer choose the suitable routes for transmission and sends and receives IP (Internet Protocol) packets from other networks.</li>
+<li><strong>Data link</strong>: This layer encapsulates IP packets from network layer into frames and send them over link nodes. Frame transmission depends on the MAC (Message Access Control) address. Receiver’s MAC address could be retrieved by sending ARP (Address Resolution Protocol) requests to see if any node has the required IP address.</li>
+<li><strong>Physical</strong>: It is responsible for bit transmission between nodes, which is the physical connection (over physical data link) and eliminates the difference between devices as much as possible.</li>
 </ol>
 <h2><span id="references">References</span></h2><ol>
 <li><a href="https://www.geeksforgeeks.org/layers-osi-model" target="_blank" rel="noopener">Layers of OSI Model</a></li>
