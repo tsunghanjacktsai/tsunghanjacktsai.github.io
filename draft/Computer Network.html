@@ -155,11 +155,11 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="computer-network">Computer Network</span></h1><h2><span id="introduction">Introduction</span></h2><h2><span id="1-what-does-the-architecture-of-computer-network">1. What does the architecture of computer network?</span></h2><p>In general, computer network often be divided into 5 main layers. This is the combination of OSI (Open System Interconnection) model and TCP/IP model, which have 7 layers and 4 layers respectively.</p>
+                <h1><span id="computer-network">Computer Network</span></h1><h2><span id="introduction">Introduction</span></h2><h2><span id="1-what-does-the-architecture-of-computer-network">1. What does the architecture of computer network?</span></h2><p>In general, computer network concepts often be divided into 5 main layers. This is the combination of OSI (Open System Interconnection) model and TCP/IP model, which have 7 layers and 4 layers respectively.</p>
 <p><img src="/images/Computer%20Network/image-20201116152624596.png" alt="image-20201116152624596"></p>
 <h2><span id="2-what-are-the-functions-of-each-layer">2. What are the functions of each layer?</span></h2><p>The following introduction will be based on the OSI network model:</p>
 <ol>
-<li><strong>Application</strong>: The task of application layer is to specify the communication protocols or interfaces between application processes run by host. There are some general protocols in application layer, e.g., HTTP (HyperText Transfer Protocol), DNS (Domain Name System), and SMTP.</li>
+<li><strong>Application</strong>: The task of application layer is to specify the communication protocols or interfaces between application processes run by host. There are some general protocols in application layer, e.g., HTTP (Hyper Text Transfer Protocol), DNS (Domain Name System), and SMTP.</li>
 <li><strong>Presentation</strong>: This layer is mainly responsible for translating data from application layer into the required format (e.g., ASCII). Some work such as data encryption/decryption and compression are also done here.</li>
 <li><strong>Session</strong>: This layer is responsible to establish and maintain connection or session between two processes. It also allows processes adding checkpoints for synchronization.</li>
 <li><strong>Transport</strong>: It provides the end-to-end data (segments) transfer service between applications over networks. The best-known protocols of transport layer are: TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).</li>
@@ -167,9 +167,29 @@
 <li><strong>Data link</strong>: This layer encapsulates IP packets from network layer into frames and send them over link nodes. Frame transmission depends on the MAC (Message Access Control) address. Receiver’s MAC address could be retrieved by sending ARP (Address Resolution Protocol) requests to see if any node has the required IP address.</li>
 <li><strong>Physical</strong>: It is responsible for bit transmission between nodes, which is the physical connection (over physical data link) and eliminates the difference between devices as much as possible.</li>
 </ol>
+<h2><span id="3-what-is-tcp-amp-udp-what-are-their-differences">3. What is TCP &amp; UDP? What are their differences?</span></h2><h2><span id="4-how-does-tcp-build-and-terminate-connection">4. How does TCP build and terminate connection?</span></h2><p>We’ll first look at how TCP build connection in Client/Server model, which is generally called a three-way handshake:</p>
+<ol>
+<li>Client: It sends a SYN segment, which requests the server to synchronize its sequence number with the client’s sequence number.</li>
+<li>Server: After receiving the packet from the client, the server will return SYN and ACK segments, which informs the client side that the packet had been received and asks it to provide expected sequence number for the acknowledgement.</li>
+<li>Client: It sends back a packet with an ACK segment, which informs the server that the returned packet had been correctly received.</li>
+</ol>
+<p><img src="/images/Computer%20Network/image-20201118141723333.png" alt="image-20201118141723333"></p>
+<p>The SYN segment confirms that the route from sender to receiver has no problem, but the route from receiver to sender should be confirmed by ACK segment.</p>
+<p>Next, we’re going to discuss how TCP terminates the connection in Client/Server model, which is a four-way handshake process:</p>
+<ol>
+<li>Client: After deciding to close the connection, the client will send a FIN segment to the server. Then the client will enter the FIN_WAIT_1 state waiting for the acknowledgment from the server.</li>
+<li>Server: It sends back an ACK segment once the FIN segment from the client is received.</li>
+<li>Client: It enters the FIN_WAIT_2 state after receiving the ACK segment from the server, which is waiting for a FIN segment sent from the other side.</li>
+<li>Server: It also closes the connection with the client and send a FIN segment after it sent the ACK segment.</li>
+<li>Client: Once the ACK segment from the server is received, the client sends back the final ACK segment for the acknowledgement. After, the client will enter the TIME_WAIT state, which the client formally closes after a while in case that the final ACK segment is not received by the other side.</li>
+</ol>
+<p><img src="/images/Computer%20Network/image-20201118144024765.png" alt="image-20201118144024765"></p>
 <h2><span id="references">References</span></h2><ol>
 <li><a href="https://www.geeksforgeeks.org/layers-osi-model" target="_blank" rel="noopener">Layers of OSI Model</a></li>
 <li><a href="https://www.geeksforgeeks.org/tcp-ip-model/?ref=lbp" target="_blank" rel="noopener">TCP/IP Model</a></li>
+<li><a href="https://www.geeksforgeeks.org/computer-network-tcp-connection-establishment/" target="_blank" rel="noopener">TCP Connection Establishment</a></li>
+<li><a href="https://www.geeksforgeeks.org/tcp-connection-termination/" target="_blank" rel="noopener">TCP Connection Termination</a></li>
+<li><a href="https://docs.oracle.com/cd/E19455-01/806-0916/6ja85398n/index.html" target="_blank" rel="noopener">How the TCP/IP Protocols Handle Data Communications</a></li>
 </ol>
 
             </div>
