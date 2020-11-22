@@ -160,14 +160,17 @@
 <h2><span id="2-what-are-the-functions-of-each-layer">2. What are the functions of each layer?</span></h2><p>The following introduction will be based on the OSI network model:</p>
 <ol>
 <li><strong>Application</strong>: The task of application layer is to specify the communication protocols or interfaces between application processes run by host. There are some general protocols in application layer, e.g., HTTP (Hyper Text Transfer Protocol), DNS (Domain Name System), and SMTP.</li>
-<li><strong>Presentation</strong>: This layer is mainly responsible for translating data from application layer into the required format (e.g., ASCII). Some work such as data encryption/decryption and compression are also done here.</li>
+<li><strong>Presentation</strong>: This layer is mainly responsible for translating data from application layer into the required format (e.g., ASCII). Some work such as data encryption/decryption and compression are done here.</li>
 <li><strong>Session</strong>: This layer is responsible to establish and maintain connection or session between two processes. It also allows processes adding checkpoints for synchronization.</li>
-<li><strong>Transport</strong>: It provides the end-to-end data (segments) transfer service between applications over networks. The best-known protocols of transport layer are: TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).</li>
+<li><strong>Transport</strong>: It provides the end-to-end data (segments) transfer service between applications over networks. The best-known protocols of transport layer are TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).</li>
 <li><strong>Network</strong>: The main functions of network layer is packet (data chunks) routing. To be specific, network layer choose the suitable routes for transmission and sends and receives IP (Internet Protocol) packets from other networks.</li>
 <li><strong>Data link</strong>: This layer encapsulates IP packets from network layer into frames and send them over link nodes. Frame transmission depends on the MAC (Message Access Control) address. Receiver’s MAC address could be retrieved by sending ARP (Address Resolution Protocol) requests to see if any node has the required IP address.</li>
 <li><strong>Physical</strong>: It is responsible for bit transmission between nodes, which is the physical connection (over physical data link) and eliminates the difference between devices as much as possible.</li>
 </ol>
-<h2><span id="3-what-is-tcp-amp-udp-what-are-their-differences">3. What is TCP &amp; UDP? What are their differences?</span></h2><h2><span id="4-how-does-tcp-build-and-terminate-connection">4. How does TCP build and terminate connection?</span></h2><p>We’ll first look at how TCP build connection in Client/Server model, which is generally called a three-way handshake:</p>
+<h2><span id="3-what-is-tcp-amp-udp-in-transport-layer-what-are-their-differences">3. What is TCP &amp; UDP in transport layer? What are their differences?</span></h2><p>TCP (Transmission Control Protocol) is a connection-oriented service, which means it builds connection before transferring data and closes connection after the transmission. The reliability of TCP reflects on establishing connection by three-way handshake, and some mechanisms like error detection, flow control, congestion control, and retransmission. Those features will cost a lot of overhead and occupy resources of processors. TCP is often used in the file transmission, sending and receiving of mail, and remote login.</p>
+<p>UDP (User Datagram Protocol) does not need to build connection before the data transmission, which means that the remote host is not required to acknowledge after receiving UDP segments. Although UDP cannot provide the reliable transmission, it is the most effective service under certain situations (instant messaging in general), e.g., real-time audio and video streaming.</p>
+<p><img src="/images/Computer%20Network/image-20201119210643622.png" alt="image-20201119210643622"></p>
+<h2><span id="4-how-does-tcp-build-and-terminate-connection">4. How does TCP build and terminate connection?</span></h2><p>We’ll first look at how TCP build connection in Client/Server model, which is generally called a three-way handshake:</p>
 <ol>
 <li>Client: It sends a SYN segment, which requests the server to synchronize its sequence number with the client’s sequence number.</li>
 <li>Server: After receiving the packet from the client, the server will return SYN and ACK segments, which informs the client side that the packet had been received and asks it to provide expected sequence number for the acknowledgement.</li>
@@ -184,12 +187,24 @@
 <li>Client: Once the ACK segment from the server is received, the client sends back the final ACK segment for the acknowledgement. After, the client will enter the TIME_WAIT state, which the client formally closes after a while in case that the final ACK segment is not received by the other side.</li>
 </ol>
 <p><img src="/images/Computer%20Network/image-20201118144024765.png" alt="image-20201118144024765"></p>
-<h2><span id="references">References</span></h2><ol>
+<h2><span id="5-what-is-arq-automatic-repeat-request">5. What is ARQ (Automatic Repeat Request)?</span></h2><p>ARQ is an error-control method for data transmission in transport layer and data link layer. Acknowledgments and timeouts are used to ensure reliable data transmission. If the receiver doesn’t get the acknowledgement within a given time, it will resend the packet until  the acknowledgement has been returned or exceeding the pre-defined times of retransmission.</p>
+<p>There are two types of ARQ, including:</p>
+<ul>
+<li><p><strong>Stop-and-wait ARQ</strong>: The basic idea of Stop-and-wait ARQ is the sender will stop data transmission after each time sending a packet. The transmission will be regarded as a failure if getting no acknowledgement from the receiver after a given time. This means the data should be retransmitted until receiving the acknowledgement. If the receiver receives a duplicated packet, it should abandon this packet and send back an acknowledgement at the same time.</p>
+</li>
+<li><p><strong>Go-Back-N ARQ</strong>: The sender maintains a sliding window, which packets within this window can be sent continuously and there is no need to wait for acknowledgements. The receiver generally receives only in-order packets and sends back cumulative ACK after the last packet arrived.</p>
+</li>
+</ul>
+<h2><span id="6-how-does-tcp-achieve-flow-control">6. How does TCP achieve flow control?</span></h2><h2><span id="7-how-does-tcp-achieve-congestion-control">7. How does TCP achieve congestion control?</span></h2><h2><span id="references">References</span></h2><ol>
 <li><a href="https://www.geeksforgeeks.org/layers-osi-model" target="_blank" rel="noopener">Layers of OSI Model</a></li>
 <li><a href="https://www.geeksforgeeks.org/tcp-ip-model/?ref=lbp" target="_blank" rel="noopener">TCP/IP Model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol" target="_blank" rel="noopener">Transmission Control Protocol - Wikipedia</a></li>
 <li><a href="https://www.geeksforgeeks.org/computer-network-tcp-connection-establishment/" target="_blank" rel="noopener">TCP Connection Establishment</a></li>
 <li><a href="https://www.geeksforgeeks.org/tcp-connection-termination/" target="_blank" rel="noopener">TCP Connection Termination</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stop-and-wait_ARQ" target="_blank" rel="noopener">Stop-and-wait ARQ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Go-Back-N_ARQ" target="_blank" rel="noopener">Go-Back-N ARQ</a></li>
 <li><a href="https://docs.oracle.com/cd/E19455-01/806-0916/6ja85398n/index.html" target="_blank" rel="noopener">How the TCP/IP Protocols Handle Data Communications</a></li>
+<li><a href="https://www.geeksforgeeks.org/difference-between-stop-and-wait-gobackn-and-selective-repeat/" target="_blank" rel="noopener">Difference between Stop and Wait, GoBackN and Selective Repeat</a></li>
 </ol>
 
             </div>
