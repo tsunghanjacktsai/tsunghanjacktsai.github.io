@@ -155,45 +155,26 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="patterns-for-coding-interviews-top-k-elements">Patterns for Coding Interviews - Top ‘K’ Elements</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/Interviews.png" alt></p>
-<h2><span id="problem">Problem</span></h2><ol>
-<li><p><a href="https://leetcode.com/problems/kth-largest-element-in-an-array" target="_blank" rel="noopener">Kth Largest Element in an Array</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst" target="_blank" rel="noopener">Kth Smallest Element in a BST</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/top-k-frequent-elements" target="_blank" rel="noopener">Top K Frequent Elements</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/sort-characters-by-frequency" target="_blank" rel="noopener">Sort Characters By Frequency</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/course-schedule-iii" target="_blank" rel="noopener">Course Schedule III</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/find-k-closest-elements" target="_blank" rel="noopener">Find K Closest Elements</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/reorganize-string" target="_blank" rel="noopener">Reorganize String</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/maximum-frequency-stack" target="_blank" rel="noopener">Maximum Frequency Stack</a></p>
-</li>
-<li><p><a href="https://leetcode.com/problems/k-closest-points-to-origin" target="_blank" rel="noopener">K Closest Points to Origin</a></p>
-</li>
-</ol>
-<h2><span id="approach">Approach</span></h2><p>The top K elements pattern is a technique aims to return a given number of the most frequent/largest/smallest elements in a given set.</p>
-<p>The key data structure of solving top K elements problems is Heap. As the feature of max heap and min heap, we can always get the largest and smallest elements efficiently, i.e., $O(logn)$.</p>
-<p>Let’s see some examples. We will first look at a LeetCode medium problem &mdash; <a href="https://leetcode.com/problems/kth-largest-element-in-an-array" target="_blank" rel="noopener">Kth Largest Element in an Array</a>. It requires us to find a given number of the largest element in a set of integers.</p>
+                <h1><span id="patterns-for-coding-interviews-top-k-elements">Patterns for Coding Interviews - Top ‘K’ Elements</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Top%20K%20Elements/Interviews.png" alt></p>
+<h2><span id="introduction">Introduction</span></h2><p>The top K elements pattern is a technique that aims to return a given number of the most frequent/largest/smallest elements in a given set.</p>
+<p>The key data structure of solving top K elements problems is a heap. As the feature of max heap and min heap, we can always get the largest and smallest elements efficiently, i.e., $O(logN)$.</p>
+<h2><span id="approach">Approach</span></h2><p>Let’s see some examples. We’ll first look at a LeetCode medium problem &mdash; <a href="https://leetcode.com/problems/kth-largest-element-in-an-array" target="_blank" rel="noopener">Kth Largest Element in an Array</a>. It requires us to find a given number of the largest element in a set of integers.</p>
 <p>Here are some examples:</p>
 <pre><code>Input: [3,2,1,5,6,4] and k = 2
 Output: 5</code></pre><pre><code>Input: [3,2,3,1,2,4,5,5,6] and k = 4
-Output: 4</code></pre><p>Without using heap, a brute-force solution is to simply sort the array and find out the element at the Kth place. However, this method will result in $O(nlogn)$ due to the sorting function of the algorithm.</p>
+Output: 4</code></pre><p>A brute-force solution is to simply sort the array and find out the element at the Kth place. However, this method will result in $O(NlogN)$ due to the sorting function of the algorithm.</p>
 <p>So can we improve the time complexity of this algorithm?</p>
-<p>Definitely. Instead of sorting the array, we can maintain a K size min heap, which enables storing and sorting the visited elements at the same time.</p>
-<p>After deciding the data structure, we can now enter the solving process. The idea of solving this problem by the top K elements pattern is to keep the size of our min heap.</p>
-<p>Since the root element will always be the smallest within a min heap, which means that if the size of a heap is larger than K, the root element should be discarded as it is the (K+1)th largest element so far.</p>
+<p>Definitely. Instead of sorting and searching separately, we can maintain a K size heap, which enables storing and sorting the visited elements at the same time.</p>
+<p>But what kind of heap should we use? Basically min heap and max heap can both achieve the correct solution. Here we’ll explain how we can solve this problem by a min heap.</p>
+<p>After deciding the data structure, we can now enter the main process. The idea of solving this problem by the top K elements pattern is to keep the given size of our min heap.</p>
+<p>Since the root element will always be the smallest within a min heap, if the size of a heap is larger than K, the root element should be discarded as it is the (K+1)th largest element so far.</p>
 <p>As a result, the algorithm process will be like:</p>
 <ol>
-<li>Traverse the array elements and put them into a K size min heap. If the size of the heap is larger than K, pop out the root element. Repeat this process until the end of the array.</li>
+<li>Traverse the array elements and put them into a K size min heap. If the heap size is larger than K, pop out the root element. Repeat this process until the end of the array.</li>
 <li>Return the root element of the min heap as it is the Kth largest element of the whole array.</li>
 </ol>
 <p>A visualization of the algorithm is provided below:</p>
-<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Top%20K%20Elements/image-20201125232813299.png" alt="image-20201125232813299"></p>
+<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Top%20K%20Elements/image-20201125232813299.png" alt></p>
 <p>Now we can easily write the code implementation:</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findKthLargest</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -212,12 +193,68 @@ Output: 4</code></pre><p>Without using heap, a brute-force solution is to simply
     <span class="token keyword">return</span> minHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>By applying the top K elements pattern, we can improve the time complexity of the solution to $O(NlogK)$, which the extraction of the root element of a min heap is $O(logK)$, and we need to traverse the whole array.</p>
-<p>Next, we’re gonna look at an advanced problem &mdash; <a href="https://leetcode.com/problems/top-k-frequent-elements" target="_blank" rel="noopener">Top K Frequent Elements</a>, which the solution will involve more processes. This problem requires us to return the K most frequent elements within a set of integers. Note that the time complexity of our solution cannot exceed $O(nlogn)$ and the result elements can be in any order.</p>
-<p>Here are a few examples:</p>
-<pre><code>Input: nums = [1,1,1,2,2,3], k = 2
-Output: [1,2]</code></pre><pre><code>Input: nums = [1], k = 1
-Output: [1]</code></pre><h2><span id="conclusion">Conclusion</span></h2>
+<p>By applying the top K elements pattern, we can improve the time complexity of the solution to $O(NlogK)$, in which the extraction of the root element is $O(logK)$, and we need to traverse the whole array.</p>
+<p>Next, we’re gonna look at another LeetCode medium problem &mdash; <a href="https://leetcode.com/problems/k-closest-points-to-origin" target="_blank" rel="noopener">K Closest Points to Origin</a>. This is a bit different from the above problem which required us to find the K largest elements, whereas this one is asking for the K smallest elements.</p>
+<p>Here are some examples:</p>
+<pre><code>Input: points = [[1,3],[-2,2]], K = 1
+Output: [[-2,2]]
+Explanation: 
+The distance between (1, 3) and the origin is sqrt(10).
+The distance between (-2, 2) and the origin is sqrt(8).
+Since sqrt(8) &lt; sqrt(10), (-2, 2) is closer to the origin.
+We only want the closest K = 1 points from the origin, so the answer is just [[-2,2]].</code></pre><pre><code>Input: points = [[3,3],[5,-1],[-2,4]], K = 2
+Output: [[3,3],[-2,4]]</code></pre><p>Like we did before, we all know that a K size heap is able to solve the problem, however, which kind of heap should we use? </p>
+<p>Again, for top k elements problems, we can always solve them by either max heap or min heap. There is just a bit different between how they handle a problem. For this one, we’ll use a max heap to show you how to deal with the K smallest problems.</p>
+<p>The way we define a max heap also needs to be careful. Instead of comparing each integer directly, this time we’re going to compare the distance to the origin between each point.</p>
+<p>So our max heap should be defined as:</p>
+<pre><code>PriorityQueue&lt;int[]&gt; maxHeap = new PriorityQueue&lt;&gt;((a, b) -&gt; (b[0] * b[0] + b[1] * b[1]) - (a[0] * a[0] + a[1] * a[1]))</code></pre><p><code>(b[0] * b[0] + b[1] * b[1]) - (a[0] * a[0] + a[1] * a[1])</code> means the comparison between the distance from b to the origin and the distance from a to the origin.</p>
+<p>The rest of the solution will be the same as the last problem, which we’ll maintain a K size max heap. Elements inside this heap will be the K closest points to the origin. So the process will be like:</p>
+<ol>
+<li>Traverse and insert those points into the max heap. If the max heap size exceeds K, pop out the root element as it is the (K+1)th closest points to the origin so far which we don’t need it.</li>
+<li>Return the final max heap as the result.</li>
+</ol>
+<p>The visualization is shown below:</p>
+<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Top%20K%20Elements/image-20201126132025912.png" alt></p>
+<p>Thus we can now implement the solution:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">kClosest</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> points<span class="token punctuation">,</span> <span class="token keyword">int</span> K<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Max heap (comparess distance)</span>
+    PriorityQueue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> maxHeap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">(</span>b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// Traverse and insert points to the max heap</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> point <span class="token operator">:</span> points<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      maxHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>point<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// Pop out the root element if the max heap size is larger than K</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> K<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        maxHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> maxHeap<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The time complexity of this algorithm is $O(NlogK)$, and the space complexity is $O(K)$.</p>
+<h2><span id="conclusion">Conclusion</span></h2><p>Ultimately, we have seen two kinds of top K elements problems solving by min heap and max heap, respectively. In summary, the top K elements pattern can be divided into two steps:</p>
+<ol>
+<li>Decide which kind of heap you’d like to use. Be careful of the heap initialization, especially the way to compare between elements.</li>
+<li>Maintain the heap size smaller than K. If it is larger than K, extract the root element. Repeat this process until the end.</li>
+</ol>
+<h2><span id="related-problems">Related Problems</span></h2><ol>
+<li><a href="https://leetcode.com/problems/kth-largest-element-in-an-array" target="_blank" rel="noopener">Kth Largest Element in an Array</a></li>
+<li><a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst" target="_blank" rel="noopener">Kth Smallest Element in a BST</a></li>
+<li><a href="https://leetcode.com/problems/top-k-frequent-elements" target="_blank" rel="noopener">Top K Frequent Elements</a></li>
+<li><a href="https://leetcode.com/problems/sort-characters-by-frequency" target="_blank" rel="noopener">Sort Characters By Frequency</a></li>
+<li><a href="https://leetcode.com/problems/course-schedule-iii" target="_blank" rel="noopener">Course Schedule III</a></li>
+<li><a href="https://leetcode.com/problems/find-k-closest-elements" target="_blank" rel="noopener">Find K Closest Elements</a></li>
+<li><a href="https://leetcode.com/problems/reorganize-string" target="_blank" rel="noopener">Reorganize String</a></li>
+<li><a href="https://leetcode.com/problems/maximum-frequency-stack" target="_blank" rel="noopener">Maximum Frequency Stack</a></li>
+<li><a href="https://leetcode.com/problems/k-closest-points-to-origin" target="_blank" rel="noopener">K Closest Points to Origin</a></li>
+</ol>
+<h2><span id="references">References</span></h2><ol>
+<li><a href="https://www.educative.io/courses/grokking-the-coding-interview" target="_blank" rel="noopener">Grokking the Coding Interview: Patterns for Coding Questions</a></li>
+<li><a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a></li>
+</ol>
+
             </div>
         </div>
         <!-- Copyright 版权 start -->
