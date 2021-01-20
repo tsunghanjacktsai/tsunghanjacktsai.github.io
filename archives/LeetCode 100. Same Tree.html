@@ -155,7 +155,61 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="resume">Resume</span></h1><p><img src="/images/index/Tsung-Han%20(Jack)%20Tsai_Resume.jpg" alt></p>
+                <h1><span id="leetcode-100-same-tree">LeetCode 100. Same Tree</span></h1><p><img src="/images/LeetCode%2098.%20Validate%20Binary%20Search%20Tree/LeetCode-1601463660180-1602417888796.png" alt></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/same-tree/" target="_blank" rel="noopener">Same Tree</a></p>
+<p>Given two binary trees, write a function to check if they are the same or not.</p>
+<p>Two binary trees are considered the same if they are structurally identical and the nodes have the same value.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input:     1         1
+          / \       / \
+         2   3     2   3
+
+        [1,2,3],   [1,2,3]
+
+Output: true</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input:     1         1
+          /           \
+         2             2
+
+        [1,2],     [1,null,2]
+
+Output: false</code></pre><p><strong>Example 3:</strong></p>
+<pre><code>Input:     1         1
+          / \       / \
+         2   1     1   2
+
+        [1,2,1],   [1,1,2]
+
+Output: false</code></pre><h2><span id="design">Design</span></h2><p>This is a simple tree problem that can be solved by tree depth-first search pattern. We can traverse both trees together and see if there is any difference. Be careful to consider the situation while null elements exist.</p>
+<p><img src="/images/LeetCode%20100.%20Same%20Tree/PNG%20image%2020.png" alt></p>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSameTree</span><span class="token punctuation">(</span>TreeNode p<span class="token punctuation">,</span> TreeNode q<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>p <span class="token operator">==</span> null <span class="token operator">&amp;&amp;</span> q <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>p <span class="token operator">==</span> null <span class="token operator">||</span> q <span class="token operator">==</span> null <span class="token operator">||</span> p<span class="token punctuation">.</span>val <span class="token operator">!=</span> q<span class="token punctuation">.</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">isSameTree</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>left<span class="token punctuation">,</span> q<span class="token punctuation">.</span>left<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isSameTree</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>right<span class="token punctuation">,</span> q<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$</p>
+<p>Space: $O(n)$</p>
 
             </div>
         </div>

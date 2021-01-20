@@ -155,7 +155,58 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="resume">Resume</span></h1><p><img src="/images/index/Tsung-Han%20(Jack)%20Tsai_Resume.jpg" alt></p>
+                <h1><span id="leetcode-328-odd-even-linked-list">LeetCode 328. Odd Even Linked List</span></h1><p><img src="/images/LeetCode%20206.%20Reverse%20Linked%20List/LeetCode.png" alt></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/odd-even-linked-list/" target="_blank" rel="noopener">Odd Even Linked List</a></p>
+<p>Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.</p>
+<p>You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
+Output: 1-&gt;3-&gt;5-&gt;2-&gt;4-&gt;NULL</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: 2-&gt;1-&gt;3-&gt;5-&gt;6-&gt;4-&gt;7-&gt;NULL
+Output: 2-&gt;3-&gt;6-&gt;7-&gt;1-&gt;5-&gt;4-&gt;NULL</code></pre><p><strong>Constraints:</strong></p>
+<ul>
+<li>The relative order inside both the even and odd groups should remain as it was in the input.</li>
+<li>The first node is considered odd, the second node even and so on …</li>
+<li>The length of the linked list is between <code>[0, 10^4]</code>.</li>
+</ul>
+<h2><span id="design">Design</span></h2><p>The solution of this problem is actually quite straightforward. We can separate the list into two sub-list, which one part contains nodes at odd positions and the other one contains nodes at even positions. The algorithm process is like:</p>
+<ol>
+<li>Given two pointers <code>odd</code> and <code>even</code> for nodes at odd and even positions respectively. Record the head of even nodes at the same time for the later connection.</li>
+<li>Start traversing through the list and separate the list into odd and even parts.</li>
+<li>Connect the tail of odd nodes to the saved head of even nodes.</li>
+</ol>
+<p>The image below has shown how the algorithm process will be looked like:</p>
+<p><img src="/images/LeetCode%20328.%20Odd%20Even%20Linked%20List/PNG%20image%2014-1600878074211.png" alt></p>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> ListNode <span class="token function">oddEvenList</span><span class="token punctuation">(</span>ListNode head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> null <span class="token operator">||</span> head<span class="token punctuation">.</span>next <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    ListNode odd <span class="token operator">=</span> head<span class="token punctuation">,</span> even <span class="token operator">=</span> head<span class="token punctuation">.</span>next<span class="token punctuation">,</span> evenHead <span class="token operator">=</span> even<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>even <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> even<span class="token punctuation">.</span>next <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      odd<span class="token punctuation">.</span>next <span class="token operator">=</span> odd<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+      even<span class="token punctuation">.</span>next <span class="token operator">=</span> even<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+      odd <span class="token operator">=</span> odd<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+      even <span class="token operator">=</span> even<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    odd<span class="token punctuation">.</span>next <span class="token operator">=</span> evenHead<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$</p>
+<p>Space: $O(1)$</p>
 
             </div>
         </div>

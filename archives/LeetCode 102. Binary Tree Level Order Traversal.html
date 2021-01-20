@@ -155,22 +155,10 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="patterns-for-coding-interviews-tree-breadth-first-search">Patterns for Coding Interviews - Tree Breadth First Search</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/Interviews.png" alt></p>
-<h2><span id="problem">Problem</span></h2><ol>
-<li><a href="https://leetcode.com/problems/binary-tree-level-order-traversal" target="_blank" rel="noopener">Binary Tree Level Order Traversal</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal" target="_blank" rel="noopener">Binary Tree Zigzag Level Order Traversal</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii" target="_blank" rel="noopener">Binary Tree Level Order Traversal II</a></li>
-<li><a href="https://leetcode.com/problems/minimum-depth-of-binary-tree" target="_blank" rel="noopener">Minimum Depth of Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node" target="_blank" rel="noopener">Populating Next Right Pointers in Each Node</a></li>
-<li><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii" target="_blank" rel="noopener">Populating Next Right Pointers in Each Node II</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-right-side-view" target="_blank" rel="noopener">Binary Tree Right Side View</a></li>
-<li><a href="https://leetcode.com/problems/number-of-islands" target="_blank" rel="noopener">Number of Islands</a></li>
-<li><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree" target="_blank" rel="noopener">Average of Levels in Binary Tree</a></li>
-<li><a href="https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree" target="_blank" rel="noopener">All Nodes Distance K in Binary Tree</a></li>
-</ol>
-<h2><span id="approach">Approach</span></h2><p>Tree BFS pattern could be applied to solve problems while searching within a tree is needed. Those problems often require us to traverse a tree in a level by level order. A key point here is that we should always pre-record nodes from the next level to return the required result later. Those pre-recorded nodes could be store within a queue as its first-in-first-out feature enables us to retrieve nodes in the correct order.</p>
-<p>Let’s see a LeetCode problem <a href="https://leetcode.com/problems/binary-tree-level-order-traversal" target="_blank" rel="noopener">Binary Tree Level Order Traversal</a> for a warm up. It requires us to print out nodes in each level of a tree. Here’s an example:</p>
-<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
+                <h1><span id="leetcode-102-binary-tree-level-order-traversal">LeetCode 102. Binary Tree Level Order Traversal</span></h1><p><img src="/images/LeetCode%20102.%20Binary%20Tree%20Level%20Order%20Traversal/LeetCode-1601463660180.png" alt></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="noopener">Binary Tree Level Order Traversal</a></p>
+<p>Given a binary tree, return the <em>level order</em> traversal of its nodes’ values. (ie, from left to right, level by level).</p>
+<p>For example:<br>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
 <pre><code>    3
    / \
   9  20
@@ -180,18 +168,17 @@
   [3],
   [9,20],
   [15,7]
-]</code></pre><p>It is a basic tree problem that can be directly solved by this pattern. As we mentioned before, we could initiate a queue to store pre-recorded nodes. The main process will be looked like:</p>
+]</code></pre><h2><span id="design">Design</span></h2><p>It is easy to observed that this is a simple tree breadth-first search problem, which requires us to return elements in each level respectively. Here is the detailed process:</p>
 <ol>
-<li>Given a queue for keeping track of nodes in the next level.</li>
-<li>Start by offering the root node into the queue and begin traversing.</li>
-<li>Polling out a pre-recorded node inside the queue and put it into a list for storing nodes in the current level.</li>
-<li>Start pre-recording nodes in the next level by offering left and right child of the current node if available. Get back to the 3rd step until nodes in the current level have all been met.</li>
-<li>Add those recorded nodes into the result list.</li>
+<li>Given a queue that is responsible for storing elements.</li>
+<li>Start BFS by reading tree’s root node into the queue.</li>
+<li>Get nodes in the current level from the queue.</li>
+<li>Store nodes in the next level into the queue if available.</li>
+<li>Record all nodes in the same level to the result list.</li>
 </ol>
-<p>See an image below for the algorithm visualization:</p>
-<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/PNG%20image%2015-1601471910068.png" alt></p>
-<p>So the code would be looked like:</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<p>Let’s see an image:</p>
+<p><img src="/images/LeetCode%20102.%20Binary%20Tree%20Level%20Order%20Traversal/PNG%20image%2015-1601471910068.png" alt></p>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -232,71 +219,8 @@
     <span class="token keyword">return</span> result<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>Now let’s try another advanced problem, which is <a href="https://leetcode.com/problems/binary-tree-right-side-view" target="_blank" rel="noopener">Binary Tree Right Side View</a>. It requires us to return a list containing  nodes from the most right side of the given tree. Here’s an example:</p>
-<pre><code>Input: [1,2,3,null,5,null,4]
-Output: [1, 3, 4]
-Explanation:
-
-   1            &lt;---
- /   \
-2     3         &lt;---
- \     \
-  5     4       &lt;---</code></pre><p>By observing the example, we can find that we simply just need to get the last node in each level. Therefore, we make some small changes to the algorithm in <a href="https://leetcode.com/problems/binary-tree-level-order-traversal" target="_blank" rel="noopener">Binary Tree Level Order Traversal</a>. The process will be like:</p>
-<ol>
-<li>Given a queue for keeping track of nodes in the next level.</li>
-<li>Start by offering the root node into the queue and begin traversing.</li>
-<li>Polling out a pre-recorded node inside the queue.</li>
-<li>If it is the last node of the current level, put it into the result list.</li>
-<li>Start pre-recording nodes in the next level by offering left and right child of the current node if available. Get back to the 3rd step until nodes in the current level have all been met.</li>
-</ol>
-<p>A visualization is provided below:</p>
-<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Tree%20Breadth%20First%20Search/PNG%20image%2017.png" alt></p>
-<p>So the code implementation will be:</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token function">rightSideView</span><span class="token punctuation">(</span>TreeNode root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    Queue<span class="token operator">&lt;</span>TreeNode<span class="token operator">></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">int</span> levelSize <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> levelSize<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        TreeNode node <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> levelSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          result<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>left <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>right <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>The time complexity of both problems are $O(n)$, which we need to traverse through every node within a tree. Besides, their space complexity is $O(n)$ as we need to create a queue for storing pre-recorded nodes.</p>
-<h2><span id="conclusion">Conclusion</span></h2><p>Isn’t it easy to solve tree BFS problem by this pattern? Keep in mind that it is essential to pre-record nodes from the next level with a queue. By practicing more similar problems, you might find that the implementations are not much different. Of course, you could also apply the recursive technique to do tree BFS. This is just another great method which is more suitable for someone who is unfamiliar with recursive thinking.</p>
+<h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$</p>
+<p>Space: $O(n)$ (queue size)</p>
 
             </div>
         </div>

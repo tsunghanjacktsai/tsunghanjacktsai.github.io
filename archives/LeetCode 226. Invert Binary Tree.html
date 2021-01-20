@@ -155,7 +155,58 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="resume">Resume</span></h1><p><img src="/images/index/Tsung-Han%20(Jack)%20Tsai_Resume.jpg" alt></p>
+                <h1><span id="leetcode-226-invert-binary-tree">LeetCode 226. Invert Binary Tree</span></h1><p><img src="/images/LeetCode%2098.%20Validate%20Binary%20Search%20Tree/LeetCode-1601463660180-1602417888796.png" alt></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/invert-binary-tree" target="_blank" rel="noopener">Invert Binary Tree</a></p>
+<p>Invert a binary tree.</p>
+<p><strong>Example:</strong></p>
+<p>Input:</p>
+<pre><code>     4
+   /   \
+  2     7
+ / \   / \
+1   3 6   9</code></pre><p>Output:</p>
+<pre><code>     4
+   /   \
+  7     2
+ / \   / \
+9   6 3   1</code></pre><h2><span id="design">Design</span></h2><p>By observing the example, we can find out that swapping each element from left and right subtrees can lead to an inverted binary tree. Hence the solution process will be like:</p>
+<ol>
+<li>Swap left and right child of the root node.</li>
+<li>Continue inverting left subtrees and right subtrees.</li>
+</ol>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> TreeNode <span class="token function">invertTree</span><span class="token punctuation">(</span>TreeNode root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    TreeNode tmp <span class="token operator">=</span> root<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+    root<span class="token punctuation">.</span>left <span class="token operator">=</span> root<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+    root<span class="token punctuation">.</span>right <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+
+    <span class="token function">invertTree</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">invertTree</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$</p>
+<p>Space: $O(n)$</p>
 
             </div>
         </div>

@@ -155,70 +155,23 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="patterns-for-coding-interviews-in-place-reversal-of-a-linked-list">Patterns for Coding Interviews - In-place Reversal of a Linked List</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Cyclic%20Sort/Interviews.png" alt></p>
-<h2><span id="problem">Problem</span></h2><ol>
-<li><a href="https://leetcode.com/problems/swap-nodes-in-pairs" target="_blank" rel="noopener">Swap Nodes in Pairs</a></li>
-<li><a href="https://leetcode.com/problems/reverse-nodes-in-k-group" target="_blank" rel="noopener">Reverse Nodes in k-Group</a></li>
-<li><a href="https://leetcode.com/problems/rotate-list" target="_blank" rel="noopener">Rotate List</a></li>
-<li><a href="https://leetcode.com/problems/reverse-linked-list" target="_blank" rel="noopener">Reverse Linked List</a></li>
-<li><a href="https://leetcode.com/problems/reverse-linked-list-ii" target="_blank" rel="noopener">Reverse Linked List II</a></li>
-<li><a href="https://leetcode.com/problems/odd-even-linked-list" target="_blank" rel="noopener">Odd Even Linked List</a></li>
-</ol>
-<h2><span id="approach">Approach</span></h2><p>Reversing a linked list is a typical problem that often be asked in coding interviews. It seems pretty simple, right? How about adding a constraint that requires us to implement it in-place and in $O(n)$ time? This means we cannot use an extra memory and should run the list in one-pass. Does it sound more difficult to you? Let’s see how to solve it with the in-place reversal of a linked list pattern.</p>
-<p>We gonna first look at the easy LeetCode problem <a href="https://leetcode.com/problems/reverse-linked-list" target="_blank" rel="noopener">Reverse Linked List</a> and solve it step by step, which enables you to learn the basic form of this pattern. Here is an example:</p>
-<pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
-Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</code></pre><p>By observing problem statement and examples, we can find that swapping the pointer direction between each two nodes could lead to a global reversal. This makes us break down the problem into small pieces.</p>
-<p>After defining sub-problems, the next thing we need to focus on is how to solve each of them, i.e. doing a reversal between two adjacent nodes. A good option is applying three pointers, which <code>prev</code> is the previous position of the current node <code>cur</code>, and <code>next</code> is responsible for storing the node that should be reversed next. The reverse process is described in the following:</p>
-<ol>
-<li>Storing the next node of <code>cur</code> by <code>next</code>.</li>
-<li><code>cur</code> change its pointer direction to the previous node <code>prev</code>, i.e. <code>cur.next = prev</code>.</li>
-<li>To go through the next iteration, move both <code>prev</code> and <code>cur</code> pointer forward, which <code>prev = cur</code> as well as <code>cur = next</code>.</li>
-</ol>
-<p>Let’s see an image for the whole process:</p>
-<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20In-place%20Reversal%20of%20a%20Linked%20List/PNG%20image%2011.png" alt></p>
-<p>So now we can have the implementation:</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> ListNode <span class="token function">reverseList</span><span class="token punctuation">(</span>ListNode head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> null <span class="token operator">||</span> head<span class="token punctuation">.</span>next <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> head<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    ListNode prev <span class="token operator">=</span> null<span class="token punctuation">,</span> cur <span class="token operator">=</span> head<span class="token punctuation">,</span> next <span class="token operator">=</span> null<span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
-      cur<span class="token punctuation">.</span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
-      prev <span class="token operator">=</span> cur<span class="token punctuation">;</span>
-      cur <span class="token operator">=</span> next<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">return</span> prev<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>Other than the method mentioned above, this problem can also be solved in a recursive way.  However, we only discuss the iterative solution in this article, which aims to make you feel comfortable with this pattern. You can find details with this link: <a href="https://jacktsaitech.com/2020/09/23/LeetCode%20206.%20Reverse%20Linked%20List/" target="_blank" rel="noopener">206. Reverse Linked List</a></p>
-<p>Now, let’s try an advanced one – <a href="https://leetcode.com/problems/reverse-linked-list-ii" target="_blank" rel="noopener">Reverse Linked List II</a>. The problem requires us to reverse nodes from m to n (1 &le; <em>m</em> &le; <em>n</em> &le; length of list), which an example are shown below:</p>
+                <h1><span id="leetcode-92-reverse-linked-list-ii">LeetCode 92. Reverse Linked List II</span></h1><p><img src="/images/LeetCode%20206.%20Reverse%20Linked%20List/LeetCode.png" alt></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/reverse-linked-list-ii/" target="_blank" rel="noopener">Reverse Linked List II</a></p>
+<p>Reverse a linked list from position <em>m</em> to <em>n</em>. Do it in one-pass.</p>
+<p><strong>Note:</strong> 1 &le; <em>m</em> &le;<em>n</em> &le; length of list.</p>
+<p><strong>Example:</strong></p>
 <pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
-Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><p>Different from the last, we cannot simply reverse the whole list by solving same sub-problems in each step. There are more different situations in this problem. As can be seen, we can only change a part of pointer directions. So the process will be:</p>
+Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><h2><span id="design">Design</span></h2><p>The problem is a variation of <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener">Reverse Linked List</a>, which asked us to reverse the linked list from the node m to n. However, even the statement seems not much difference, the implementation will require more effort. The algorithm process is described below:</p>
 <ol>
-<li>Skip nodes that cannot be reversed, i.e. ignore <code>m - 1</code> nodes from the beginning.</li>
-<li>Record the starting position of the reverse process and its previous node for reconnecting the reversed part with those remaining nodes.</li>
-<li>We can now start our reverse operations, which the method is the same as the last problem.</li>
-<li>Reconnect with remaining nodes and see if <code>head</code> reset is needed.</li>
+<li>Given two pointers <code>prev</code> and <code>cur</code> to traverse through the list and complete reverse operations.</li>
+<li>Skip <code>m - 1</code> nodes first as they do not need to be reversed.</li>
+<li>Mark the positions where <code>prev</code> and <code>cur</code> at right now for reconnecting the reversed part with remained nodes later.</li>
+<li>Start to reverse nodes from m to n. Be careful the actual number of nodes you need to reverse.</li>
+<li>Reconnect the reversed part with remained nodes.</li>
 </ol>
-<p>Let’s see an image for it:</p>
-<p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20In-place%20Reversal%20of%20a%20Linked%20List/PNG%20image%2013.png" alt></p>
-<p>Hence, we can get <code>1-&gt;4-&gt;3-&gt;2-&gt;5</code> for the answer eventually.</p>
-<p>Now, we can implement the solution:</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<p>Please see the image below for details:</p>
+<p><img src="/images/LeetCode%2092.%20Reverse%20Linked%20List%20II/PNG%20image%2013.png" alt></p>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
@@ -260,12 +213,8 @@ Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><p>Different from the las
     <span class="token keyword">return</span> head<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h2><span id="conclusion">Conclusion</span></h2><p>Did you get used to the pattern now? Actually, the most difficult part of this kind of problems is not the reverse operation. It is more complex while you try to deal with the reconnection. All in all, we can sum up this pattern into three main steps:</p>
-<ol>
-<li>See if we need to ignore or store some nodes or positions in the list.</li>
-<li>Reverse specified nodes by inverting their pointer directions.</li>
-<li>Determine whether reconnection between nodes or <code>head</code> reset are needed in each iteration.</li>
-</ol>
+<h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$</p>
+<p>Space: $O(1)$</p>
 
             </div>
         </div>
