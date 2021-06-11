@@ -1,0 +1,489 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+	<link rel="shortcut icon" href="/img/me.jpg">
+	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="java, computer science, programming">
+    <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
+    <meta data-react-helmet="true" property="og:type" content="website">
+    <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <!-- <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header> -->
+        <header id="post-header"></header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            	<a href="#s1">Category</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithms/">Algorithms</a></li><li><a class="category-link" href="/categories/Concurrency/">Concurrency</a></li><li><a class="category-link" href="/categories/IoTDB/">IoTDB</a></li><li><a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tag/" title="Tag">
+		                Tag
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="About">
+		                About
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+					<li class="translate-style">
+						<a id="translateButtonObject" href="javascript:translatePage();">繁&#8644;简</a>
+					</li>
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="linkedin" href="https://www.linkedin.com/in/tsung-han-jack-tsai-62696314b" target="_blank" rel="noopener">
+                            <i class="icon fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+			<script type="text/javascript" src="/js/tw_cn.js"></script>
+			<script type="text/javascript">
+				var defaultEncoding = 2; //網站編寫字體是否繁體，1-繁體，2-簡體
+				var translateDelay = 0; //延遲時間,若不在前, 要設定延遲翻譯時間, 如100表示100ms,默認為0
+				var cookieDomain = "https://jack870131.github.io/"; //Cookie地址, 一定要設定, 通常為你的網址
+				var translateButtonId = "translateLink"; //默認互換id
+				translateInitilization();
+			</script>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img"></div>
+            <!-- Post -->
+            <div class="typo">
+                <h1><span id="java內存模型">Java內存模型</span></h1><p>本篇博客主要是紀錄對&lt;&lt;Java并发编程的艺术&gt;&gt;的學習心得以及一些知識點的重新整理，因此文章中會有許多引用自該書的文字。同時也借鑑其他相關的技術博客，以完善整個知識框架。</p>
+<h2><span id="java內存模型的基礎">Java內存模型的基礎</span></h2><h3><span id="併發編程的兩個關鍵問題">併發編程的兩個關鍵問題</span></h3><p>在併發編程中，需要處理兩個關鍵問題:</p>
+<ol>
+<li>線程之間如何通信: 指線程之間以何種機制來交換信息。在命令式編程中，線程之間的通信機制有兩種: 共享內存和消息傳遞。在共享內存的模型裡，線程之間共享程序的公共狀態，通過讀寫內存中的公共狀態進行隱式通信。在消息傳遞的併發模型裡，線程之間沒有公共狀態，線程之間必須通過發送消息來顯示進行通信。</li>
+<li>線程之間如何同步: 指程序中用於控制不同線程間操作發生相對順序的機制。在共享內存併發模型裡，同步是顯示進行的。程序員必須顯示地指定某段代碼需要在線程之間互斥進行。在消息傳遞的併發模型裡，由於消息的發送必須在消息的接收之前，因此同步是隱式進行的。</li>
+</ol>
+<p>Java併發採用的是共享內存模型，Java線程之間的通信總是隱式進行，整個通信過程對程序員來說是透明的。</p>
+<h2><span id="java內存模型的抽象結構">Java內存模型的抽象結構</span></h2><p>在Java中，所有實例域、靜態域和數組元素都存儲在堆內存中，堆內存在線程之間共享(共享變量)。局部變量(Local Variables)，方法定義參數(Formal Method Parameters)和ˋ異常處理器參數(Exception Handler Parameters)不會在線程之間共享，因此不會有內存可見性問題，不受內存模型的影響。</p>
+<p>Java線程之間的通信由Java內存模型(JMM)控制，JMM決定一個線程對共享變量的寫入何時對另一個線程可見。JMM等於定義了線程和主內存之間的抽象關係: 線程之間的共享變量存儲在主內存(Main Memory)中，每個線程都有一個私有的本地內存(Local Memory)，本地內存中存儲了該線程以讀/寫共享變量的副本。本地內存是JMM的一個抽象概念，並不真實存在。它涵蓋了緩存、寫緩衝區、寄存器以及其他的硬件和編譯器優化。</p>
+<img src="https://i.imgur.com/GRxWTxK.jpg" alt="Java內存模型的抽象結構" style="zoom: 25%;">
+
+<p>根據上圖，如果線程A要和線程B通信的話，必須要經過以下2個步驟:</p>
+<ol>
+<li>線程A把本地內存A中更新過的共享變量刷新的主內存中。</li>
+<li>線程B到主內存中去讀取線程A之前已更新過的共享變量。</li>
+</ol>
+<img src="https://i.imgur.com/1Tn1Z9h.jpg" alt="線程間的通信" style="zoom:25%;">
+
+<h2><span id="重排序">重排序</span></h2><p>重排序是指編譯器和處理器為了優化程序性能而對指令序列進行重新排序的一種手段。</p>
+<h3><span id="數據依賴性">數據依賴性</span></h3><p>如果兩個操作訪問同一個變量，且這兩個操作中有一個為寫操作，此時這兩個操作之間就存在數據依賴性。數據依賴分為下列3種:</p>
+<table>
+<thead>
+<tr>
+<th align="center">名稱</th>
+<th align="center">代碼示例</th>
+<th align="center">說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">寫後讀</td>
+<td align="center">a = 1;<br>b = a;</td>
+<td align="center">寫一個變量之後，再讀這個位置</td>
+</tr>
+<tr>
+<td align="center">寫後寫</td>
+<td align="center">a = 1;<br>a = 2</td>
+<td align="center">寫一個變量之後，再寫這個變量</td>
+</tr>
+<tr>
+<td align="center">讀後寫</td>
+<td align="center">a = b;<br>b = 1;</td>
+<td align="center">讀一個變量之後，再寫這個變量</td>
+</tr>
+</tbody></table>
+<p>上面3種情況，只要重排序兩個操作的執行順序，程序的執行結果就會被改變。編譯器和處理器再重排序時，會遵守數據依賴性，編譯器和處理器不會改變存在數據依賴關係的兩個操作的執行順序。這裡僅針對單個處理器中執行的指令序列和丹個線程中執行的操作，不同處理器之間和不同線程之間的數據依賴性不被編譯器和處理器考慮。</p>
+<h3><span id="重排序對多線程的影響">重排序對多線程的影響</span></h3><p>下面代碼展示重排序是否會改變多線程程序的執行結果:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ReorderExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+        flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 3</span>
+            <span class="token keyword">int</span> i <span class="token operator">=</span> a <span class="token operator">*</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 4</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>flag變量是個標記 用來標示變量a是否已被寫入。這裡假設有兩個線程A和B，A首先執行writer()方法，隨後B線程接著執行reader()方法。線程B再執行操作4時，能否看到線程A在操作一對共享變量a的寫入呢?</p>
+<p>答案是: 不一定。</p>
+<p>由於操作1和操作2沒有數據依賴關係，編譯器和處理器可以對這兩個操作重排序; 同樣，操作3和操作4沒有數據依賴關係，編譯器和處理器也可以對這兩個操作重排序。讓我們先來看看，當操作1和操作2重排序時，可能會產生甚麼效果:</p>
+<img src="https://i.imgur.com/JwgOknA.jpg" alt="程序執行時序圖" style="zoom:25%;">
+
+<p>如上圖所示，操作1和操作2做了重排序。程序執行時，線程A首先寫標記變量flag，隨後線程B讀這個變量。由於條件判斷為真，線程B將讀取變量a。此時，變量a還沒有被線程A寫入，在這裡多線程程序的語義被重排序破壞了。</p>
+<p>接下來，當操作3和操作4重排序時會產生甚麼效果(也可以順便說明控制依賴性)。以下是程序執行的時序圖:</p>
+<img src="https://i.imgur.com/FU3zktN.jpg" alt="程序的執行時序圖" style="zoom:25%;">
+
+<p>在程序中，操作3和操作4存在控制依賴關係。當代碼中存在控制依賴性時，會影響指令序列執行的併行度。為此，編譯器和處理器會採用猜測(Speculation)執行來克服控制相關性對併行度的影響。已處理器的猜測執行為例，執行線程B的處理器可以提前讀去併計算a * a，然後把計算結果臨時保存到一個名為重排序緩衝(Reorder Buffer, ROB)的硬件緩存中。當操作3的條件判斷為真時，就把該計算結果寫入變量中。</p>
+<p>從上圖可知，猜測執行實質上對操作3和4做了重排序。重排序在這裡破壞了多線程程序的語義。</p>
+<p>在單線程程序中，對存在控制依賴的操作重排序，不會改變執行結果; 但在多線程程序中，對存在控制依賴的操作重排序，可能會改變程序的執行結果。</p>
+<h3><span id="happens-before">happens-before</span></h3><p>在JMM中，如果一個操作值型的結果需要對另一個操作可見，那麼這兩個操作之間必須要存在happens-before關係。這裡提到的兩個操作既可以是在一個線程之內，也可以是在不同線程之間。happens-before規則如下:</p>
+<ol>
+<li>程序順序規則: 一個線程中的每個操作，happens-before於該線程中的任意後續操作。</li>
+<li>監視器規則: 對一個鎖的解鎖，happens-before於隨後對這個鎖的加鎖。</li>
+<li>volatile變量規則: 對一個volatile域的寫，happens-before於任意後續對這個volatile域的讀。</li>
+<li>傳遞性: 如果A happens-before B，且B happens-before C，那麼A happens-before C。</li>
+</ol>
+<p>P.S. 兩個操作之間具有happens-before關係，並不意味著前一個操作必須要在後一個操作之前執行。happens-before僅僅要求前一個操作(執行的結果)對後一個操作可見，且前一個操作按順序排在第二個操作之前。</p>
+<h2><span id="volatile的內存語義">volatile的內存語義</span></h2><p>當聲明共享變量為volatile後，對這個變量的讀/寫將會很特別。下面將介紹volatile的內存語義及volatile內存語義的實現。</p>
+<h3><span id="volatile的特性">volatile的特性</span></h3><p>理解volatile特性的一個好方法是把對volatile變量的單個讀寫，看成是使用同一個鎖對這些單個讀/寫操作做了同步。示例代碼如下:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileFeaturesExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">volatile</span> <span class="token keyword">long</span> v1 <span class="token operator">=</span> 0L<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//使用volatile聲明64位的long型變量</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        v1 <span class="token operator">-</span> l<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 單個volatile變量的寫</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getAndIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        v1<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 複合(多個)volatile變量的讀/寫</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> v1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 單個volatile變量的讀</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>假設有多個線程分別調用上面程序的3個方法，這個程序在語義上和下面程序等價。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileFeaturesExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">long</span> v1 <span class="token operator">=</span> 0L<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 64位的long型普通變量</span>
+    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        v1 <span class="token operator">=</span> l<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 對單個的普通變量的寫用同一個鎖同步</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getAndIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 普通方法調用</span>
+        <span class="token keyword">long</span> temp <span class="token operator">=</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 調用已同步的讀方法</span>
+        temp <span class="token operator">+=</span> 1L<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 普通寫操作 </span>
+        <span class="token function">set</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 調用已同步的寫方法</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> synchroniszed <span class="token keyword">long</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 對單個普通變量的讀用同一個鎖同步</span>
+        <span class="token keyword">return</span> v1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>如上所示，一個volatile變量的單個讀/寫操作，與一個普通變量的讀/寫操作都是使用同一個鎖來同步，它們之間的執行效果相同。</p>
+<p>鎖的happens-before規則保證釋放鎖和獲取鎖的兩個線程之間的內存可見性，意味著對一個volatile變量的讀，總是能看到(任意線程)對這個volatile變量最後的寫入。</p>
+<p>鎖的語義決定了臨界區代碼的執行具有原子性。只要是volatile變量，對該變量的讀寫就具有原子性。如果是多個volatile操作或類似於volatile++這種複合操作，這些操作整體上不具有原子性。</p>
+<p>簡而言之，volatile變量自身具有下列特性:</p>
+<ol>
+<li>可見性: 對一個volatile變量的讀，總是能看到(任意線程)對這個volatile變量最後的寫入。</li>
+<li>原子性: 對任意單個volatile變量的讀寫具有原子性，但類似於volatile++這種複合操作不具有原子性。</li>
+</ol>
+<h3><span id="volatile寫讀建立的happens-before關係">volatile寫/讀建立的happens-before關係</span></h3><p>上面講的是volatile變量自身的特性，接下來說說volatile對線程的內存可見性的影響。</p>
+<p>從內存語義的角度來說，volatile的寫/讀與鎖的釋放/獲取有相同的內存效果: volatile寫和鎖的釋放有相同的內存語義; volatile的讀與鎖的獲取有相同語義。以下為示例代碼:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">volatile</span> <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+        flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 3</span>
+            <span class="token keyword">int</span> i <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 4</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>假設線程A執行writer()方法之後，線程B執行reader()方法。根據happens-before規則，這個過程建立的happens-before關係可以分為3類:</p>
+<ol>
+<li>根據程序次序規則，1 happens-before 2; 3 happens-before 4。</li>
+<li>根據volatile規則，2 happens-before 3。</li>
+<li>根據happens-before的傳遞性規則，1 happens-before 4。</li>
+</ol>
+<p>上述的happens-before關係如下圖所示:</p>
+<img src="https://i.imgur.com/Gird3A1.jpg" alt="happens-before關係" style="zoom:25%;">
+
+<p>上圖中，每一個箭頭連接的兩個節點，代表了一個happens-before關係。黑色箭頭表示程序順序規則; 橙色箭頭表示volatile規則; 藍色箭頭表示組合這些規則後提供的happens-before保證。</p>
+<p>這裡A線程寫一個volatile變量後，B線程讀同一個volatile變量。A線程在寫volatile變量之前所有可見的共享變量，在B線程讀同一個volatile變量後，將立即變得對B線程可見。</p>
+<h3><span id="volatile寫讀的內存語義">volatile寫/讀的內存語義</span></h3><p>volatile寫的內存語義如下:</p>
+<p>當寫一個volatile變量時，JMM會把該線程對應的本地內存中的共享變量值刷新到主內存。</p>
+<p>以上面的示例代碼VolatileExample為例，假設線程A首先值型writer()方法，隨後線程B執行reader()方法，初始時兩個線程的本地內存中的flag和a都是初始狀態。以下是線程A執行volatile寫後，共享變量的狀態示意圖:</p>
+<img src="https://i.imgur.com/SNy3gGa.jpg" alt="共享變量的狀態示意圖" style="zoom:25%;">
+
+<p>線程A在寫flag變量後，本地內存A中被線程A更新過的兩個共享變量的值被刷新到主內存中。此時，本地內存A和主內存中的共享變量值是一致的。</p>
+<p>volatile讀的內存語義如下:</p>
+<p>當讀一個volatile變量時，JMM會把線程對應的本地內存置為無效。線程接下來將從主內存中讀取共享變量。</p>
+<p>如下圖所示，在讀flag變量後，本地內存B包含的值已經被置為無效。此時，線程B必須從主內存中讀取共享變量。線程B的讀取操作將導致本地內存B與主內存中的共享變量值變成一致。</p>
+<p>如果我們把volatile寫和讀兩個步驟合起來看，在讀線程B讀一個volatile變量後，寫線程A在寫這個volatile變量之前所有可見的共享變量的值都將立即變得對線程B可見。</p>
+<p>總結一下:</p>
+<ul>
+<li>線程A寫一個volatile變量，實質上是線程A向接下來將要讀這個volatile變量的某個線程發出了(其對共享變量所做修改)消息。</li>
+<li>線程B讀一個volatile變量，實質上是線程B接收了之前某個線程發出的(在寫這個volatile變量之前對共享變量所做修改的)消息。</li>
+<li>線程A寫一個volatile變量，隨後線程B讀這個volatile變量，這個過程實質上是線程A通過主內存向線程B發送消息。</li>
+</ul>
+<h3><span id="jsr-133為甚麼要增強volatile的內存語義">JSR-133為甚麼要增強volatile的內存語義</span></h3><p>在JSR-133之前的舊Java內存模型中，雖然不允許volatile變量之間重排序，但舊的Java內存模型允許volatile變量與普通變量重排序。在舊的內存模型中，VolatileExmaple示例程序可能被重排序成下列時序來執行，如下圖所示:</p>
+<img src="https://i.imgur.com/PSVMrCG.jpg" alt="線程執行時序圖" style="zoom:25%;">
+
+<p>在舊的內存模型中，當1和2之間沒有數據依賴關係時，1和2之間就可能被重排序(3和4類似)。其結果就是: 讀麲成B執行4時，不一定能看到寫線程A在執行1時對共享變量的修改。</p>
+<p>因此，在舊的內存模型中，volatile的寫/讀沒有鎖的釋放/獲取的內存語義。為了提供一種比鎖更輕量級的線程通信機制，決定增強volatile的內存語義: 嚴格限制編譯器和處理器對volatile變量與普通變量的重排序，確保volatile的寫/讀和鎖的釋放/獲取具有相同的內存語義。從編譯器重排序規則和處理器的內存屏障插入策略來看，只要volatile變量與普通變量之間的重排序可能會破壞volatile的內存語義，這種重排序就會被編譯器重排序規則和處理器內存屏障插入策略禁止。</p>
+<p>由於volatile僅僅保證對單個volatile變量的讀/寫具有原子性，而鎖的互斥執行特性可以確保對整個臨界區代碼的執行具有原子性。因此在功能上，鎖比volatile更強大; 在可伸縮性和執行性能上，volatile更具優勢。</p>
+<h2><span id="鎖的內存語義">鎖的內存語義</span></h2><p>鎖除了為人所知的可以讓臨界區互斥執行的功能以外，還有一項常常被忽視的部分: 鎖的內存語義。</p>
+<h3><span id="鎖的釋放獲取建立的happens-before關係">鎖的釋放/獲取建立的happens-before關係</span></h3><p>鎖事Java併發編程中最重要的同步機制。鎖除了讓臨界區互斥執行外，還可以讓釋放鎖的線程向獲取同一個鎖的線程發送消息。以下是鎖的釋放/獲取的代碼:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MonitorExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 1</span>
+        a<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+    <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 3</span>
+    <span class="token keyword">public</span> synschronized <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 4</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 5</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 6</span>
+<span class="token punctuation">}</span></code></pre>
+<p>假設線程A執行writer()方法，隨後線程B執行reader()方法。根據happens-before規則，這個過程包含的happens-before關係可以分為三類:</p>
+<ol>
+<li>根據程序次序規則，1 happens-before 2, 2 happens-before 3; 4 happens-before 5, 5 happens-before 6。</li>
+<li>根據監視器規則，3 happens-before 4。</li>
+<li>根據happens-before的傳遞性，2 happens-before 6。</li>
+</ol>
+<h3><span id="鎖的釋放和獲取的內存語義">鎖的釋放和獲取的內存語義</span></h3><p>當線程釋放鎖時，JMM會把該線程對應的本地內存中的共享變量刷新到主內存中。以上面的MonitorExample為例，A線程釋放鎖後，共享數據的狀態示意圖如下圖所示:</p>
+<img src="https://i.imgur.com/kEIzh4B.jpg" alt="共享數據的狀態示意圖" style="zoom:25%;">
+
+<p>對比鎖釋放/獲取的內存語義與volatile寫/讀的內存語義可以看出: 鎖釋放與volatile寫有相同的內存語義;鎖獲取與volatile讀有相同的內存語義。以下做個總結:</p>
+<ol>
+<li>線程A釋放一個鎖，實質上是線程A向接下來將要獲取這個鎖的某個線程發出了(線程A對共享變量所做修改的)消息。</li>
+<li>線程B獲取一個鎖，實質上是線程B接收了之前某個線程發出的(在釋放這個鎖之前對共享變量所做修改的)消息。</li>
+<li>線程A釋放鎖，隨後線程B獲取這個鎖，這個過程實質上是線程A通過主內存向線程B發送消息。</li>
+</ol>
+<h3><span id="鎖內存語義的實現">鎖內存語義的實現</span></h3><p>以下代碼為ReentrantLock的源碼:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ReentrantLockExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    ReentrantLock lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        lock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 獲取鎖</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            a<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            lock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 釋放鎖</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        lock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 獲取鎖</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> i <span class="token operator">=</span> a<span class="token punctuation">;</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            lock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 釋放鎖</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>在ReentrantLock中，調用lock()方法獲取鎖;調用unlock()方法釋放鎖。</p>
+<p>ReentrantLock的實現依賴於Java同步器框架AbstractQueuedSynchronizer(AQS)。AQS使用一個整型的volatile變量(命名為state)來維護同步狀態，這個volatile變量是ReentrantLock內存語義實現的關鍵。以下是ReentrantLock的類圖:</p>
+<img src="https://i.imgur.com/mv6YaG2.jpg" alt="ReentrantLock類圖" style="zoom:25%;">
+
+<p>ReentrantLock分為公平鎖和非公平鎖，我們首先分析公平鎖。使用公平鎖時，加鎖方法lock()調用軌跡如下:</p>
+<ol>
+<li>ReentrantLock:lock()</li>
+<li>FairSync:lock()</li>
+<li>AbstractQueuedSynchronizer:acuire(int arg)</li>
+<li>ReentrantLock:tryAcquire(int acquires)</li>
+</ol>
+<p>在第4步開始加鎖，下面是該方法的源代碼:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token keyword">int</span> acquires<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> Thread current <span class="token operator">=</span> Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 獲取鎖的開始，首先讀volatile變量state</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isFirst</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+           <span class="token function">compareAndSetState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> acquires<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">setExclusiveOwnerThread</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>current <span class="token operator">==</span> <span class="token function">getExclusiveOwnerThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> nextc <span class="token operator">=</span> c <span class="token operator">+</span> acquires<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nextc <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Maximum lock count exceeded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setState</span><span class="token punctuation">(</span>nextc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>從上面代碼可以看出，加鎖方法首先讀volatile變量state。在使用公平鎖時，解鎖方法unlock()調用軌跡如下:</p>
+<ol>
+<li>ReentrantLock:unlock();</li>
+<li>AbstractQueuedSynchronizer:release(int arg);</li>
+<li>Sunc:tryRelease(int releases)</li>
+</ol>
+<p>在第3步真正開始釋放鎖，下面是該方法的源代碼:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">tryRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> releases<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> releases<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token function">getExclusiveOwnerThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalMonitorStateException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> free <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        free <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token function">setExclusiveOwnerThread</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">setState</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 釋放鎖的最後，寫volatile變量state</span>
+    <span class="token keyword">return</span> free<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>公平鎖在釋放鎖的最後寫volatile變量state，在獲取鎖時首先讀這個volatile變量。根據volatile的happens-before規則，釋放鎖的線程在寫volatile變量之前可見的共享變量，在獲取鎖的線程讀取同一個volatile變量後將立即變得對獲取鎖的線程可見。</p>
+<p>接下來分析非公平鎖的內存語義實現。非公平鎖的釋放和公平鎖完全一樣，鎖以這裡緊緊分析非公平鎖的讀取。使用非公平鎖時，加鎖方法lock()的調用軌跡如下:</p>
+<ol>
+<li>ReentrantLock:lock()</li>
+<li>NonfairSync:lock()</li>
+<li>AbstractQueuedSynchronizer:compareAndSetState(int expect, int update)</li>
+</ol>
+<p>在地3步真正開始加鎖，以下是該方法的源碼:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">compareAndState</span><span class="token punctuation">(</span><span class="token keyword">int</span> expect<span class="token punctuation">,</span> <span class="token keyword">int</span> update<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> unsafe<span class="token punctuation">.</span><span class="token function">compareAndSwapInt</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> stateOffset<span class="token punctuation">,</span> expect<span class="token punctuation">,</span> update<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>該方法以原子操作的方式更新state變量，本文把Java的compareAndSet()方法調用簡稱為CAS。JDK文檔對該方法的說明如下: 如果當前狀態值等於預期值，則以原子方式將同步狀態設置為給定的更新值。此操作具有volatile讀和寫的內存語義。</p>
+<p>對公平鎖和非公平鎖的內存語義做個總結:</p>
+<ul>
+<li>公平鎖和非公平鎖釋放時，最後都要寫一個volatile變量state。</li>
+<li>公平鎖獲取時，首先會去讀volatile變量。</li>
+<li>非公平鎖獲取時，首先會用CAS更新volatile變量，這個操作同時具有volatile讀和volatile寫的內存語義。</li>
+</ul>
+<p>從本文對ReentrantLock的分析噁以看出，鎖的釋放/獲取的內存語義的實現至少有下面兩種方式:</p>
+<ol>
+<li>利用volatile變量的寫/讀所具有的內存語義。</li>
+<li>利用CAS所附帶的volatile讀和volatile寫的內存語義。</li>
+</ol>
+<h3><span id="concurrent包的實現">concurrent包的實現</span></h3><p>由於Java的CAS同時具有volatile讀和寫的內存語義，因此Java線程之間的通信現在有下面4種方式:</p>
+<ol>
+<li>A線程寫volatile變量，隨後B線程讀這個volatile變量。</li>
+<li>A線程寫volatile變量，隨後B線程用CAS更新這個volatile變量。</li>
+<li>A線程用CAS更新一個volatile變量，隨後B線程用CAS更新這個volatile變量。</li>
+<li>A線程用CAS更新一個volatile變量，隨後B線程讀這個volatile變量。</li>
+</ol>
+<p>Java的CAS會用現代處理器上提供的高校機器級別的原子指令，這些原子指令以原子方式對內存執行讀-改-寫操作，這是再多處理器中實現同步的關鍵。同時，volatile變量的讀/寫和CAS可以實現線程之間的通信。把這些特性整合在一起，就形成了整個concurrent包得以實現的基石。如果我們仔細分析concurrent包的源碼，會發現一個通用畫的實現模式:</p>
+<ol>
+<li>聲明共享變量為volatile。</li>
+<li>使用CAS的原子條件更新來實現線程之間的同步。</li>
+<li>同時，配合以volatile的讀/寫和CAS所具有的volatile讀/寫的內存語義來實現線程之間的通信</li>
+</ol>
+<p>AQS，非阻塞數據結構和原子變量類(java.util.concurrent.atomic包中的類)，這些concurrent包中的基礎類都是使用這種模式來實現的，而concurrent包中的高層類又是依賴於這些基礎類來實現的。從整題來看，concurrent包的實現示意圖如下所示:</p>
+<img src="https://i.imgur.com/uPzeOfv.jpg" alt="concurrent包的實現意圖" style="zoom:25%;">
+
+<h2><span id="java內存模型綜述">Java內存模型綜述</span></h2><p>接下來對Java內存模型的相關知識做一個總結。</p>
+<h3><span id="處理器的內存模型">處理器的內存模型</span></h3><p>順序一致性內存模型是一個理論參考模型，JMM和處理器內存模型在設計時通常會以順序一致性內存模型為參照。在設計時，JMM和處理器內存模型會對順序一致性模型做一些放鬆，因為如果完勸按照順序一致性模型來實現處理器和JMM，那麼很多的處理器和編譯器優化都要被禁止，這對執行性能將會有很大的影響。</p>
+<p>由於常見的處理器內存模型比JMM要弱，Java編譯器在生成字節碼時，會在執行指令序列的適當位置插入內存屏障來限制處理器的重排序。同時，由於各種處理器內存模型的強弱不同，為了在不同的處理器平台向程序員展示一個一致的內存模型，JMM在不同的處理器中需要插入的內存屏障數量和種類也不相同。</p>
+<h3><span id="jmm的內存可見性保證">JMM的內存可見性保證</span></h3><p>按程序類型，Java程序的內存可見性保證可以分為下列3類:</p>
+<ul>
+<li>單線程程序: 單線程程序不會出現內存可見性問題。編譯器、runtime和處理器會共同確保單線程程序的執行結果與該城序在順序一致性模型中的執行結果相同。</li>
+<li>正確同步的多線程程序: 正確同步的多線程程序的執行將具有順序一致性(程序的執行結果與該程序在順序一致性內存模型中的執行結果相同)。這是JMM關注的重點，JMM通過限制編譯器和處理器的重排序來為程序員提供內存可見性保證。</li>
+<li>未同步/未正確同步的多線程程序: JMM為它們提供了最小安全性保證，線程執行時讀取到的值，要麼是之前某個線程寫入的值，要麼是默認值(0, null, false)。</li>
+</ul>
+<p>只要多線程程序是正確同步的，JMM保證該程序在任意的處理器平台上的執行結果，與該程序在順序一致性內存模型中的執行結果一致。</p>
+<h3><span id="jsr-133對舊內存模型的修補">JSR-133對舊內存模型的修補</span></h3><p>JSR-133對JDK 5之前的舊內存模型的修補主要有兩個:</p>
+<ul>
+<li>增強volatile的內存語義: 舊內存模型運許volatile變量與普通變量重排序。JSR-133嚴格限制volatile變量與普通變量的重排序，使volatile的寫-讀和鎖的釋放-獲取具有相同的內存語義。</li>
+<li>增強final的內存語義: 在舊內存模型中，多次讀取同一個final變量的值可能會不相同。為此，JSR-133為final增加了兩個重排序規則。在保證final引用不會從構造函數內溢出的情況下，final具有了初始化安全性。</li>
+</ul>
+<img src="https://i.imgur.com/1h3y3rF.jpg" alt="3類程序的執行結果對比圖" style="zoom:25%;">
+            </div>
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                Tsung Han Tsai © 2018 - 2021 • All rights reserved
+            </ul>
+        </div>
+    </div>
+</body>
+
+ 	
+</html>
