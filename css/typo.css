@@ -394,7 +394,8 @@ strong, b {
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
   /*margin-bottom: 0em*/
-  margin-top: 0.5em;
+  /*margin-top: 0.2em;*/
+  /*font-size: 0.95em;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -418,12 +419,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .typo h2, .typo-h2 {
-  font-size: 1.5em;
+  font-size: 1.75em;
   text-transform: none;
 }
 
 .typo h3, .typo-h3 {
-  font-size: 1.1em;
+  font-size: 1.25em;
   text-transform: none;
 }
 
