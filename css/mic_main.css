@@ -1250,9 +1250,9 @@
 		height: 4rem;
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
-		padding: 0 2rem 0 0;
+		padding: 0 11rem;
 		position: relative;
-		max-width: 70rem;
+		max-width: 100%;
 		z-index: 5;
 	}
 

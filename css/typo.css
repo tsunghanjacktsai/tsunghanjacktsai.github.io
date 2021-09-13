@@ -64,7 +64,7 @@ audio, canvas, video {
 @font-face {
   font-family: 'Noto Serif';
   font-style: normal;
-  font-weight: 400;
+  /*font-weight: ;*/
   src: url('../fonts/noto-serif-v11-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/noto-serif-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -85,7 +85,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.125em;
     line-height: 1.5;
-    font-family: "Noto Serif SC", "Noto Serif TC", "Noto Serif", "Microsoft Yahei";
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 600px) {
@@ -97,9 +97,9 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.125em;
-    line-height: 1.5;
-    font-family: "Noto Serif SC", "Noto Serif TC", "Noto Serif", "Microsoft Yahei";
+    font-size: 1.00em;
+    line-height: 1.75;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 768px) {
@@ -111,9 +111,9 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.20em;
-    line-height: 1.5;
-    font-family: "Noto Serif SC", "Noto Serif TC", "Noto Serif", "Microsoft Yahei";
+    font-size: 1.00em;
+    line-height: 1.75;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 992px) {
@@ -125,9 +125,9 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.125em;
-    line-height: 1.5;
-    font-family: "Noto Serif SC", "Noto Serif TC", "Noto Serif", "Microsoft Yahei";
+    font-size: 1.00em;
+    line-height: 1.75;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -139,9 +139,9 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.05em;
-    line-height: 1.5;
-    font-family: "Noto Serif SC", "Noto Serif TC", "Noto Serif", "Microsoft Yahei";
+    font-size: 1.00em;
+    line-height: 1.75;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
 }
 
@@ -383,8 +383,8 @@ strong, b {
 }
 @media only screen and (min-width: 1200px) {
   .typo {
-    padding-left: 8.0rem;
-    padding-right: 8.0rem;
+    padding-left: 11.0rem;
+    padding-right: 11.0rem;
     padding-top: 0.0rem;
     padding-bottom: 1rem;
   }
@@ -398,10 +398,10 @@ strong, b {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Noto Serif SC", "Noto Serif TC", "Noto Serif", "Microsoft Yahei";
+  font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   font-weight: bold;
   color: #333;
-  line-height: 1.35;
+  line-height: 2.0;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
