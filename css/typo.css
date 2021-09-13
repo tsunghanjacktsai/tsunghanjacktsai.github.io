@@ -83,7 +83,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.125em;
+    font-size: 1.00em;
     line-height: 1.5;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
@@ -97,7 +97,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.25em;
+    font-size: 1.00em;
     line-height: 1.75;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
@@ -111,7 +111,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.25em;
+    font-size: 1.00em;
     line-height: 1.75;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
@@ -125,7 +125,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     font-weight: 350;
     font-stretch: normal;
-    font-size: 1.00em;
+    font-size: 0.95em;
     line-height: 1.75;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
   }
