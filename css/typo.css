@@ -37,36 +37,41 @@ audio, canvas, video {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/noto-sans-tc-v11-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Noto Sans TC Regular'), local('NotoSansTC-Regular'),
-       url('../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.svg#NotoSansTC') format('svg'); /* Legacy iOS */
+       url('../fonts/noto-sans-tc-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/noto-sans-tc-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/noto-sans-tc-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/noto-sans-tc-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/noto-sans-tc-v11-latin-regular.svg#NotoSansTC') format('svg'); /* Legacy iOS */
 }
 
+/* noto-sans-sc-regular - latin_chinese-traditional */
 @font-face {
-    font-family: 'charterregular';
-    src: url('charter_regular-webfont.eot');
-    src: url('charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('charter_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* noto-serif-tc-500 - latin_chinese-traditional */
-@font-face {
-  font-family: 'Noto Serif TC';
+  font-family: 'Noto Sans SC';
   font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/noto-serif-tc-v7-latin_chinese-traditional-500.eot'); /* IE9 Compat Modes */
-  src: local('Noto Serif TC Medium'), local('NotoSerifTC-Medium'),
-       url('../fonts/noto-serif-tc-v7-latin_chinese-traditional-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/noto-serif-tc-v7-latin_chinese-traditional-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/noto-serif-tc-v7-latin_chinese-traditional-500.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/noto-serif-tc-v7-latin_chinese-traditional-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/noto-serif-tc-v7-latin_chinese-traditional-500.svg#NotoSerifTC') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  src: url('../fonts/noto-sans-sc-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans SC Regular'), local('NotoSansSC-Regular'),
+       url('../fonts/noto-sans-sc-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/noto-sans-sc-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/noto-sans-sc-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/noto-sans-sc-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/noto-sans-sc-v12-latin-regular.svg#NotoSansSC') format('svg'); /* Legacy iOS */
+}
+
+/* noto-serif-regular - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/noto-serif-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/noto-serif-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/noto-serif-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/noto-serif-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/noto-serif-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/noto-serif-v11-latin-regular.svg#NotoSerif') format('svg'); /* Legacy iOS */
 }
 
 @media only screen and (max-width: 600px) {
@@ -80,7 +85,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.125em;
     line-height: 1.5;
-    font-family: Charter, "Noto Serif TC", "Noto Sans TC", "Microsoft Yahei", "Microsoft Sans Serif";
+    font-family: "Noto Sans SC", "Noto Sans TC", "Noto Serif", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 600px) {
@@ -94,7 +99,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.125em;
     line-height: 1.5;
-    font-family: Charter, "Noto Serif TC", "Noto Sans TC", "Microsoft Yahei", "Microsoft Sans Serif";
+    font-family: "Noto Sans SC", "Noto Sans TC", "Noto Serif", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 768px) {
@@ -108,7 +113,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.20em;
     line-height: 1.5;
-    font-family: Charter, "Noto Serif TC", "Noto Sans TC", "Microsoft Yahei", "Microsoft Sans Serif";
+    font-family: "Noto Sans SC", "Noto Sans TC", "Noto Serif", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 992px) {
@@ -122,7 +127,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.125em;
     line-height: 1.5;
-    font-family: Charter, "Noto Serif TC", "Noto Sans TC", "Microsoft Yahei", "Microsoft Sans Serif";
+    font-family: "Noto Sans SC", "Noto Sans TC", "Noto Serif", "Microsoft Yahei";
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -136,7 +141,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.05em;
     line-height: 1.5;
-    font-family: Charter, "Noto Serif TC", "Noto Sans TC", "Microsoft Yahei", "Microsoft Sans Serif";
+    font-family: "Noto Sans SC", "Noto Sans TC", "Noto Serif", "Microsoft Yahei";
   }
 }
 
@@ -393,7 +398,7 @@ strong, b {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif;
+  font-family: "Noto Sans SC", "Noto Sans TC", "Noto Serif", "Microsoft Yahei";
   font-weight: bold;
   color: #333;
   line-height: 1.35;
