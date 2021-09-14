@@ -18,7 +18,7 @@ html.borderbox *, html.borderbox *:before, html.borderbox *:after {
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
-  margin: 0;
+  margin: 10px;
   padding: 0;
 }
 
@@ -84,7 +84,7 @@ audio, canvas, video {
     font-weight: 350;
     font-stretch: normal;
     font-size: 1.00em;
-    line-height: 1.5;
+    line-height: 2.0;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei", sans-serif;
   }
 }
