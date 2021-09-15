@@ -155,12 +155,12 @@
             <div class="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="java-併發容器和框架">Java 併發容器和框架</span></h1><p>本篇博客主要是紀錄對&lt;&lt;Java并发编程的艺术&gt;&gt;的學習心得以及一些知識點的重新整理，因此文章中會有許多引用自該書的文字。同時也借鑑其他相關的技術博客，以完善整個知識框架。</p>
-<h2><span id="concurrenthashmap">ConcurrentHashMap</span></h2><p>ConcurrentHashMap視線安全且高效的HashMap，接下來將介紹該容器是如何保證線程安全的。</p>
-<h3><span id="為甚麼使用concurrenthashmap">為甚麼使用ConcurrentHashMap</span></h3><p>在併發編程中使用HashMap可能導致程序死循環。而使用線程安全的HashTable效率又非常低下，基於以上兩個原因，便有了ConcurrentHashMap的登場機會。</p>
+                <h1><span id="java-併发容器和框架">Java 併发容器和框架</span></h1><p>本篇博客主要是纪录对&lt;&lt;Java并发编程的艺术&gt;&gt;的学习心得以及一些知识点的重新整理，因此文章中会有许多引用自该书的文字。同时也借鑑其他相关的技术博客，以完善整个知识框架。</p>
+<h2><span id="concurrenthashmap">ConcurrentHashMap</span></h2><p>ConcurrentHashMap视线安全且高效的HashMap，接下来将介绍该容器是如何保证线程安全的。</p>
+<h3><span id="为甚麽使用concurrenthashmap">为甚麽使用ConcurrentHashMap</span></h3><p>在併发编程中使用HashMap可能导致程序死循环。而使用线程安全的HashTable效率又非常低下，基于以上两个原因，便有了ConcurrentHashMap的登场机会。</p>
 <ol>
-<li><p>線程不安全的HashMap</p>
-<p>在多線程環境下，使用HashMap進行put操作會引起死循環，導致CPU利用率接近100%，所以在併發情況下不能使用HashMap。例如，執行以下代碼會引起死循環。</p>
+<li><p>线程不安全的HashMap</p>
+<p>在多线程环境下，使用HashMap进行put操作会引起死循环，导致CPU利用率接近100%，所以在併发情况下不能使用HashMap。例如，执行以下代码会引起死循环。</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">final</span> Hash<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> String<span class="token operator">></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span>String<span class="token punctuation">,</span> String<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 Thread t <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token annotation punctuation">@Override</span>
@@ -177,44 +177,44 @@ Thread t <span class="token operator">=</span> <span class="token keyword">new</
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"ftf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 t<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 t<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>HashMap在併發執行put操作時會引起死循環，是因為多線程會導致HashMap的Entry鏈表形成數據結構，一旦形成環形數據結構，Entru的next節點永遠不為空，就會產生死循環獲取Entry。</p>
+<p>HashMap在併发执行put操作时会引起死循环，是因为多线程会导致HashMap的Entry链表形成数据结构，一旦形成环形数据结构，Entru的next节点永远不为空，就会产生死循环获取Entry。</p>
 </li>
 <li><p>效率低下的HashTable</p>
-<p>HashTable容器使用synchronized來保證線程安全，但在線程競爭激烈的情況下HashTable的效率非常低下。因為當一個線程訪問HashTable的同步方法，其他線程也訪問HashTable的同步方法時，會進入阻塞或輪詢狀態。如線程1使用put進行元素添加，線程2不但不能使用put方法添加元素，也不能使用get方法來獲取元素，所以競爭越激烈效率越低。</p>
+<p>HashTable容器使用synchronized来保证线程安全，但在线程竞争激烈的情况下HashTable的效率非常低下。因为当一个线程访问HashTable的同步方法，其他线程也访问HashTable的同步方法时，会进入阻塞或轮询状态。如线程1使用put进行元素添加，线程2不但不能使用put方法添加元素，也不能使用get方法来获取元素，所以竞争越激烈效率越低。</p>
 </li>
-<li><p>ConcurrentHashMap的鎖分段技術可有效提升併發訪問率</p>
-<p>HashTable容器在競爭激烈的併發環境下表現出效率低下的原因是所有訪問HashTable的線程都必須競爭同一把鎖，假如容器裡有多把鎖，每一把鎖用於鎖容器其中一部份數據，那麼當多線程訪問容器裡不同數據段的數據時，線程間就不會存在鎖競爭，從而可以有效提高併發訪問效率，這就是ConcurrentHashMap所使用的鎖分段技術。首先將數據分成一段一段的存儲，然後給每一段數據賠一把鎖，當一個線程占用鎖訪問其中一個段數據的時候，其他段的數據也能被其他線程訪問。</p>
+<li><p>ConcurrentHashMap的锁分段技术可有效提升併发访问率</p>
+<p>HashTable容器在竞争激烈的併发环境下表现出效率低下的原因是所有访问HashTable的线程都必须竞争同一把锁，假如容器裡有多把锁，每一把锁用于锁容器其中一部份数据，那麽当多线程访问容器裡不同数据段的数据时，线程间就不会存在锁竞争，从而可以有效提高併发访问效率，这就是ConcurrentHashMap所使用的锁分段技术。首先将数据分成一段一段的存储，然后给每一段数据赔一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问。</p>
 </li>
 </ol>
-<h3><span id="concurrenthashmap的結構">ConcurrentHashMap的結構</span></h3><p>通過ConcurrentHashMap的類圖來分析ConcurrentHashMap的結構，如下圖所示:</p>
-<img src="https://i.imgur.com/r0v3fEY.jpg" alt="ConcurrentHashMap類圖" style="zoom: 33%;">
+<h3><span id="concurrenthashmap的结构">ConcurrentHashMap的结构</span></h3><p>通过ConcurrentHashMap的类图来分析ConcurrentHashMap的结构，如下图所示:</p>
+<img src="https://i.imgur.com/r0v3fEY.jpg" alt="ConcurrentHashMap类图" style="zoom: 33%;">
 
-<p>ConcurrentHashMap是由Segment數組結構和HashEntry數組結構組成。Segment是一種可重入鎖(ReentrantLock)，在ConcurrentHashMap裡面扮演鎖的角色; HashEntry則用於存儲鍵值對數據。一個ConcurrentHashMap裡包含一個Segment數組，每個HashEntry是一個鏈表結構的元素，每個Segment守護著一個HashEntry數組裡的元素，當對HashEntry數組的數據進行修改時，必須首先獲得與他對應的Segment鎖。以下是ConcurrentHashMap的結構圖:</p>
-<img src="https://i.imgur.com/PPpVMLv.jpg" alt="ConcurrentHashMap結構圖" style="zoom:33%;">
+<p>ConcurrentHashMap是由Segment数组结构和HashEntry数组结构组成。Segment是一种可重入锁(ReentrantLock)，在ConcurrentHashMap裡面扮演锁的角色; HashEntry则用于存储键值对数据。一个ConcurrentHashMap裡包含一个Segment数组，每个HashEntry是一个链表结构的元素，每个Segment守护着一个HashEntry数组裡的元素，当对HashEntry数组的数据进行修改时，必须首先获得与他对应的Segment锁。以下是ConcurrentHashMap的结构图:</p>
+<img src="https://i.imgur.com/PPpVMLv.jpg" alt="ConcurrentHashMap结构图" style="zoom:33%;">
 
-<h3><span id="源碼分析">源碼分析</span></h3><p>詳見之後的源碼分析。</p>
-<h2><span id="concurrentlinkedqueue">ConcurrentLinkedQueue</span></h2><p>在併發編成中，有時候需要使用現成安全的隊列。如果要實現一個現成安全的隊列有兩種方式: 一種是使用阻塞算法，另一種是使用非阻塞算法。使用阻塞算法的隊列可以用一個鎖(入隊和出隊使用同一把所)或兩個鎖(入隊和出隊用不同的鎖)等方式來實現。非阻塞的方式則可以使用循環CAS的方式來實現。ConcurrentLinkedQueue就是以非阻塞的方式實現的線程安全隊列。</p>
-<p>ConcurrentLinkedQueue是一個基於鏈接節點的無界線程安全隊列，他採用先進先出的規則對節點進行排序，當我們添加一個元素的時候，他會添加到對列的尾部; 當我們獲取一個元素時，它會返回隊列頭部的元素。它採用了”wait-free”算法(即CAS)來實現。</p>
-<h3><span id="concurrentlinkedqueue的結構">ConcurrentLinkedQueue的結構</span></h3><img src="https://i.imgur.com/aK3b5DR.jpg" alt="ConcurrentLinkedQueue類圖" style="zoom:33%;">
+<h3><span id="源码分析">源码分析</span></h3><p>详见之后的源码分析。</p>
+<h2><span id="concurrentlinkedqueue">ConcurrentLinkedQueue</span></h2><p>在併发编成中，有时候需要使用现成安全的队列。如果要实现一个现成安全的队列有两种方式: 一种是使用阻塞算法，另一种是使用非阻塞算法。使用阻塞算法的队列可以用一个锁(入队和出队使用同一把所)或两个锁(入队和出队用不同的锁)等方式来实现。非阻塞的方式则可以使用循环CAS的方式来实现。ConcurrentLinkedQueue就是以非阻塞的方式实现的线程安全队列。</p>
+<p>ConcurrentLinkedQueue是一个基于链接节点的无界线程安全队列，他採用先进先出的规则对节点进行排序，当我们添加一个元素的时候，他会添加到对列的尾部; 当我们获取一个元素时，它会返回队列头部的元素。它採用了”wait-free”算法(即CAS)来实现。</p>
+<h3><span id="concurrentlinkedqueue的结构">ConcurrentLinkedQueue的结构</span></h3><img src="https://i.imgur.com/aK3b5DR.jpg" alt="ConcurrentLinkedQueue类图" style="zoom:33%;">
 
-<p>ConcurrentLinkedQueue由head節點和tail節點組成，沒個節點(Node)由節點元素(item)和指向下一個節點(next)的飲用組成，節點與節點之間就是通過這個next關聯起來，從而組成一張鏈表結構的對列。默認情況下head節點存儲的元素為空，tail節點等於head節點。</p>
-<h3><span id="源碼分析">源碼分析</span></h3><p>詳見之後的源碼分析。</p>
-<h2><span id="java中的阻塞隊列">Java中的阻塞隊列</span></h2><p>本節將介紹Java中的阻塞隊列</p>
-<h3><span id="甚麼是阻塞隊列">甚麼是阻塞隊列</span></h3><p>阻塞隊列(BlockingQueue)是一個支持兩個富家操作的隊列。這兩個富家的操作支持阻塞的插入和移除方法。</p>
+<p>ConcurrentLinkedQueue由head节点和tail节点组成，没个节点(Node)由节点元素(item)和指向下一个节点(next)的饮用组成，节点与节点之间就是通过这个next关联起来，从而组成一张链表结构的对列。默认情况下head节点存储的元素为空，tail节点等于head节点。</p>
+<h3><span id="源码分析">源码分析</span></h3><p>详见之后的源码分析。</p>
+<h2><span id="java中的阻塞队列">Java中的阻塞队列</span></h2><p>本节将介绍Java中的阻塞队列</p>
+<h3><span id="甚麽是阻塞队列">甚麽是阻塞队列</span></h3><p>阻塞队列(BlockingQueue)是一个支持两个富家操作的队列。这两个富家的操作支持阻塞的插入和移除方法。</p>
 <ol>
-<li>支持阻塞的插入方法: 意思是當隊列滿十，隊列會阻塞插入元素的線程，直到隊列不滿。</li>
-<li>支持阻塞的移除方法: 意思是在隊列為空時，獲取元素的線程會等待隊列變為非空。</li>
+<li>支持阻塞的插入方法: 意思是当队列满十，队列会阻塞插入元素的线程，直到队列不满。</li>
+<li>支持阻塞的移除方法: 意思是在队列为空时，获取元素的线程会等待队列变为非空。</li>
 </ol>
-<p>阻塞隊列成用於生產者和消費者的場景，生產者是向隊列李添加元素的線程，消費者是從隊列裡取元素的線程。阻塞隊列就是生產者用來存放元素、消費者用來獲取元素的容器。</p>
-<p>在阻塞隊列不可用時，這兩個富家操作提供了4種處理方式，如下表所示:</p>
+<p>阻塞队列成用于生产者和消费者的场景，生产者是向队列李添加元素的线程，消费者是从队列裡取元素的线程。阻塞队列就是生产者用来存放元素、消费者用来获取元素的容器。</p>
+<p>在阻塞队列不可用时，这两个富家操作提供了4种处理方式，如下表所示:</p>
 <table>
 <thead>
 <tr>
-<th align="center">方法/處理方式</th>
-<th align="center">拋出異常</th>
+<th align="center">方法/处理方式</th>
+<th align="center">抛出异常</th>
 <th align="center">返回特殊值</th>
 <th align="center">一直阻塞</th>
-<th align="center">超時退出</th>
+<th align="center">超时退出</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -232,7 +232,7 @@ t<span class="token punctuation">.</span><span class="token function">join</span
 <td align="center">poll(time, unit)</td>
 </tr>
 <tr>
-<td align="center">檢查方法</td>
+<td align="center">检查方法</td>
 <td align="center">element()</td>
 <td align="center">peek()</td>
 <td align="center">不可用</td>
@@ -240,22 +240,22 @@ t<span class="token punctuation">.</span><span class="token function">join</span
 </tr>
 </tbody></table>
 <ul>
-<li>拋出異常: 當隊列滿時，如果再往裡面插入元素，會拋出IllegalStateException(“Queue full”)異常。當隊列空時，從隊列或取元素會拋出NoSuchElementException異常。</li>
-<li>返回特殊值: 當網隊列插入元素時，會返回元素是否插入成功，成功返回true。如果是移除方法，則是從隊列裡取出一個元素，如果沒有則返回null。</li>
-<li>一直阻塞: 當阻塞隊列滿時，如果生產者線程往隊列裡put元素，隊列會一直阻塞生產者線程，直到隊列可用或者響應中斷退出。當隊列為空時，如果消費者線程從隊列裡take元素，隊列會阻塞住消費者線程，直到隊列不為空。</li>
-<li>超時退出: 當阻塞隊列滿時，如果生產者線程往隊列裡插入元素，隊列會阻塞生產者線程段時間，如果超過了指定時間，生產者線程就會退出。</li>
+<li>抛出异常: 当队列满时，如果再往裡面插入元素，会抛出IllegalStateException(“Queue full”)异常。当队列空时，从队列或取元素会抛出NoSuchElementException异常。</li>
+<li>返回特殊值: 当网队列插入元素时，会返回元素是否插入成功，成功返回true。如果是移除方法，则是从队列裡取出一个元素，如果没有则返回null。</li>
+<li>一直阻塞: 当阻塞队列满时，如果生产者线程往队列裡put元素，队列会一直阻塞生产者线程，直到队列可用或者响应中断退出。当队列为空时，如果消费者线程从队列裡take元素，队列会阻塞住消费者线程，直到队列不为空。</li>
+<li>超时退出: 当阻塞队列满时，如果生产者线程往队列裡插入元素，队列会阻塞生产者线程段时间，如果超过了指定时间，生产者线程就会退出。</li>
 </ul>
-<h3><span id="java裡的阻塞隊列">Java裡的阻塞隊列</span></h3><p>JDK 7提供了以下7種阻塞隊列:</p>
+<h3><span id="java裡的阻塞队列">Java裡的阻塞队列</span></h3><p>JDK 7提供了以下7种阻塞队列:</p>
 <ul>
-<li>ArrayBlockingQueue: 一個由數組結構組成的有界阻塞隊列。</li>
-<li>LinkedBlockingQueue: 一個由鏈表結構組成的有界阻塞隊列。</li>
-<li>PriorityBlockingQueue: 一個使用優先級排序的無界阻塞隊列。</li>
-<li>DelayQueue: 一個使用優先級隊列實現的無界阻塞隊列。</li>
-<li>SynchronousQueue: 一個不存儲元素的阻塞隊列。</li>
-<li>LinkedTransferQueue: 一個由鏈表結構組成的無界阻塞隊列。</li>
-<li>LinkedBlockingDeque: 一個由鏈表結構組成的雙向阻塞隊列。</li>
+<li>ArrayBlockingQueue: 一个由数组结构组成的有界阻塞队列。</li>
+<li>LinkedBlockingQueue: 一个由链表结构组成的有界阻塞队列。</li>
+<li>PriorityBlockingQueue: 一个使用优先级排序的无界阻塞队列。</li>
+<li>DelayQueue: 一个使用优先级队列实现的无界阻塞队列。</li>
+<li>SynchronousQueue: 一个不存储元素的阻塞队列。</li>
+<li>LinkedTransferQueue: 一个由链表结构组成的无界阻塞队列。</li>
+<li>LinkedBlockingDeque: 一个由链表结构组成的双向阻塞队列。</li>
 </ul>
-<h3><span id="源碼分析">源碼分析</span></h3><p>詳見之後的源碼分析。</p>
+<h3><span id="源码分析">源码分析</span></h3><p>详见之后的源码分析。</p>
 
             </div>
         </div>
