@@ -410,7 +410,7 @@ strong, b {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei";
+  font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   font-weight: bold;
   color: #333;
   line-height: 2.0;
