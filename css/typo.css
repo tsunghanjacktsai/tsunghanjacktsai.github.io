@@ -25,6 +25,7 @@ body, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, inp
 p, ul, ol {
   /*margin-top: 8px;*/
   margin-bottom: 8px;
+  font-size: 0.98em;
 }
 
 li {
@@ -434,12 +435,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .typo h3, .typo-h3 {
-  font-size: 1.25em;
+  font-size: 1.50em;
   text-transform: none;
 }
 
 .typo h4, .typo-h4 {
-  font-size: 1.0em;
+  font-size: 1.25em;
   text-transform: none;
 }
 
