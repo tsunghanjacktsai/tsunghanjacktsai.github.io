@@ -47,7 +47,7 @@ audio, canvas, video {
 @font-face {
   font-family: 'Noto Serif TC';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -61,7 +61,7 @@ audio, canvas, video {
 @font-face {
   font-family: 'Noto Serif SC';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -75,7 +75,7 @@ audio, canvas, video {
 @font-face {
   font-family: 'Noto Serif';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url('../fonts/noto-serif-v16-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/noto-serif-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -92,7 +92,7 @@ audio, canvas, video {
     font-variant-caps: normal;
     font-variant-numeric: normal;
     font-variant-east-asian: normal;
-    font-weight: 400;
+    /*font-weight: 400;*/
     font-stretch: normal;
     font-size: 1.00em;
     line-height: 2.0;
@@ -106,7 +106,7 @@ audio, canvas, video {
     font-variant-caps: normal;
     font-variant-numeric: normal;
     font-variant-east-asian: normal;
-    font-weight: 400;
+    /*font-weight: 400;*/
     font-stretch: normal;
     font-size: 1.00em;
     line-height: 1.75;
@@ -120,7 +120,7 @@ audio, canvas, video {
     font-variant-caps: normal;
     font-variant-numeric: normal;
     font-variant-east-asian: normal;
-    font-weight: 400;
+    /*font-weight: 400;*/
     font-stretch: normal;
     font-size: 1.125em;
     line-height: 1.75;
@@ -134,7 +134,7 @@ audio, canvas, video {
     font-variant-caps: normal;
     font-variant-numeric: normal;
     font-variant-east-asian: normal;
-    font-weight: 400;
+    /*font-weight: 400;*/
     font-stretch: normal;
     font-size: 0.95em;
     line-height: 1.75;
@@ -148,7 +148,7 @@ audio, canvas, video {
     font-variant-caps: normal;
     font-variant-numeric: normal;
     font-variant-east-asian: normal;
-    font-weight: 400;
+    /*font-weight: 400;*/
     font-stretch: normal;
     font-size: 0.95em;
     line-height: 1.75;
