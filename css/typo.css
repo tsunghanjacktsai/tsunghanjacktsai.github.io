@@ -96,7 +96,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.00em;
     line-height: 2.0;
-    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei", sans-serif;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
 }
 @media only screen and (min-width: 600px) {
@@ -110,7 +110,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.00em;
     line-height: 1.75;
-    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei", sans-serif;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
 }
 @media only screen and (min-width: 768px) {
@@ -124,7 +124,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 1.125em;
     line-height: 1.75;
-    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei", sans-serif;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
 }
 @media only screen and (min-width: 992px) {
@@ -138,7 +138,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 0.95em;
     line-height: 1.75;
-    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei", sans-serif;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -152,7 +152,7 @@ audio, canvas, video {
     font-stretch: normal;
     font-size: 0.95em;
     line-height: 1.75;
-    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC", "Microsoft Yahei", sans-serif;
+    font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
 }
 
@@ -394,8 +394,8 @@ strong, b {
 }
 @media only screen and (min-width: 1200px) {
   .typo {
-    padding-left: 11.0rem;
-    padding-right: 11.0rem;
+    padding-left: 11.5rem;
+    padding-right: 11.5rem;
     padding-top: 0.0rem;
     padding-bottom: 1rem;
   }

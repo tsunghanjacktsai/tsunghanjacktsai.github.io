@@ -1252,7 +1252,7 @@
 		transition: transform 1s ease, opacity 1s ease;
 		background: rgba(220, 220, 220, 0.175);
 		height: 4rem;
-		line-height: 4rem;
+		line-height: 3.75rem;
 		margin: -4rem auto 0 auto;
 		padding: 0 11rem;
 		position: relative;
