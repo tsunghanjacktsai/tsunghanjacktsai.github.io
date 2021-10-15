@@ -23,7 +23,7 @@ body, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, inp
 }
 
 p, ul, ol {
-  margin-top: 8px;
+  /*margin-top: 8px;*/
   margin-bottom: 8px;
 }
 
