@@ -44,4 +44,4 @@
         margin: -1px 0 -4px;
         vertical-align: middle;
       }
-    </style></head><body><h1 id="g" class="projectLogo"><a href="//www.google.com/fonts"><img src="//www.google.com/images/logos/google_logo_41.png" alt="Google"/> Fonts</a></h1><p><b>400:</b>&nbsp;<ins>Missing font family</ins></p><p>The requested font families are not available.<p>Requested: Noto Serif SC (style: normal, weight: 400)<p><ins>For reference, see the <a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts API documentation</a>.</ins></p></body></html>
+    </style></head><body><h1 id="g" class="projectLogo"><a href="//www.google.com/fonts"><img src="//www.google.com/images/logos/google_logo_41.png" alt="Google"/> Fonts</a></h1><p><b>400:</b>&nbsp;<ins>Missing font family</ins></p><p>The requested font families are not available.<p>Requested: Noto Serif TC (style: normal, weight: 500)<p><ins>For reference, see the <a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts API documentation</a>.</ins></p></body></html>

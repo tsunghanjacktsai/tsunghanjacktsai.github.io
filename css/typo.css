@@ -43,32 +43,32 @@ audio, canvas, video {
   display: inline-block;
 }
 
-/* noto-serif-tc-regular - chinese-traditional */
+/* noto-serif-tc-500 - chinese-traditional */
 @font-face {
   font-family: 'Noto Serif TC';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/noto-serif-tc-v17-chinese-traditional-500.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/noto-serif-tc-v17-chinese-traditional-regular.svg#NotoSerifTC') format('svg'); /* Legacy iOS */
+       url('../fonts/noto-serif-tc-v17-chinese-traditional-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/noto-serif-tc-v17-chinese-traditional-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/noto-serif-tc-v17-chinese-traditional-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/noto-serif-tc-v17-chinese-traditional-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/noto-serif-tc-v17-chinese-traditional-500.svg#NotoSerifTC') format('svg'); /* Legacy iOS */
 }
 
-/* noto-serif-sc-regular - chinese-simplified */
+/* noto-serif-sc-500 - chinese-simplified */
 @font-face {
   font-family: 'Noto Serif SC';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/noto-serif-sc-v16-chinese-simplified-500.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/noto-serif-sc-v16-chinese-simplified-regular.svg#NotoSerifSC') format('svg'); /* Legacy iOS */
+       url('../fonts/noto-serif-sc-v16-chinese-simplified-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/noto-serif-sc-v16-chinese-simplified-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/noto-serif-sc-v16-chinese-simplified-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/noto-serif-sc-v16-chinese-simplified-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/noto-serif-sc-v16-chinese-simplified-500.svg#NotoSerifSC') format('svg'); /* Legacy iOS */
 }
 
 /* noto-serif-regular - latin */
