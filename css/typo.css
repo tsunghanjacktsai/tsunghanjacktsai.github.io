@@ -25,7 +25,7 @@ body, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, inp
 p, ul, ol {
   /*margin-top: 8px;*/
   margin-bottom: 8px;
-  font-size: 0.98em;
+  /*font-size: 1.025em;*/
 }
 
 li {
@@ -94,7 +94,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     /*font-weight: 400;*/
     font-stretch: normal;
-    font-size: 1.025em;
+    font-size: 1.00em;
     line-height: 2.0;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
@@ -108,7 +108,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     /*font-weight: 400;*/
     font-stretch: normal;
-    font-size: 1.025em;
+    font-size: 1.00em;
     line-height: 1.75;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
