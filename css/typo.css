@@ -94,7 +94,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     /*font-weight: 400;*/
     font-stretch: normal;
-    font-size: 1.00em;
+    font-size: 1.025em;
     line-height: 2.0;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
@@ -108,7 +108,7 @@ audio, canvas, video {
     font-variant-east-asian: normal;
     /*font-weight: 400;*/
     font-stretch: normal;
-    font-size: 1.00em;
+    font-size: 1.025em;
     line-height: 1.75;
     font-family: "Noto Serif", "Noto Serif SC", "Noto Serif TC";
   }
