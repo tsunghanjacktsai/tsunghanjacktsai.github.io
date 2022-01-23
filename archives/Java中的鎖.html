@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,8 +152,8 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
                 <h1><span id="java中的鎖">Java中的鎖</span></h1><p>本篇博客主要是紀錄對&lt;&lt;Java并发编程的艺术&gt;&gt;的學習心得以及一些知識點的重新整理，因此文章中會有許多引用自該書的文字。同時也借鑑其他相關的技術博客，以完善整個知識框架。</p>
@@ -162,10 +162,10 @@
 <p>以下是使用Lock的簡單例子:</p>
 <pre class=" language-java"><code class="language-java">Lock lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 lock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">try</span> <span class="token punctuation">{</span>
-<span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+<span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">finally</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   lock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>注意不要將獲取鎖的過程寫在try裡，因為如果在獲取鎖時發生了異常，異常拋出的同時，也會導致鎖無故釋放。</p>
 <p>Lock接口提供的synchronized關鍵字鎖不具備的主要特性如下表所示:</p>
 <table>
@@ -193,46 +193,46 @@ lock<span class="token punctuation">.</span><span class="token function">lock</s
 <p>同步器式實現鎖(也可以是任意組件)的關鍵，在鎖的實現中聚合同步器，利用同步器實現鎖的語義。可以這樣理解二者之間的關係: 鎖是面向使用者的，它定義了使用者與鎖交互的接口(比如可以允許兩個現成並行訪問)，隱藏了實現細節: 同步器面向的是鎖的實現者，它簡化了鎖的實現方式，屏蔽了同步狀態管理、線程的排隊、等待與喚醒等底層操作。鎖和同步器很好地隔離了使用者和實現者所需關注的領域。</p>
 <h3><span id="隊列同步器的示例">隊列同步器的示例</span></h3><p>只有掌握了同步器的工作原理才能更加深入地理解併發包中其他的併發組件，所以下面通過一個獨佔鎖的示例來深入了解一下同步器的工作原理。</p>
 <p>顧名思義，獨佔鎖就是同意時刻指寧有一個線程獲取到鎖，而其他獲取鎖的線程只能處於同步隊列中等待，只有獲取鎖的線程釋放了鎖，後繼的線程才能夠獲取鎖。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Mutex</span> <span class="token keyword">implements</span> <span class="token class-name">Lock</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Mutex</span> <span class="token keyword">implements</span> <span class="token class-name">Lock</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   <span class="token comment" spellcheck="true">// 靜態內部類，自訂亦同步器</span>
-  <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Sync</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractQueuedSynchronizer</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Sync</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractQueuedSynchronizer</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 是否處於占用狀態</span>
-    <span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">isHeldExclusively</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">isHeldExclusively</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">return</span> <span class="token function">getStatte</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 當狀態為0的時候獲取鎖</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token keyword">int</span> acquires<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">compareAndSetState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token keyword">int</span> acquires<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">compareAndSetState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token function">setExclusiveOwnerThread</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
       <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 釋放鎖，將狀態設置為0</span>
-    <span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">tryRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> releases<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">tryRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> releases<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalMonitorStateException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token function">IlsetExclusiveOwnerThread</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token function">setState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 返回一個Condition，每個Condition都包含了一個Condition隊列</span>
-    Condition <span class="token function">newCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ConditionObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    Condition <span class="token function">newCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ConditionObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 僅需要將操作代理到Sync上即可</span>
     <span class="token keyword">private</span> <span class="token keyword">final</span> Sync sync <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>sunc<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">tryLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> sync<span class="token punctuation">.</span><span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>sync<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
-    <span class="token keyword">public</span> Condition <span class="token function">newCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> sync<span class="token punctuation">.</span><span class="token function">newCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isLocked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> sync<span class="token punctuation">.</span><span class="token function">isHeldExclusively</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">hasQueuedThreads</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> sunc<span class="token punctuation">.</span><span class="token function">hasQueuedThreads</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">lockInterruptibly</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>sunc<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">tryLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">return</span> sync<span class="token punctuation">.</span><span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>sync<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> Condition <span class="token function">newCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">return</span> sync<span class="token punctuation">.</span><span class="token function">newCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isLocked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">return</span> sync<span class="token punctuation">.</span><span class="token function">isHeldExclusively</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">hasQueuedThreads</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">return</span> sunc<span class="token punctuation">.</span><span class="token function">hasQueuedThreads</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">lockInterruptibly</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       sync<span class="token punctuation">.</span><span class="token function">acquireInterruptibly</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">tryLock</span><span class="token punctuation">(</span><span class="token keyword">long</span> timeout<span class="token punctuation">,</span> TimeUnit unit<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">tryLock</span><span class="token punctuation">(</span><span class="token keyword">long</span> timeout<span class="token punctuation">,</span> TimeUnit unit<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">return</span> sunc<span class="token punctuation">.</span><span class="token function">tryAcquireNanos</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> unit<span class="token punctuation">.</span><span class="token function">toNanos</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>上述示例中，獨佔鎖Mutex是一個自定義同步組件，它在同一時刻只允許一個線程佔有鎖。Mutex中定義了一個靜態內部類，該內部類繼承了同步器並實現了獨佔是獲取和釋放同步狀態。在tryAcquire(int acquires)方法中，如果經過CAS設置成功(同步狀態設置為1)，則代表獲取了同步狀態，而在tryRelease(int releases)方法中指是將同步狀態重置為0。用戶只用Mutex時並不會直接和內部同步器的實現打交道，而是調用Mutex提供的方法，在Mutex的實現中，以獲取鎖的lock()方法為例，只需要在方法時憲中調用同步器的模板法acquire(int args)即可，當前線程調用該方法獲取同步狀態失敗後會被加入倒同步隊列中等待，這樣就大大降低了實現一個可靠自定義同步組件的門檻。</p>
 <h2><span id="重入鎖">重入鎖</span></h2><p>重入鎖ReentrantLock，顧名思義，就是支持重進入的鎖，它表示該鎖能夠支持一個線程對資源的重複加鎖。除此之外，該鎖還支持獲取鎖時的公平和非公平性選擇。</p>
 <p>回憶上一節中的示例Mutex，同時考慮如下場景: 當一個線程調用Mutex的lock()方法獲取鎖之後，如果再次調用lock()方法，則該線程將會被自己所阻塞，原因是Mutex再實現tryAcquire(int acquires)方法時沒有考慮佔有鎖的線程再次獲取鎖的場景，而在調用tryAcquire(int acquires)方法時返回了false，導致該線程被阻塞。簡單地說，Mutex是一個不支持蟲進入的鎖。而synchronized關鍵字隱式的支持崇信入，比如一個synchronized修式的遞歸方法，在方法執行時，執行線程在獲取了鎖之後仍能連續多次地獲取該鎖，而不像Mutex由於獲取了鎖，而在下一次獲取鎖時出現阻塞自己的情況。</p>
@@ -268,7 +268,7 @@ lock<span class="token punctuation">.</span><span class="token function">lock</s
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>

@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,20 +152,20 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
                 <h1><span id="patterns-for-coding-interviews-cyclic-sort">Patterns for Coding Interviews - Cyclic Sort</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Cyclic%20Sort/Interviews.png" alt></p>
 <h2><span id="problem">Problem</span></h2><ol>
-<li><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank" rel="noopener">First Missing Positive</a></li>
-<li><a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="noopener">Missing Number</a></li>
-<li><a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank" rel="noopener">Find the Duplicate Number</a></li>
-<li><a href="https://leetcode.com/problems/find-all-duplicates-in-an-array/" target="_blank" rel="noopener">Find All Duplicates in an Array</a></li>
-<li><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/" target="_blank" rel="noopener">Find All Numbers Disappeared in an Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/first-missing-positive/">First Missing Positive</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/missing-number/">Missing Number</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/find-the-duplicate-number/">Find the Duplicate Number</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/find-all-duplicates-in-an-array/">Find All Duplicates in an Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a></li>
 </ol>
 <h2><span id="approach">Approach</span></h2><p>The cyclic sort pattern is mainly focused on solving problems that required us to find something such as duplicates or missing numbers in an unsorted array within $O(n)$  time and constant space. Some of them will include a typical characteristic which all elements inside the array are positive, i.e. $1 \leq nums[i] \leq n$ (n = size of array). Let’s find the feeling through some examples.</p>
-<p>We will first go on with the easy Leetcode problem <a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="noopener">Missing Number</a>. As the problem stated, an array containing distinct integers from 0 to n has one missing number and need to find out what it is. Few cases are provided below:</p>
+<p>We will first go on with the easy Leetcode problem <a target="_blank" rel="noopener" href="https://leetcode.com/problems/missing-number/">Missing Number</a>. As the problem stated, an array containing distinct integers from 0 to n has one missing number and need to find out what it is. Few cases are provided below:</p>
 <pre><code>Input: [3,0,1]
 Output: 2</code></pre><pre><code>Input: [9,6,4,2,3,5,7,0,1]
 Output: 8</code></pre><p>By observing the problem, we could find out a potential condition from the description that <em>elements within the array are from 0 to n and are distinct</em>. It means that all elements are positive except for the element 0 and exist only once.  Thus, simply speaking, we can sort the array and find out the missing number by 0 as the description below:</p>
@@ -176,58 +176,58 @@ Output: 8</code></pre><p>By observing the problem, we could find out a potential
 <p>Now, we can get back to the main part: How exactly can we solve the problem in constant space and $O(n)$ time? The key point is the sorting function. You may probably know that common sorting algorithms without extra space will result in $O(nlogn)$ time in the worst case, which does not satisfy what this problem asked. So we need to do some special treatments. As we already know that the array only contains 0 as well as distinct positives, we could try to replace those positives according to their values, that is, place an element 1 to the index 0 and an element 9 to the index 8, which nums[i] will be swapped with nums[nums[i] - 1]. The detailed process is shown in the image below:</p>
 <p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Cyclic%20Sort/PNG%20image%203-1600522806639.png" alt></p>
 <p>Now, let’s see how the solution be implemented:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">missingNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">missingNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token function">swap</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> i<span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         i<span class="token operator">++</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> tmp <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
     nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
     nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>Of course, this is not the optimal way to solve this problem. We can use some math methods to enhance the efficiency. However, that is unrelated to the cyclic sort pattern, so we will just skip this part.</p>
-<p>Are you feeling it now? If not, let’s try to solve a similar problem <a href="https://leetcode.com/problems/find-all-duplicates-in-an-array/" target="_blank" rel="noopener">Find All Duplicates in an Array</a>. Same as the last one, we can find the constraint $1 \leq nums[i] \leq$ from the problem statement, which means that we can apply the cyclic sort pattern to complete the sort function. The only difference is, we need to get multiple elements for the result.</p>
+<p>Are you feeling it now? If not, let’s try to solve a similar problem <a target="_blank" rel="noopener" href="https://leetcode.com/problems/find-all-duplicates-in-an-array/">Find All Duplicates in an Array</a>. Same as the last one, we can find the constraint $1 \leq nums[i] \leq$ from the problem statement, which means that we can apply the cyclic sort pattern to complete the sort function. The only difference is, we need to get multiple elements for the result.</p>
 <p>Last time, we can utilize 0, i.e. the only non-positive integer, as a mark for the missing number. To solve this problem, we need to mark those duplicates out by checking whether all elements are at the right place in the end, e.g. an element at the index 0 should be equal to 1 and an element at the index 3 should be equal to 4. So we can conclude that nums[i] is equal to (i + 1). Duplicates exist while nums[i] is not equal to (i + 1) and should be put into the result list. Look at the image below for details:</p>
 <p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Cyclic%20Sort/PNG%20image%202.png" alt="Find All Duplicates in the Array"></p>
 <p>Here is the code implementation:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token function">findDuplicates</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token function">findDuplicates</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token function">swap</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> i<span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         i<span class="token operator">++</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         result<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> tmp <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
     nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
     nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h2><span id="conclusion">Conclusion</span></h2><p>So far, we have seen two problems that can be solved by cyclic sort pattern. Most of the array in this kind of problems could be sorted through the same method varies with small differences. After, find our target in the sorted array by problem’s conditions. In conclusion, the main solving process can be separate into two parts:</p>
 <ol>
 <li>Sort the array by placing elements with corresponding indices based on their values.</li>
@@ -239,7 +239,7 @@ Output: 8</code></pre><p>By observing the problem, we could find out a potential
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>

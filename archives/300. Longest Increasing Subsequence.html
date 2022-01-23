@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,11 +152,11 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
-                <h1><span id="300-longest-increasing-subsequence">300. Longest Increasing Subsequence</span></h1><p>Source link: <a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">https://leetcode.com/problems/longest-increasing-subsequence/</a></p>
+                <h1><span id="300-longest-increasing-subsequence">300. Longest Increasing Subsequence</span></h1><p>Source link: <a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-increasing-subsequence/">https://leetcode.com/problems/longest-increasing-subsequence/</a></p>
 <h2><span id="design">Design</span></h2><h3><span id="method-i-dynamic-programming">Method I (Dynamic Programming)</span></h3><ol>
 <li>Initialize an array <em>dp</em> for storing the increasing subsequence length for each element inside the array <em>nums</em>, and a variable <em>maxLen</em> for recording the max length of the increasing subsequence to the current element.</li>
 <li>Traverse through the array <em>nums</em>, for each one, traverse its previous elements. If the previous element is smaller than the current element, update the increasing subsequence length and store it into the array <em>dp</em>.</li>
@@ -165,44 +165,44 @@
 </ol>
 <img src="https://i.imgur.com/7hR5h5t.jpg" alt="Longest Increasing Subsequence" style="zoom:33%;">
 
-<h3><span id="method-ii-binary-search">Method II (Binary Search)</span></h3><p>English version: <a href="https://leetcode.com/problems/longest-increasing-subsequence/discuss/74824/JavaPython-Binary-search-O(nlogn)-time-with-explanation" target="_blank" rel="noopener">https://leetcode.com/problems/longest-increasing-subsequence/discuss/74824/JavaPython-Binary-search-O(nlogn)-time-with-explanation</a></p>
-<p>Chinese version: <a href="https://segmentfault.com/a/1190000003819886" target="_blank" rel="noopener">https://segmentfault.com/a/1190000003819886</a></p>
-<h2><span id="implementation">Implementation</span></h2><h3><span id="method-i">Method I</span></h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">lengthOfLIS</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h3><span id="method-ii-binary-search">Method II (Binary Search)</span></h3><p>English version: <a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-increasing-subsequence/discuss/74824/JavaPython-Binary-search-O(nlogn)-time-with-explanation">https://leetcode.com/problems/longest-increasing-subsequence/discuss/74824/JavaPython-Binary-search-O(nlogn)-time-with-explanation</a></p>
+<p>Chinese version: <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000003819886">https://segmentfault.com/a/1190000003819886</a></p>
+<h2><span id="implementation">Implementation</span></h2><h3><span id="method-i">Method I</span></h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">lengthOfLIS</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> maxLen <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           len <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>len<span class="token punctuation">,</span> dp<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
       dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> len<span class="token punctuation">;</span>
       maxLen <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>maxLen<span class="token punctuation">,</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> maxLen<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h3><span id="method-ii">Method II</span></h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">lengthOfLIS</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<h3><span id="method-ii">Method II</span></h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">lengthOfLIS</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tails <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> nums<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> len<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             <span class="token keyword">int</span> mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>tails<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> num<span class="token punctuation">)</span>
                 left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
             <span class="token keyword">else</span>
                 right <span class="token operator">=</span> mid<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
         tails<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> num<span class="token punctuation">;</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">==</span> len<span class="token punctuation">)</span> <span class="token operator">++</span>len<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> len<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h2><span id="complexity-analysis">Complexity Analysis</span></h2><h3><span id="method-i">Method I</span></h3><p>Time: $O(n^2)$</p>
 <p>Space: $O(n)$</p>
 <h3><span id="method-ii">Method II</span></h3><p>Time: $O(nlogn)$</p>
@@ -213,7 +213,7 @@
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>

@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,12 +152,12 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-480-sliding-window-median">LeetCode 480. Sliding Window Median</span></h1><p><img src="/images/LeetCode%20295.%20Find%20Median%20from%20Data%20Stream/LeetCode-1601463660180-1602417888796.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/sliding-window-median" target="_blank" rel="noopener">Sliding Window Median</a></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a target="_blank" rel="noopener" href="https://leetcode.com/problems/sliding-window-median">Sliding Window Median</a></p>
 <p>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.</p>
 <p>Examples:</p>
 <pre><code>[2,3,4]` , the median is `3
@@ -172,7 +172,7 @@
  1  3  -1  -3 [5  3  6] 7       5
  1  3  -1  -3  5 [3  6  7]      6</code></pre><p>Therefore, return the median sliding window as <code>[1,-1,-1,3,5,6]</code>.</p>
 <p><strong>Note:</strong><br>You may assume <code>k</code> is always valid, ie: <code>k</code> is always smaller than input array’s size for non-empty array.<br>Answers within <code>10^-5</code> of the actual value will be accepted as correct.</p>
-<h2><span id="design">Design</span></h2><p>To solve this problem, we could apply the same two heaps pattern as <a href="https://jacktsaitech.com/2020/10/26/LeetCode%20295.%20Find%20Median%20from%20Data%20Stream/" target="_blank" rel="noopener">LeetCode 295. Find Median from Data Stream</a>. However, there is a little difference between them, which we should keep track of the elements inside sliding window. The algorithm process is described below:</p>
+<h2><span id="design">Design</span></h2><p>To solve this problem, we could apply the same two heaps pattern as <a target="_blank" rel="noopener" href="https://jacktsaitech.com/2020/10/26/LeetCode%20295.%20Find%20Median%20from%20Data%20Stream/">LeetCode 295. Find Median from Data Stream</a>. However, there is a little difference between them, which we should keep track of the elements inside sliding window. The algorithm process is described below:</p>
 <ol>
 <li>Traverse the array and Insert elements into maximum heap and minimum heap.</li>
 <li>Rebalance both heaps after inserting a new element.</li>
@@ -182,51 +182,51 @@
 </ol>
 <p>Have a look at the illustration below:</p>
 <p><img src="/images/LeetCode%20480.%20Sliding%20Window%20Median/PNG%20image%2028-1603777349836.png" alt></p>
-<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">medianSlidingWindow</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">medianSlidingWindow</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     PriorityQueue<span class="token operator">&lt;</span>Integer<span class="token operator">></span> maxHeap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span>Collections<span class="token punctuation">.</span><span class="token function">reverseOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     PriorityQueue<span class="token operator">&lt;</span>Integer<span class="token operator">></span> minHeap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">double</span><span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length <span class="token operator">-</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> maxHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">>=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> maxHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">>=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         maxHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         minHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         minHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         maxHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>minHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">-</span> k <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">-</span> k <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           result<span class="token punctuation">[</span>i <span class="token operator">-</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> maxHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2.0</span> <span class="token operator">+</span> minHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2.0</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           result<span class="token punctuation">[</span>i <span class="token operator">-</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> maxHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
         <span class="token keyword">int</span> elementToBeRemoved <span class="token operator">=</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>elementToBeRemoved <span class="token operator">&lt;=</span> maxHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>elementToBeRemoved <span class="token operator">&lt;=</span> maxHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           maxHeap<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>elementToBeRemoved<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           minHeap<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>elementToBeRemoved<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           minHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           maxHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>minHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
     <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$ ($O(n * k)$)</p>
 <p>Space: $O(n)$ ($O(k)$ if ignoring the result array size)</p>
 
@@ -235,7 +235,7 @@
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>

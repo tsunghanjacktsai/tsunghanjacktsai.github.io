@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,8 +152,8 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
                 <h1><span id="java併發編程基礎">Java併發編程基礎</span></h1><p>本篇博客主要是紀錄對&lt;&lt;Java并发编程的艺术&gt;&gt;的學習心得以及一些知識點的重新整理，因此文章中會有許多引用自該書的文字。同時也借鑑其他相關的技術博客，以完善整個知識框架。</p>
@@ -206,30 +206,30 @@
 <p>由上圖可以看到，線程創建以後，調用start()方法開始運行。當線程執行wait()方法之後，線程進入等待狀態。進入等待狀態的線程需要依靠其他線程的通知才能夠返回到運行狀態，而超時等待狀態相當於在等待狀態的基礎上增加了超時限制，也就是超時時間到達時將會返回到運行狀態。當線程調用同步法時，在沒有獲取到鎖的情況下，線程將會進入到阻塞狀態。線程在執行Runnable的run()方法之後會進入到終止狀態。</p>
 <h3><span id="daemon-線程">Daemon 線程</span></h3><p>Daemon線程是一種支持型線程，因為它主要被用作程序中後台調度以及支持性工作。這意味著，當一個Java虛擬機中不存在非Daemon線程的時候，Java虛擬機將會退出。可以通過調用Thread.setDaemon(true)將線程設置為Daemon線程(需要在啟動線程之前設置)。</p>
 <p>Daemon線程被用作完成支持性工作，但是在Java虛擬機退出時Daemon線程中的finally塊並不一定會執行，以下為示例代碼:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Daemon</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Daemon</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         Thread thread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">DaemonRunner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"DaemonRunner"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         thread<span class="token punctuation">.</span><span class="token function">setDaemon</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         thread<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">DaemonRunner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">DaemonRunner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
                 SleepUtils<span class="token punctuation">.</span><span class="token function">second</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">finally</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
                 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"DaemonThread finally run."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>運行Daemon程序，可以看到在終端或者命令行上沒有任何輸出。main線程(非Daemon線程)在啟動了線程DaemonRunner之後隨著main方法執行完畢而終止，而此時Java虛擬機中沒有非Daemon線程，虛擬機需要退出。Java虛擬機中的所有Daemon線程都需要立即終止，因此DaemonRunner立即終止，但是DaemonRunner中的finally塊並沒有執行(在構建Daemon線程時，不能依靠finally塊中的內容來確保執行關閉或清理資源的邏輯)。</p>
 <h2><span id="啟動和終止線程">啟動和終止線程</span></h2><p>接下來將詳細介紹線程的啟動和終止。</p>
 <h3><span id="構造線程">構造線程</span></h3><p>在運行線程之前首先要構造一個線程對象，線程對象在構造的時候需要提供線程所需要的屬性，如線程所屬的線程組、線程優先級、是否是Daemon線程等信息。以下代碼是java.lang.Thread中對線程進行初始化的部分:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span>ThreadGroup g<span class="token punctuation">,</span> Runnable target<span class="token punctuation">,</span> String name<span class="token punctuation">,</span> <span class="token keyword">long</span> stackSize<span class="token punctuation">,</span> AccessControlContext acc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span>ThreadGroup g<span class="token punctuation">,</span> Runnable target<span class="token punctuation">,</span> String name<span class="token punctuation">,</span> <span class="token keyword">long</span> stackSize<span class="token punctuation">,</span> AccessControlContext acc<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NullPointerException</span><span class="token punctuation">(</span><span class="token string">"name connot be null"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 當前線程就是該線程的父線程</span>
     Thread parent <span class="token operator">=</span> <span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>group <span class="token operator">=</span> g<span class="token punctuation">;</span>
@@ -240,20 +240,20 @@
     <span class="token keyword">this</span><span class="token punctuation">.</span>target <span class="token operator">=</span> target<span class="token punctuation">;</span>
     <span class="token function">setPriority</span><span class="token punctuation">(</span>priority<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 將父線程的InheritableThreadLocal複製過來</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">.</span>inheritableThreadLocals <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">.</span>inheritableThreadLocals <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>inheritableThreadLocals <span class="token operator">=</span> ThreadLocal<span class="token punctuation">.</span><span class="token function">createInheritedMap</span><span class="token punctuation">(</span>Parent<span class="token punctuation">.</span>inheritableThreadLocals<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// 分配一個線程ID</span>
         tid <span class="token operator">=</span> <span class="token function">nextThreadID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>在上述過程中，一個新構造的線程對向是由其parent線程來進行空間分配的，而child線程繼承了parent是否為Daemon、優先級和加載資源的contextClassLocader以及可繼承的ThreadLocal，同時還會分配一個為一個ID來標示這個child線程。至此，一個能夠運行的線程對向就初始化好了，在堆內存等待著運行。</p>
 <h2><span id="啟動線程">啟動線程</span></h2><p>線程對象在初始化完成之後，調用start()方法就可以啟動該線程。線程start()方法的含意是: 當前線程(即parent線程)同步告知Java虛擬機，只要線程規劃器空閒，應該立即啟動調用start()方法的線程。</p>
 <h3><span id="中斷">中斷</span></h3><p>中斷可以理解為線程的一個標示位屬性，它表示一個運行中的線程是否被其他線程進行了中斷操作。中斷好比其他線程對該線程打了個招呼，其他線程通過調用該線程的interrupt()方法對其進行中斷操作。</p>
 <p>線程通過檢查自身是否被中斷來進行響應，麲程通過方法isInterrupted()方法來進行判斷是否被中斷，也可以調用靜態方法Thread.interrupted()對當前線程的中斷標示位進行復位。如果該線程已經處於終結狀態，即使線程被中斷過，在調用該線程對向的isInterrupted()時依舊會返回false。</p>
 <p>從Java的API中可以看到，許多聲明拋出InterruptedException的方法(例如Thread.sleep(long millis)方法)，這些方法在拋出InterruptedException之前，Java虛擬機會先將該線程的中斷標示位清除，然後拋出InterruptedEcxception，此時調用isInterrupted()方法將會返回false。</p>
 <p>在以下代碼中，首先創建了兩個線程，SleepThread和BusyThread，前者不停地睡眠，後者一直運行，然後對這兩個線程分別進行中斷操作，觀察二者的中斷標示位。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Interrupted</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Interrupted</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// sleepThread不停地嘗試睡眠</span>
         sleepThread<span class="token punctuation">.</span><span class="token function">setDaemon</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// busyThread不停的運行</span>
@@ -269,30 +269,30 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"BusyThread interrupted is "</span> <span class="token operator">+</span> busyThread<span class="token punctuation">.</span><span class="token function">isInterrupted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// 防止sleepThread和busyThread立刻退出</span>
         SleepUtils<span class="token punctuation">.</span><span class="token function">second</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SleepRunner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SleepRunner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
                 SleepUtils<span class="token punctuation">.</span><span class="token function">second</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">BusyRunner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">BusyRunner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>輸出如下:</p>
 <pre class=" language-java"><code class="language-java">SleepThread interrupted is <span class="token boolean">false</span>
 BusyThread interrupted is <span class="token boolean">true</span></code></pre>
 <p>從結果可以看出，拋出InterruptedException的線程SleepThread，其中斷標示位被清除了，而一直忙碌運作的線程BusyThread，中斷標示位沒有被清除。</p>
 <h3><span id="安全地終止線程">安全地終止線程</span></h3><p>在上一節提到的中斷狀態是線程的標示位，而中斷操作是一種簡便的線程交互方式，而這種交互方式最適合用來取消或停止任務。除了中斷以外，還可以利用一個boolean變量來控制是否需要停止任務並終止該線程。</p>
 <p>在以下代碼示例中，創建了一個線程CountThread，它不斷地進行變量累加，而主線程常是對其進行中斷操作和停止操作。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Shutdown</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Shutdown</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         Runner one <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Runner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         Thread countThread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>one<span class="token punctuation">,</span> <span class="token string">"CountThread"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         countThread<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -305,22 +305,22 @@ BusyThread interrupted is <span class="token boolean">true</span></code></pre>
         <span class="token comment" spellcheck="true">// 睡眠1秒，main線程對Runner two進行取消，使CountThread能夠感知on為false而結束</span>
         TimeUnit<span class="token punctuation">.</span>SECONDS<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         two<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Runner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Runner</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">private</span> <span class="token keyword">long</span> i<span class="token punctuation">;</span>
         <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">boolean</span> on <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span>on <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isInterrupted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>on <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isInterrupted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
                 i<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
             System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Count i = "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             on <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>輸出結果如下所是(輸出內容可能不同):</p>
 <pre class=" language-java"><code class="language-java">Count i <span class="token operator">=</span> <span class="token number">543487324</span>
 Count i <span class="token operator">=</span> <span class="token number">540898082</span></code></pre>
@@ -337,9 +337,9 @@ Count i <span class="token operator">=</span> <span class="token number">5408980
 <p>從上圖可以看到，任意線程對Object(Object由synchronized保護)的訪問，首先要獲得Object的監視器。如果獲取失敗，線程進入同步隊列，現成狀態變為BLOCKED。當訪問Object的前驅(獲得了鎖的線程)釋放了鎖，則該釋放操作喚醒阻塞在同步隊列中的線程，使其重新嘗試對監視器的獲取。</p>
 <h3><span id="等待通知機制">等待/通知機制</span></h3><p>一個線程修改了一個對象的值，而另一個線程感知到了變化，然後進行相應的操作，整個過程開始於一個線程，而最終執行又是另一個線程。前者是生產者，後者是消費者，這種模式隔離了”做甚麼(what)”和”怎麼做”，在功能層面上實現了解藕，體系結構上具備了良好的伸縮性。接下來介紹在Java語言中如何實現類似的功能。</p>
 <p>簡單的辦法是讓消費者線程不斷地循環檢查變量是否符合預期，如以下代碼所示，在while循環中設置不滿足調建，如果條件滿足則退出while循環，從而完成消費者的工作。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>value <span class="token operator">!=</span> desire<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>value <span class="token operator">!=</span> desire<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>上面這段代碼在條件不滿足時就睡眠一段時間，這樣做的目的是防止過快的”無效”城市，這種方式看似能夠解時線所需的功能，但卻存在如下問題:</p>
 <ol>
@@ -377,51 +377,51 @@ Count i <span class="token operator">=</span> <span class="token number">5408980
 </tbody></table>
 <p>等待/通知機制，是指一個線程調用了對象O的wait()方法進入等待狀態，而另一線程B調用了對象O的notifyAll()方法，線程A收到通知後從對象O的wait()方法返回，進而執行後續操作。</p>
 <p>在以下代碼示例中，創建了兩個線程 – WaitThread和NotifyThread，前者檢查flag值是否為false，如果符合要求，進行後續操作，否則在lock上等待，後者睡眠了一段時間後對lock進行通知:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> clas WaitNotify <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> clas WaitNotify <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   <span class="token keyword">static</span> <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
   <span class="token keyword">static</span> Object lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     Thread waitThread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"WaitThread"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     watTHread<span class="token punctuation">.</span><span class="token function">starty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     TimeUnit<span class="token punctuation">.</span>SECONDS<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     Thread notifyTHread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"NotifyThread"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     notifyThread<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Wait</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Wait</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token comment" spellcheck="true">// 加鎖，擁有lock的Monitor</span>
-      <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// 當條件不滿足時，繼續wait，同時釋放lock的鎖</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          tru <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          tru <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" flag is true. wait @ "</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             lock<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
+          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// 條件滿足時，完成工作</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" flag is false. running @ "</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"HH:mm:ss"</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Notify</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Notify</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token comment" spellcheck="true">// 加鎖，擁有lock的Monitor</span>
-      <span class="token function">sunchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">sunchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// 獲取lock的鎖，然後進行通知，通知時不會釋放lock的鎖</span>
         <span class="token comment" spellcheck="true">// 直到當前線程釋放了lock後，WaitThread才能從wait方法中返回</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" hold lock. notify @ "</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         lock<span class="token punctuation">.</span><span class="token function">notifyAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
         SleepUtils<span class="token punctuation">.</span><span class="token function">second</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
       <span class="token comment" spellcheck="true">// 再次加鎖</span>
-      <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         Sustem<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" hold lock again. sleep @ "</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         SleepUtils<span class="token punctuation">.</span><span class="token function">second</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>輸出:</p>
 <pre><code>Thread[WaitTHread,5,main] flag i true. wait @ 22:23:03
 Thread[NotifyThread],5,main] hold lock. notify @ 22:23:04
@@ -447,12 +447,12 @@ Thread[WaitThread,5,main] flag is false. running @ 22:23:14</code></pre><p>上�
 <li>條件滿足則執行對應的邏輯。</li>
 </ol>
 <p>代碼如下:</p>
-<pre class=" language-java"><code class="language-java"><span class="token function">sunchronized</span><span class="token punctuation">(</span>對象<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">while</span><span class="token punctuation">(</span>條件不滿足<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token function">sunchronized</span><span class="token punctuation">(</span>對象<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>條件不滿足<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     對象<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
   處理邏輯
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>通知方遵循如下原則:</p>
 <ol>
 <li>獲得對象的鎖。</li>
@@ -460,34 +460,34 @@ Thread[WaitThread,5,main] flag is false. running @ 22:23:14</code></pre><p>上�
 <li>通知所有等待在對象上的線程。</li>
 </ol>
 <p>對應的代碼如下:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">synchronized</span><span class="token punctuation">(</span>對象<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">synchronized</span><span class="token punctuation">(</span>對象<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   改變條件
   對象<span class="token punctuation">.</span><span class="token function">notifyAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h3><span id="管道輸入輸出流">管道輸入/輸出流</span></h3><p>管道輸入/輸出流和普通的文件輸入/輸出流或者網絡輸入/輸出流不同之處在於，它主要用於線程之間的數據傳輸，而傳輸的媒介為內存。</p>
 <p>管道輸入/輸出流主要包括了如下4中具體實現: PipedOutputStream、PipedInputStream、PipedReader和PipedWriter，前兩種面向字節，而後兩種面向字符。</p>
 <h3><span id="threadlocal的使用">ThreadLocal的使用</span></h3><p>ThreadLocal，即線程變量、是一個以ThreadLocal對象為鍵、任意對象為值的存儲結構。這個結構被附帶在線程上，也就是說一個線程可以根據一個ThreadLocal對象查詢到綁訂在這個線程上的一個值。</p>
 <p>可以通過set(T)方法來設置一個值，在當前線程下再通過get()方法獲取到原先設置的值。</p>
 <p>在以下示例中，構建了一個常用的Profiler類，它具有begin()和end()兩個方法，而end()方法返回從begin()方法調用開始到end()方法被調用時的時間差，單位是毫秒:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Profiler</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Profiler</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   <span class="token comment" spellcheck="true">// 第一次get()方法調用時會進行初始化(如果set方法沒有調用),每個線程會調用一次</span>
-  <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> ThraedLocal<span class="token operator">&lt;</span>Long<span class="token operator">></span> TIME_THREADLOCAL <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>Long<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">protected</span> Long <span class="token function">initialValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> ThraedLocal<span class="token operator">&lt;</span>Long<span class="token operator">></span> TIME_THREADLOCAL <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>Long<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> Long <span class="token function">initialValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">return</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     TIME_THREADLOCAL<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">void</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> TIME_THREADLOCAL<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     Profiler<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     TimeUnit<span class="token punctuation">.</span>SECONDS<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Cost: "</span> <span class="token operator">+</span> Profiler<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" milis"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>輸出:</p>
 <pre class=" language-java"><code class="language-java">Cost<span class="token operator">:</span> <span class="token number">1001</span> mills</code></pre>
 <p>Profiler可以被複用在方法調用耗時統計的功能上，在方法的入口前執行begin()方法，在方法調用後進行end()方法，好處是兩個方法的調用不用在一個方法或者類中，比如在AOP(面向方面編程)中，可以在方法調用前的切入點執行begin()方法，而在方法調用後的切入點執行end()方法，這樣依舊可以獲得方法的執行耗時。</p>
@@ -501,77 +501,77 @@ Thread[WaitThread,5,main] flag is false. running @ 22:23:14</code></pre><p>上�
 </ul>
 <p>這時僅需要wait(REMAINING)即可，在wait(REMAINING)返回之後將會執行REMAINING=FUTURE-now。如果REMAINING小於等於0，表示已經超時，直接退出，否則將繼續執行wait(REMAINING)。</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 對當前對象加鎖</span>
-<span class="token keyword">public</span> <span class="token keyword">synchronized</span> Object <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">long</span> mills<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">synchronized</span> Object <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">long</span> mills<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   <span class="token keyword">long</span> future <span class="token operator">=</span> System<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> millis<span class="token punctuation">;</span>
   <span class="token keyword">long</span> remaining <span class="token operator">=</span> mills<span class="token punctuation">;</span>
   <span class="token comment" spellcheck="true">// 當超時大於0並且result返回值不滿足要求</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>result <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> remaining <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>result <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> remaining <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token function">wait</span> <span class="token punctuation">(</span>remaining<span class="token punctuation">)</span><span class="token punctuation">;</span>
     remaining <span class="token operator">=</span> future <span class="token operator">-</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>可以看出，等待超時模式就是在等待/通知范式基礎上增加了超時控制，這使得該模式相比原有范式更具有靈活性，因為即使方法執行時間過長，也不會”永久”阻塞調用者，而是會按照調用者的要求”按時”返回。</p>
 <h3><span id="數據庫連接池">數據庫連接池</span></h3><p>我們使用等待超時模式來構造一個簡單的數據庫連接池，在示例中模擬從連接池中獲取、使用和釋放連接的過程，而客戶端獲取連接的過程被設定為等待超時的模式，也就是在1000毫秒內無法獲取到可用連接，將會返回給客戶端一個null。設定連接池的大小為10個，然後通過調節客戶端的線程數來模擬無法獲取連接的場景。</p>
 <p>首先看下連接池的定義。它通過構造函數初始化連接的最大上限，通過一個雙向隊列來維護連接，調用方需要先調用fetchConnection(long)方法來只訂在多少毫秒內超活獲取連接，當連接使用完成後，需要調用releaseConnection(Connection)方法將連接放回線程池，代碼示例如下:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConnectionPool</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConnectionPool</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   <span class="token keyword">private</span> LinkedList<span class="token operator">&lt;</span>Connection<span class="token operator">></span> pool <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span>Connection<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">public</span> <span class="token function">ConnectionPool</span><span class="token punctuation">(</span><span class="token keyword">int</span> initialSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>initialSize <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> initialSize<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token function">ConnectionPool</span><span class="token punctuation">(</span><span class="token keyword">int</span> initialSize<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>initialSize <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> initialSize<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         pool<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>ConnectionDriver<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">releaseConnection</span><span class="token punctuation">(</span>Connection connection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>connection <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">sunchronized</span> <span class="token punctuation">(</span>pool<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">releaseConnection</span><span class="token punctuation">(</span>Connection connection<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>connection <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token function">sunchronized</span> <span class="token punctuation">(</span>pool<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">// 連接釋放後需要進行通知，這樣其他消費者能夠感知道連接池中已經歸還了一個連接</span>
         pool<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>connection<span class="token punctuation">)</span><span class="token punctuation">;</span>
         pool<span class="token punctuation">.</span><span class="token function">notifyAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
   <span class="token comment" spellcheck="true">// 在mills內無法獲取道連接，將會返回null</span>
-  <span class="token keyword">public</span> Connection <span class="token function">fetchConnection</span><span class="token punctuation">(</span><span class="token keyword">long</span> mills<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token punctuation">{</span>
-    <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>pool<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> Connection <span class="token function">fetchConnection</span><span class="token punctuation">(</span><span class="token keyword">long</span> mills<span class="token punctuation">)</span> <span class="token keyword">throws</span> InterruptedException <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>pool<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token comment" spellcheck="true">// 完全超時</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>mills <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>pool<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>mills <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>pool<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           pool<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> pool<span class="token punctuation">.</span><span class="token function">removeFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">long</span> future <span class="token operator">=</span> Sustem<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> mills<span class="token punctuation">;</span>
         <span class="token keyword">long</span> remaining <span class="token operator">=</span> mills<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>pool<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> remaining <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>pool<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> remaining <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           pool<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span>remaining<span class="token punctuation">)</span><span class="token punctuation">;</span>
           remaining <span class="token operator">=</span> future <span class="token operator">-</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
         Connection result <span class="token operator">=</span> null<span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>pool<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>pool<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
           result <span class="token operator">=</span> pool<span class="token punctuation">.</span><span class="token function">removeFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>由於java.sql.Connection是一個接口，最終的實現是由數據庫驅動提供方來實現的，考慮到只是個示例，我們通過動態代理構造了一個Connection，該Connection的代理實現僅僅是在commit()方法調用時休眠100毫秒，代碼如下所示:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConnectionDriver</span> <span class="token punctuation">{</span>
-  <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">ConnectionHandler</span> <span class="token keyword">implements</span> <span class="token class-name">InvocationHandler</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> Object <span class="token function">invoke</span><span class="token punctuation">(</span>Object proxy<span class="token punctuation">,</span> Method method<span class="token punctuation">,</span> Object<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>method<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"commit"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConnectionDriver</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">ConnectionHandler</span> <span class="token keyword">implements</span> <span class="token class-name">InvocationHandler</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> Object <span class="token function">invoke</span><span class="token punctuation">(</span>Object proxy<span class="token punctuation">,</span> Method method<span class="token punctuation">,</span> Object<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>method<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"commit"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         TimeUnit<span class="token punctuation">.</span>MILLISECONDS<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
       <span class="token keyword">return</span> null<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
   <span class="token comment" spellcheck="true">// 創建一個Connection代理，在commit時休眠100毫秒</span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> Connection <span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>Connection<span class="token punctuation">)</span> Proxy<span class="token punctuation">.</span><span class="token function">newProxyInstance</span><span class="token punctuation">(</span>ConnectionDriver<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClasLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">class</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> Connection<span class="token punctuation">.</span><span class="token keyword">class</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ConnectionHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> Connection <span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>Connection<span class="token punctuation">)</span> Proxy<span class="token punctuation">.</span><span class="token function">newProxyInstance</span><span class="token punctuation">(</span>ConnectionDriver<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClasLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">class</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> Connection<span class="token punctuation">.</span><span class="token keyword">class</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ConnectionHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h3><span id="線程池技術">線程池技術</span></h3><p>對於服務端的程序，經常面對的是客戶端傳入的短小(執行時間短、工作內容較為單一)任務，需要服務端快速並返回結果。如果服務端每次接受到一個任務，創建一個線程，然後進行執行，這在圓形階段是個不錯的選擇，但是面對成千上萬的任務遞交進服務器時，如果還是採用一個任務一個線程的方式，那麼將會創建數以萬計的線程，這不是一個好的選擇。因為這會使操作系統頻繁的進行線程上下切換，無故增加系統的負載，而線程的創建和消亡都是需要耗費系統資源的，也無疑浪費了系統資源。</p>
 <p>線程池技術能夠很好地解決這個問題，它預先創建了若干數量的線程，並且不能由用戶直接對線程的創建進行控制，在這個前提下重複使用固定或較為固定數目的線程來完成任務的執行。這樣做的好處是，一方面，消除了頻繁創建和消亡線程的系統資源開銷，另一方面，面對過量任務的提交能夠平緩的劣化。</p>
 <p>線程池的本質就是使用了一個線程安全的工作隊列連接工作者線程和客戶端線程，客戶端線程放入工作隊列後便返回，而工作者線程則不斷地從工作隊列上取出工作並執行。當工作隊列為空時，所有的工作者線程均等待再工作隊列上，當有客戶端提交了一個任務之後會通知任意一個工作者線程，隨著大量的任務被提交，更多的工作者線程會被喚醒。</p>
@@ -581,7 +581,7 @@ Thread[WaitThread,5,main] flag is false. running @ 22:23:14</code></pre><p>上�
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>

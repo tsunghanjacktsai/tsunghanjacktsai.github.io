@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,17 +152,17 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
                 <h1><span id="leetcode-92-reverse-linked-list-ii">LeetCode 92. Reverse Linked List II</span></h1><p><img src="/images/LeetCode%20206.%20Reverse%20Linked%20List/LeetCode.png" alt></p>
-<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a href="https://leetcode.com/problems/reverse-linked-list-ii/" target="_blank" rel="noopener">Reverse Linked List II</a></p>
+<h2><span id="problem">Problem</span></h2><p><strong>Source link</strong>: <a target="_blank" rel="noopener" href="https://leetcode.com/problems/reverse-linked-list-ii/">Reverse Linked List II</a></p>
 <p>Reverse a linked list from position <em>m</em> to <em>n</em>. Do it in one-pass.</p>
 <p><strong>Note:</strong> 1 &le; <em>m</em> &le;<em>n</em> &le; length of list.</p>
 <p><strong>Example:</strong></p>
 <pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
-Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><h2><span id="design">Design</span></h2><p>The problem is a variation of <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank" rel="noopener">Reverse Linked List</a>, which asked us to reverse the linked list from the node m to n. However, even the statement seems not much difference, the implementation will require more effort. The algorithm process is described below:</p>
+Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><h2><span id="design">Design</span></h2><p>The problem is a variation of <a target="_blank" rel="noopener" href="https://leetcode.com/problems/reverse-linked-list/">Reverse Linked List</a>, which asked us to reverse the linked list from the node m to n. However, even the statement seems not much difference, the implementation will require more effort. The algorithm process is described below:</p>
 <ol>
 <li>Given two pointers <code>prev</code> and <code>cur</code> to traverse through the list and complete reverse operations.</li>
 <li>Skip <code>m - 1</code> nodes first as they do not need to be reversed.</li>
@@ -174,46 +174,46 @@ Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><h2><span id="design">Des
 <p><img src="/images/LeetCode%2092.%20Reverse%20Linked%20List%20II/PNG%20image%2013.png" alt></p>
 <h2><span id="implementation">Implementation</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class ListNode &amp;#123;
  *     int val;
  *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ *     ListNode() &amp;#123;&amp;#125;
+ *     ListNode(int val) &amp;#123; this.val = val; &amp;#125;
+ *     ListNode(int val, ListNode next) &amp;#123; this.val = val; this.next = next; &amp;#125;
+ * &amp;#125;
  */</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> ListNode <span class="token function">reverseBetween</span><span class="token punctuation">(</span>ListNode head<span class="token punctuation">,</span> <span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> null <span class="token operator">||</span> head<span class="token punctuation">.</span>next <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> ListNode <span class="token function">reverseBetween</span><span class="token punctuation">(</span>ListNode head<span class="token punctuation">,</span> <span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> null <span class="token operator">||</span> head<span class="token punctuation">.</span>next <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">return</span> head<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
     ListNode prev <span class="token operator">=</span> null<span class="token punctuation">,</span> cur <span class="token operator">=</span> head<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> cur <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> cur <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       prev <span class="token operator">=</span> cur<span class="token punctuation">;</span>
       cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
     ListNode lastNodeOfPrevPart <span class="token operator">=</span> prev<span class="token punctuation">;</span>
     ListNode lastNodeOfSubList <span class="token operator">=</span> cur<span class="token punctuation">;</span>
     ListNode next <span class="token operator">=</span> null<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> cur <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> cur <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
       cur<span class="token punctuation">.</span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
       prev <span class="token operator">=</span> cur<span class="token punctuation">;</span>
       cur <span class="token operator">=</span> next<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>lastNodeOfPrevPart <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>lastNodeOfPrevPart <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       lastNodeOfPrevPart<span class="token punctuation">.</span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       head <span class="token operator">=</span> prev<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     lastNodeOfSubList<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">;</span>
 
     <span class="token keyword">return</span> head<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h2><span id="complexity">Complexity</span></h2><p>Time: $O(n)$</p>
 <p>Space: $O(1)$</p>
 
@@ -222,7 +222,7 @@ Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL</code></pre><h2><span id="design">Des
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>

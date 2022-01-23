@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,14 +152,14 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
                 <h1><span id="patterns-for-coding-interviews-top-k-elements">Patterns for Coding Interviews - Top ‘K’ Elements</span></h1><p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Top%20K%20Elements/Interviews.png" alt></p>
 <h2><span id="introduction">Introduction</span></h2><p>The top K elements pattern is a technique that aims to return a given number of the most frequent/largest/smallest elements in a given set.</p>
 <p>The key data structure of solving top K elements problems is a heap. As the feature of max heap and min heap, we can always get the largest and smallest elements efficiently, i.e., $O(logN)$.</p>
-<h2><span id="approach">Approach</span></h2><p>Let’s see some examples. We’ll first look at a LeetCode medium problem &mdash; <a href="https://leetcode.com/problems/kth-largest-element-in-an-array" target="_blank" rel="noopener">Kth Largest Element in an Array</a>. It requires us to find a given number of the largest element in a set of integers.</p>
+<h2><span id="approach">Approach</span></h2><p>Let’s see some examples. We’ll first look at a LeetCode medium problem &mdash; <a target="_blank" rel="noopener" href="https://leetcode.com/problems/kth-largest-element-in-an-array">Kth Largest Element in an Array</a>. It requires us to find a given number of the largest element in a set of integers.</p>
 <p>Here are some examples:</p>
 <pre><code>Input: [3,2,1,5,6,4] and k = 2
 Output: 5</code></pre><pre><code>Input: [3,2,3,1,2,4,5,5,6] and k = 4
@@ -177,25 +177,25 @@ Output: 4</code></pre><p>A brute-force solution is to simply sort the array and 
 <p>A visualization of the algorithm is provided below:</p>
 <p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Top%20K%20Elements/image-20201125232813299.png" alt></p>
 <p>Now we can easily write the code implementation:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findKthLargest</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findKthLargest</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// Create a min heap</span>
     PriorityQueue<span class="token operator">&lt;</span>Integer<span class="token operator">></span> minHeap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment" spellcheck="true">// Insert the array elements into the min heap.</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       minHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token comment" spellcheck="true">// Pop out the root element if the min heap size is larger than k</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>minHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> k<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         minHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
     <span class="token keyword">return</span> minHeap<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>By applying the top K elements pattern, we can improve the time complexity of the solution to $O(NlogK)$, in which the extraction of the root element is $O(logK)$, and we need to traverse the whole array.</p>
-<p>Next, we’re gonna look at another LeetCode medium problem &mdash; <a href="https://leetcode.com/problems/k-closest-points-to-origin" target="_blank" rel="noopener">K Closest Points to Origin</a>. This is a bit different from the above problem which required us to find the K largest elements, whereas this one is asking for the K smallest elements.</p>
+<p>Next, we’re gonna look at another LeetCode medium problem &mdash; <a target="_blank" rel="noopener" href="https://leetcode.com/problems/k-closest-points-to-origin">K Closest Points to Origin</a>. This is a bit different from the above problem which required us to find the K largest elements, whereas this one is asking for the K smallest elements.</p>
 <p>Here are some examples:</p>
 <pre><code>Input: points = [[1,3],[-2,2]], K = 1
 Output: [[-2,2]]
@@ -217,23 +217,23 @@ Output: [[3,3],[-2,4]]</code></pre><p>Like we did before, we all know that a K s
 <p>The visualization is shown below:</p>
 <p><img src="/images/Patterns%20for%20Coding%20Interviews%20-%20Top%20K%20Elements/image-20201126132025912.png" alt></p>
 <p>Thus we can now implement the solution:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">kClosest</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> points<span class="token punctuation">,</span> <span class="token keyword">int</span> K<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">kClosest</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> points<span class="token punctuation">,</span> <span class="token keyword">int</span> K<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// Max heap (comparess distance)</span>
     PriorityQueue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> maxHeap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">(</span>b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment" spellcheck="true">// Traverse and insert points to the max heap</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> point <span class="token operator">:</span> points<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> point <span class="token operator">:</span> points<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       maxHeap<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>point<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token comment" spellcheck="true">// Pop out the root element if the max heap size is larger than K</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> K<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>maxHeap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> K<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         maxHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
     <span class="token keyword">return</span> maxHeap<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>The time complexity of this algorithm is $O(NlogK)$, and the space complexity is $O(K)$.</p>
 <h2><span id="conclusion">Conclusion</span></h2><p>Ultimately, we have seen two kinds of top K elements problems solving by min heap and max heap, respectively. In summary, the top K elements pattern can be divided into two steps:</p>
 <ol>
@@ -241,19 +241,19 @@ Output: [[3,3],[-2,4]]</code></pre><p>Like we did before, we all know that a K s
 <li>Maintain the heap size smaller than K. If it is larger than K, extract the root element. Repeat this process until the end.</li>
 </ol>
 <h2><span id="related-problems">Related Problems</span></h2><ol>
-<li><a href="https://leetcode.com/problems/kth-largest-element-in-an-array" target="_blank" rel="noopener">Kth Largest Element in an Array</a></li>
-<li><a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst" target="_blank" rel="noopener">Kth Smallest Element in a BST</a></li>
-<li><a href="https://leetcode.com/problems/top-k-frequent-elements" target="_blank" rel="noopener">Top K Frequent Elements</a></li>
-<li><a href="https://leetcode.com/problems/sort-characters-by-frequency" target="_blank" rel="noopener">Sort Characters By Frequency</a></li>
-<li><a href="https://leetcode.com/problems/course-schedule-iii" target="_blank" rel="noopener">Course Schedule III</a></li>
-<li><a href="https://leetcode.com/problems/find-k-closest-elements" target="_blank" rel="noopener">Find K Closest Elements</a></li>
-<li><a href="https://leetcode.com/problems/reorganize-string" target="_blank" rel="noopener">Reorganize String</a></li>
-<li><a href="https://leetcode.com/problems/maximum-frequency-stack" target="_blank" rel="noopener">Maximum Frequency Stack</a></li>
-<li><a href="https://leetcode.com/problems/k-closest-points-to-origin" target="_blank" rel="noopener">K Closest Points to Origin</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/kth-largest-element-in-an-array">Kth Largest Element in an Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/kth-smallest-element-in-a-bst">Kth Smallest Element in a BST</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/top-k-frequent-elements">Top K Frequent Elements</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/sort-characters-by-frequency">Sort Characters By Frequency</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/course-schedule-iii">Course Schedule III</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/find-k-closest-elements">Find K Closest Elements</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/reorganize-string">Reorganize String</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-frequency-stack">Maximum Frequency Stack</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/k-closest-points-to-origin">K Closest Points to Origin</a></li>
 </ol>
 <h2><span id="references">References</span></h2><ol>
-<li><a href="https://www.educative.io/courses/grokking-the-coding-interview" target="_blank" rel="noopener">Grokking the Coding Interview: Patterns for Coding Questions</a></li>
-<li><a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.educative.io/courses/grokking-the-coding-interview">Grokking the Coding Interview: Patterns for Coding Questions</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/">LeetCode</a></li>
 </ol>
 
             </div>
@@ -261,7 +261,7 @@ Output: [[3,3],[-2,4]]</code></pre><p>Like we did before, we all know that a K s
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>

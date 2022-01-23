@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 
-<head><meta name="generator" content="Hexo 3.9.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/me.jpg"/>
 	<link rel="shortcut icon" href="/img/me.jpg">
 	<script data-ad-client="ca-pub-3134773914228719" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 			    <title>
     Jack's Blog
     </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/mic_main.css">
-    <link rel="stylesheet" href="/css/dropdownMenu.css">
-    <meta name="keywords" content="java, computer science, programming">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="java, computer science, programming" />
     <meta data-react-helmet="true" property="og:image" content="https://www.jacktsaitech.com/images/Cover Page.png">
     <meta data-react-helmet="true" property="og:type" content="website">
     <meta data-react-helmet="true" property="og:url" content="https://www.jacktsaitech.com">
     <noscript>
-        <link rel="stylesheet" href="/css/noscript.css">
+        <link rel="stylesheet" href="/css/noscript.css" />
     </noscript>
     <style type="text/css">
         body:before {
@@ -65,7 +65,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/highlight.js"></script>
 	
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -73,8 +73,8 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_okaidia.css">
-<link rel="stylesheet" href="/css/typo.css">
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
@@ -87,10 +87,10 @@
 </header> -->
         <header id="post-header"></header>
         <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
 			<!-- Homepage  主页  --> 
-			<li>
+			<li >
 	            <a href="/" rel="nofollow">Home</a>
 	        </li>
 			<!-- categories_name  分类   --> 
@@ -99,8 +99,8 @@
 	            	<a href="#s1">Category</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
-	                    </li></ul>
+	                        <a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a>
+	                    </ul>
 	        </li>
 	        
 	        <!-- archives  归档   --> 
@@ -152,8 +152,8 @@
 			</script>
 </nav>
 
-        <div id="main">
-            <div class="post_page_title_img"></div>
+        <div id="main" >
+            <div class ="post_page_title_img"></div>
             <!-- Post -->
             <div class="typo">
                 <h1><span id="java內存模型">Java內存模型</span></h1><p>本篇博客主要是紀錄對&lt;&lt;Java并发编程的艺术&gt;&gt;的學習心得以及一些知識點的重新整理，因此文章中會有許多引用自該書的文字。同時也借鑑其他相關的技術博客，以完善整個知識框架。</p>
@@ -202,19 +202,19 @@
 </tbody></table>
 <p>上面3種情況，只要重排序兩個操作的執行順序，程序的執行結果就會被改變。編譯器和處理器再重排序時，會遵守數據依賴性，編譯器和處理器不會改變存在數據依賴關係的兩個操作的執行順序。這裡僅針對單個處理器中執行的指令序列和丹個線程中執行的操作，不同處理器之間和不同線程之間的數據依賴性不被編譯器和處理器考慮。</p>
 <h3><span id="重排序對多線程的影響">重排序對多線程的影響</span></h3><p>下面代碼展示重排序是否會改變多線程程序的執行結果:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ReorderExample</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ReorderExample</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
         flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 3</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3</span>
             <span class="token keyword">int</span> i <span class="token operator">=</span> a <span class="token operator">*</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 4</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>flag變量是個標記 用來標示變量a是否已被寫入。這裡假設有兩個線程A和B，A首先執行writer()方法，隨後B線程接著執行reader()方法。線程B再執行操作4時，能否看到線程A在操作一對共享變量a的寫入呢?</p>
 <p>答案是: 不一定。</p>
 <p>由於操作1和操作2沒有數據依賴關係，編譯器和處理器可以對這兩個操作重排序; 同樣，操作3和操作4沒有數據依賴關係，編譯器和處理器也可以對這兩個操作重排序。讓我們先來看看，當操作1和操作2重排序時，可能會產生甚麼效果:</p>
@@ -237,33 +237,33 @@
 <p>P.S. 兩個操作之間具有happens-before關係，並不意味著前一個操作必須要在後一個操作之前執行。happens-before僅僅要求前一個操作(執行的結果)對後一個操作可見，且前一個操作按順序排在第二個操作之前。</p>
 <h2><span id="volatile的內存語義">volatile的內存語義</span></h2><p>當聲明共享變量為volatile後，對這個變量的讀/寫將會很特別。下面將介紹volatile的內存語義及volatile內存語義的實現。</p>
 <h3><span id="volatile的特性">volatile的特性</span></h3><p>理解volatile特性的一個好方法是把對volatile變量的單個讀寫，看成是使用同一個鎖對這些單個讀/寫操作做了同步。示例代碼如下:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileFeaturesExample</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileFeaturesExample</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">volatile</span> <span class="token keyword">long</span> v1 <span class="token operator">=</span> 0L<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//使用volatile聲明64位的long型變量</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         v1 <span class="token operator">-</span> l<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 單個volatile變量的寫</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getAndIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getAndIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         v1<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 複合(多個)volatile變量的讀/寫</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> v1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 單個volatile變量的讀</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>假設有多個線程分別調用上面程序的3個方法，這個程序在語義上和下面程序等價。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileFeaturesExample</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileFeaturesExample</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">long</span> v1 <span class="token operator">=</span> 0L<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 64位的long型普通變量</span>
-    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         v1 <span class="token operator">=</span> l<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 對單個的普通變量的寫用同一個鎖同步</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getAndIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 普通方法調用</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getAndIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 普通方法調用</span>
         <span class="token keyword">long</span> temp <span class="token operator">=</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 調用已同步的讀方法</span>
         temp <span class="token operator">+=</span> 1L<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 普通寫操作 </span>
         <span class="token function">set</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 調用已同步的寫方法</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> synchroniszed <span class="token keyword">long</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 對單個普通變量的讀用同一個鎖同步</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> synchroniszed <span class="token keyword">long</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 對單個普通變量的讀用同一個鎖同步</span>
         <span class="token keyword">return</span> v1<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>如上所示，一個volatile變量的單個讀/寫操作，與一個普通變量的讀/寫操作都是使用同一個鎖來同步，它們之間的執行效果相同。</p>
 <p>鎖的happens-before規則保證釋放鎖和獲取鎖的兩個線程之間的內存可見性，意味著對一個volatile變量的讀，總是能看到(任意線程)對這個volatile變量最後的寫入。</p>
 <p>鎖的語義決定了臨界區代碼的執行具有原子性。只要是volatile變量，對該變量的讀寫就具有原子性。如果是多個volatile操作或類似於volatile++這種複合操作，這些操作整體上不具有原子性。</p>
@@ -274,20 +274,20 @@
 </ol>
 <h3><span id="volatile寫讀建立的happens-before關係">volatile寫/讀建立的happens-before關係</span></h3><p>上面講的是volatile變量自身的特性，接下來說說volatile對線程的內存可見性的影響。</p>
 <p>從內存語義的角度來說，volatile的寫/讀與鎖的釋放/獲取有相同的內存效果: volatile寫和鎖的釋放有相同的內存語義; volatile的讀與鎖的獲取有相同語義。以下為示例代碼:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileExample</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">VolatileExample</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token keyword">volatile</span> <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
         flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 3</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3</span>
             <span class="token keyword">int</span> i <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 4</span>
             <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>假設線程A執行writer()方法之後，線程B執行reader()方法。根據happens-before規則，這個過程建立的happens-before關係可以分為3類:</p>
 <ol>
 <li>根據程序次序規則，1 happens-before 2; 3 happens-before 4。</li>
@@ -323,16 +323,16 @@
 <p>由於volatile僅僅保證對單個volatile變量的讀/寫具有原子性，而鎖的互斥執行特性可以確保對整個臨界區代碼的執行具有原子性。因此在功能上，鎖比volatile更強大; 在可伸縮性和執行性能上，volatile更具優勢。</p>
 <h2><span id="鎖的內存語義">鎖的內存語義</span></h2><p>鎖除了為人所知的可以讓臨界區互斥執行的功能以外，還有一項常常被忽視的部分: 鎖的內存語義。</p>
 <h3><span id="鎖的釋放獲取建立的happens-before關係">鎖的釋放/獲取建立的happens-before關係</span></h3><p>鎖事Java併發編程中最重要的同步機制。鎖除了讓臨界區互斥執行外，還可以讓釋放鎖的線程向獲取同一個鎖的線程發送消息。以下是鎖的釋放/獲取的代碼:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MonitorExample</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MonitorExample</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 1</span>
+    <span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
         a<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
-    <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 3</span>
-    <span class="token keyword">public</span> synschronized <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 4</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3</span>
+    <span class="token keyword">public</span> synschronized <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 4</span>
         <span class="token keyword">int</span> i <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 5</span>
         <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 6</span>
-<span class="token punctuation">}</span></code></pre>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 6</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>假設線程A執行writer()方法，隨後線程B執行reader()方法。根據happens-before規則，這個過程包含的happens-before關係可以分為三類:</p>
 <ol>
 <li>根據程序次序規則，1 happens-before 2, 2 happens-before 3; 4 happens-before 5, 5 happens-before 6。</li>
@@ -349,27 +349,27 @@
 <li>線程A釋放鎖，隨後線程B獲取這個鎖，這個過程實質上是線程A通過主內存向線程B發送消息。</li>
 </ol>
 <h3><span id="鎖內存語義的實現">鎖內存語義的實現</span></h3><p>以下代碼為ReentrantLock的源碼:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ReentrantLockExample</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">ReentrantLockExample</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
     ReentrantLock lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         lock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 獲取鎖</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             a<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">finally</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             lock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 釋放鎖</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         lock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 獲取鎖</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             <span class="token keyword">int</span> i <span class="token operator">=</span> a<span class="token punctuation">;</span>
             <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">finally</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             lock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 釋放鎖</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>在ReentrantLock中，調用lock()方法獲取鎖;調用unlock()方法釋放鎖。</p>
 <p>ReentrantLock的實現依賴於Java同步器框架AbstractQueuedSynchronizer(AQS)。AQS使用一個整型的volatile變量(命名為state)來維護同步狀態，這個volatile變量是ReentrantLock內存語義實現的關鍵。以下是ReentrantLock的類圖:</p>
 <img src="https://i.imgur.com/mv6YaG2.jpg" alt="ReentrantLock類圖" style="zoom:25%;">
@@ -382,24 +382,24 @@
 <li>ReentrantLock:tryAcquire(int acquires)</li>
 </ol>
 <p>在第4步開始加鎖，下面是該方法的源代碼:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token keyword">int</span> acquires<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">tryAcquire</span><span class="token punctuation">(</span><span class="token keyword">int</span> acquires<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">final</span> Thread current <span class="token operator">=</span> Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 獲取鎖的開始，首先讀volatile變量state</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isFirst</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
-           <span class="token function">compareAndSetState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> acquires<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           <span class="token function">compareAndSetState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> acquires<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
             <span class="token function">setExclusiveOwnerThread</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>current <span class="token operator">==</span> <span class="token function">getExclusiveOwnerThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>current <span class="token operator">==</span> <span class="token function">getExclusiveOwnerThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> nextc <span class="token operator">=</span> c <span class="token operator">+</span> acquires<span class="token punctuation">;</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>nextc <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
             <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Maximum lock count exceeded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">setState</span><span class="token punctuation">(</span>nextc<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>從上面代碼可以看出，加鎖方法首先讀volatile變量state。在使用公平鎖時，解鎖方法unlock()調用軌跡如下:</p>
 <ol>
 <li>ReentrantLock:unlock();</li>
@@ -407,18 +407,18 @@
 <li>Sunc:tryRelease(int releases)</li>
 </ol>
 <p>在第3步真正開始釋放鎖，下面是該方法的源代碼:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">tryRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> releases<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">tryRelease</span><span class="token punctuation">(</span><span class="token keyword">int</span> releases<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> releases<span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token function">getExclusiveOwnerThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
         <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalMonitorStateException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">boolean</span> free <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         free <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
         <span class="token function">setExclusiveOwnerThread</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     <span class="token function">setState</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 釋放鎖的最後，寫volatile變量state</span>
     <span class="token keyword">return</span> free<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>公平鎖在釋放鎖的最後寫volatile變量state，在獲取鎖時首先讀這個volatile變量。根據volatile的happens-before規則，釋放鎖的線程在寫volatile變量之前可見的共享變量，在獲取鎖的線程讀取同一個volatile變量後將立即變得對獲取鎖的線程可見。</p>
 <p>接下來分析非公平鎖的內存語義實現。非公平鎖的釋放和公平鎖完全一樣，鎖以這裡緊緊分析非公平鎖的讀取。使用非公平鎖時，加鎖方法lock()的調用軌跡如下:</p>
 <ol>
@@ -427,9 +427,9 @@
 <li>AbstractQueuedSynchronizer:compareAndSetState(int expect, int update)</li>
 </ol>
 <p>在地3步真正開始加鎖，以下是該方法的源碼:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">compareAndState</span><span class="token punctuation">(</span><span class="token keyword">int</span> expect<span class="token punctuation">,</span> <span class="token keyword">int</span> update<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> <span class="token function">compareAndState</span><span class="token punctuation">(</span><span class="token keyword">int</span> expect<span class="token punctuation">,</span> <span class="token keyword">int</span> update<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> unsafe<span class="token punctuation">.</span><span class="token function">compareAndSwapInt</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> stateOffset<span class="token punctuation">,</span> expect<span class="token punctuation">,</span> update<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>該方法以原子操作的方式更新state變量，本文把Java的compareAndSet()方法調用簡稱為CAS。JDK文檔對該方法的說明如下: 如果當前狀態值等於預期值，則以原子方式將同步狀態設置為給定的更新值。此操作具有volatile讀和寫的內存語義。</p>
 <p>對公平鎖和非公平鎖的內存語義做個總結:</p>
 <ul>
@@ -479,7 +479,7 @@
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
-                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
                 Tsung Han Tsai © 2018 - 2021 • All rights reserved
             </ul>
         </div>
